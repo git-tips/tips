@@ -22,3 +22,19 @@ git update-ref -d HEAD
 ```sh
 git diff --name-only --diff-filter=U
 ```
+
+# List all branches that are already merged into master
+
+```sh
+git checkout master
+git branch --merged
+```
+
+# Quickly switch to the previous branch
+
+```sh
+git checkout -
+```
+
+
+
