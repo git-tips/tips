@@ -1,10 +1,7 @@
 ## Easy steps:
 
-* Clone this [repo](https://github.com/git-tips/tips.git):
-  ```sh
-  $ git clone https://github.com/git-tips/tips.git
-  ```
-  
+* [Fork](https://github.com/git-tips/tips/network) the repo.
+
 * Install the deps: 
  ```sh
   $ cd tips && npm install
