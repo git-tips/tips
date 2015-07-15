@@ -22,3 +22,8 @@ git update-ref -d HEAD
 ```sh
 git diff --name-only --diff-filter=U
 ```
+
+# Remove branches that have already been merged with master
+```sh
+git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d
+```
