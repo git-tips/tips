@@ -12,6 +12,8 @@
 * [Remove branches that have already been merged with master](https://github.com/git-tips/tips#Remove branches that have already been merged with master)
 * [List all branches and their upstreams, as well as last commit on branch](https://github.com/git-tips/tips#List all branches and their upstreams, as well as last commit on branch)
 * [Track upstream branch](https://github.com/git-tips/tips#Track upstream branch)
+* [Delete local branch](https://github.com/git-tips/tips#Delete local branch)
+* [Delete remote branch](https://github.com/git-tips/tips#Delete remote branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -62,6 +64,16 @@ git branch -vv
 ## Track upstream branch
 ```sh
 git branch -u origin/mybranch
+```
+
+## Delete local branch
+```sh
+git branch -d local_branchname
+```
+
+## Delete remote branch
+```sh
+git push origin :remote_branchname
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
