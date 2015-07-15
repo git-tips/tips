@@ -1,12 +1,18 @@
 ## Easy steps:
 
-* Clone the repo.
+* Clone this [repo](https://github.com/git-tips/tips.git):
+  ```sh
+  $ git clone https://github.com/git-tips/tips.git
+  ```
+  
+* Install the deps: 
+ ```sh
+  $ cd tips && npm install
+  ```
+  
+* Edit [tips.json](./tips.json) to add your tip in the below format:
 
-* Install the deps: `npm install`
-
-* Edit `tips.json` to add your tip in the below format:
-
-```json
+```js
 {
     "title": <your_tip_title>,
     "tip": <your_tip>
