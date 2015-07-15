@@ -3,7 +3,7 @@ var tips = require('./tips.json');
 var render = function(data) {
   var data = data.data;
 
-  var out = '* [' + data.title + '](https://github.com/git-tips/tips#' + data.title + ')\n';
+  var out = '* [' + data.title + '](https://github.com/git-tips/tips#' + data.title.split(' ').join('-') + ')\n';
 
   if (tips[tips.length -1].title === data.title) out = out + '\n';
   return out;
