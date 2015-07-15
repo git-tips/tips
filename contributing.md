@@ -2,6 +2,8 @@
 
 * Clone the repo.
 
+* Install the deps: `npm install`
+
 * Edit `tips.json` to add your tip in the below format:
 
 ```json
