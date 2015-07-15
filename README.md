@@ -10,7 +10,7 @@
 * [List all branches that are already merged into master](https://github.com/git-tips/tips#List-all-branches-that-are-already-merged-into-master)
 * [Quickly switch to the previous branch](https://github.com/git-tips/tips#Quickly-switch-to-the-previous-branch)
 * [Remove branches that have already been merged with master](https://github.com/git-tips/tips#Remove-branches-that-have-already-been-merged-with-master)
-* [List all branches and their upstreams, as well as last commit on branch](https://github.com/git-tips/tips#List-all-branches-and-their-upstreams,-as-well-as-last-commit-on-branch)
+* [List all branches and their upstreams, as well as last commit on branch](https://github.com/git-tips/tips#List-all-branches-and-their-upstreams-as-well-as-last-commit-on-branch)
 * [Track upstream branch](https://github.com/git-tips/tips#Track-upstream-branch)
 * [Delete local branch](https://github.com/git-tips/tips#Delete-local-branch)
 * [Delete remote branch](https://github.com/git-tips/tips#Delete-remote-branch)
