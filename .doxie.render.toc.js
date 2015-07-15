@@ -1,4 +1,6 @@
-var tips = require('./tips.json');
+var readFileSync = require('fs').readFileSync;
+var tips = require('cson').parse(readFileSync(__dirname + '/tips.cson'));
+  // TODO: Use `doxie --append` once it’s there
 
 var render = function(data) {
   var data = data.data;
