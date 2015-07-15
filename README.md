@@ -36,5 +36,14 @@ git branch --merged
 git checkout -
 ```
 
+# List all branches and their upstreams, as well as last commit on branch
 
+```sh
+git branch -vv
+```
 
+# Track upstream branch
+
+```sh
+git branch -u origin/mybranch
+```
