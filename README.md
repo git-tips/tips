@@ -1,3 +1,6 @@
+## git-tips
+> Collection of `git-tips`, want to add your tips? Checkout [contributing.md](./contributing.md)
+
 <!-- @doxie.inject start toc -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
 * [Overwrite pull](https://github.com/git-tips/tips#Overwrite pull)
