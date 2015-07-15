@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "npm run generate && git add README.md",
-    "update-readme": "echo 'Updating the readme…'; doxie --render < ./tips.json --inject into README.md && echo '…done!'",
-    "update-toc": "echo 'Updating the table of contents…'; doxie --render .doxie.render.toc.js < ./tips.json --inject into README.md as toc && echo '…done!'",
+    "update-readme": "echo 'Updating the readme…'; cson2json tips.cson | doxie --render --inject into README.md && echo '…done!'",
+    "update-toc": "echo 'Updating the table of contents…'; cson2json tips.cson | doxie --render .doxie.render.toc.js --inject into README.md as toc && echo '…done!'",
     "generate": "npm run update-readme; npm run update-toc"
   },
   "repository": {
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/git-tips/tips#readme",
   "devDependencies": {
+    "cson": "^3.0.1",
     "doxie": "^0.2.2",
     "doxie.inject": "^0.1.1",
     "doxie.output": "^0.3.0",
