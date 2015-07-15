@@ -34,11 +34,11 @@
   {
       "title": "Track upstream branch",
       "tip": "git branch -u origin/mybranch"
-  }
+  },
   {
       "title": "Delete local branch",
       "tip": "git branch -d local_branchname"
-  }
+  },
   {
       "title": "Delete remote branch",
       "tip": "git push origin :remote_branchname"
