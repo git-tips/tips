@@ -16,6 +16,7 @@
 * [Delete remote branch](https://github.com/git-tips/tips#delete-remote-branch)
 * [Undo local changes with the last content in head](https://github.com/git-tips/tips#undo-local-changes-with-the-last-content-in-head)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
+* [Stage parts of a changed file, instead of the entire file](https://github.com/git-tips/tips#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -86,6 +87,11 @@ git checkout -- <file_name>
 ## Changing a remote's URL
 ```sh
 git remote set-url origin <URL>
+```
+
+## Stage parts of a changed file, instead of the entire file
+```sh
+git add -p
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
