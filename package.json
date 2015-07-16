@@ -33,8 +33,5 @@
     "doxie.output": "^0.3.0",
     "doxie.render": "^0.3.0",
     "husky": "^0.8.1"
-  },
-  "dependencies": {
-    "slug": "^0.9.1"
   }
 }
