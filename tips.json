@@ -50,5 +50,9 @@
   {
       "title": "Changing a remote's URL",
       "tip": "git remote set-url origin <URL>"
+  },
+  {
+      "title": "Stage parts of a changed file, instead of the entire file",
+      "tip": "git add -p"
   }
 ]
