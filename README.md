@@ -14,6 +14,8 @@
 * [Track upstream branch](https://github.com/git-tips/tips#Track-upstream-branch)
 * [Delete local branch](https://github.com/git-tips/tips#Delete-local-branch)
 * [Delete remote branch](https://github.com/git-tips/tips#Delete-remote-branch)
+* [Undo local changes with the last content in head](https://github.com/git-tips/tips#Undo-local-changes-with-the-last-content-in-head)
+* [Changing a remote's URL](https://github.com/git-tips/tips#Changing-a-remotes-URL)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -68,12 +70,22 @@ git branch -u origin/mybranch
 
 ## Delete local branch
 ```sh
-git branch -d local_branchname
+git branch -d <local_branchname>
 ```
 
 ## Delete remote branch
 ```sh
-git push origin :remote_branchname
+git push origin :<remote_branchname>
+```
+
+## Undo local changes with the last content in head
+```sh
+git checkout -- <file_name>
+```
+
+## Changing a remote's URL
+```sh
+git remote set-url origin <URL>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
