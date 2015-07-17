@@ -54,5 +54,9 @@
   {
       "title": "Stage parts of a changed file, instead of the entire file",
       "tip": "git add -p"
+  },
+  {
+      "title": "Get git bash completion",
+      "tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
   }
 ]
