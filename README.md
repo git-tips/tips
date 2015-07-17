@@ -98,6 +98,12 @@ git remote set-url origin <URL>
 git remote
 ```
 
+
+__Alternatives:__
+```sh
+git remote show
+```
+
 ## Get list of all local and remote branches
 ```sh
 git branch -a

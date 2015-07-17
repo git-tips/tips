@@ -54,7 +54,7 @@
   {
     "title": "Get list of all remote references",
     "tip": "git remote",
-    "alternatives": "git remote show"
+    "alternatives": ["git remote show"]
   },
   {
     "title": "Get list of all local and remote branches",
