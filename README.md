@@ -16,6 +16,9 @@
 * [Delete remote branch](https://github.com/git-tips/tips#delete-remote-branch)
 * [Undo local changes with the last content in head](https://github.com/git-tips/tips#undo-local-changes-with-the-last-content-in-head)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
+* [Get list of all remote references](https://github.com/git-tips/tips#get-list-of-all-remote-references)
+* [Get list of all local and remote branches](https://github.com/git-tips/tips#get-list-of-all-local-and-remote-branches)
+* [Get only remote branches](https://github.com/git-tips/tips#get-only-remote-branches)
 * [Stage parts of a changed file, instead of the entire file](https://github.com/git-tips/tips#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 * [Get git bash completion](https://github.com/git-tips/tips#get-git-bash-completion)
 
@@ -88,6 +91,21 @@ git checkout -- <file_name>
 ## Changing a remote's URL
 ```sh
 git remote set-url origin <URL>
+```
+
+## Get list of all remote references
+```sh
+git remote
+```
+
+## Get list of all local and remote branches
+```sh
+git branch -a
+```
+
+## Get only remote branches
+```sh
+git branch -r
 ```
 
 ## Stage parts of a changed file, instead of the entire file

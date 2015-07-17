@@ -52,6 +52,19 @@
       "tip": "git remote set-url origin <URL>"
   },
   {
+    "title": "Get list of all remote references",
+    "tip": "git remote",
+    "alternatives": "git remote show"
+  },
+  {
+    "title": "Get list of all local and remote branches",
+    "tip": "git branch -a"
+  },
+  {
+    "title": "Get only remote branches",
+    "tip": "git branch -r"
+  },
+  {
       "title": "Stage parts of a changed file, instead of the entire file",
       "tip": "git add -p"
   },
