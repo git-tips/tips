@@ -21,6 +21,7 @@
 * [Get only remote branches](https://github.com/git-tips/tips#get-only-remote-branches)
 * [Stage parts of a changed file, instead of the entire file](https://github.com/git-tips/tips#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 * [Get git bash completion](https://github.com/git-tips/tips#get-git-bash-completion)
+* [What changed since two weeks?](https://github.com/git-tips/tips#what-changed-since-two-weeks)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -122,6 +123,11 @@ git add -p
 ## Get git bash completion
 ```sh
 curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc
+```
+
+## What changed since two weeks?
+```sh
+git whatchanged --since='2 weeks ago'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
