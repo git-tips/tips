@@ -1,4 +1,3 @@
-var tips = require('./tips.json');
 // from https://gist.github.com/mathewbyrne/1280286
 slugify = function(text){
   return text.toString().toLowerCase()
@@ -14,7 +13,6 @@ var render = function(data) {
 
   var out = '* [' + data.title + '](https://github.com/git-tips/tips#' + slugify(data.title) + ')\n';
 
-  if (tips[tips.length -1].title === data.title) out = out + '\n';
   return out;
 };
 
