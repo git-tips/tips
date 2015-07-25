@@ -75,5 +75,9 @@
   {
       "title": "What changed since two weeks?",
       "tip": "git whatchanged --since='2 weeks ago'"
+  },
+  {
+      "title": "Pick commits across branches using cherry-pick",
+      "tip": "git checkout <branch-name> && cherry-pick <commit-ish>"
   }
 ]

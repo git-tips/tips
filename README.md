@@ -22,6 +22,7 @@
 * [Stage parts of a changed file, instead of the entire file](https://github.com/git-tips/tips#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 * [Get git bash completion](https://github.com/git-tips/tips#get-git-bash-completion)
 * [What changed since two weeks?](https://github.com/git-tips/tips#what-changed-since-two-weeks)
+* [Pick commits across branches using cherry-pick](https://github.com/git-tips/tips#pick-commits-across-branches-using-cherry-pick)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -128,6 +129,11 @@ curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completio
 ## What changed since two weeks?
 ```sh
 git whatchanged --since='2 weeks ago'
+```
+
+## Pick commits across branches using cherry-pick
+```sh
+git checkout <branch-name> && cherry-pick <commit-ish>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
