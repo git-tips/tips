@@ -4,7 +4,8 @@
 <!-- @doxie.inject start toc -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
 * [Overwrite pull](https://github.com/git-tips/tips#overwrite-pull)
-* [List of all the files changed in a commit](https://github.com/git-tips/tips#list-of-all-the-files-changed-in-a-commit)
+* [List of all files changed in a commit](https://github.com/git-tips/tips#list-of-all-files-changed-in-a-commit)
+* [List of all files till a commit](https://github.com/git-tips/tips#list-of-all-files-till-a-commit)
 * [Git reset first commit](https://github.com/git-tips/tips#git-reset-first-commit)
 * [List all the conflicted files](https://github.com/git-tips/tips#list-all-the-conflicted-files)
 * [List all branches that are already merged into master](https://github.com/git-tips/tips#list-all-branches-that-are-already-merged-into-master)
@@ -35,7 +36,12 @@
 git fetch --all && git reset --hard origin/master
 ```
 
-## List of all the files changed in a commit
+## List of all files changed in a commit
+```sh
+git diff-tree --no-commit-id --name-only -r <commit-ish>
+```
+
+## List of all files till a commit
 ```sh
 git ls-tree --name-only -r <commit-ish>
 ```
