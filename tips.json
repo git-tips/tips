@@ -4,7 +4,11 @@
       "tip": "git fetch --all && git reset --hard origin/master"
   },
   {
-      "title": "List of all the files changed in a commit",
+      "title": "List of all files changed in a commit",
+      "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
+  },
+  {
+      "title": "List of all files till a commit",
       "tip": "git ls-tree --name-only -r <commit-ish>"
   },
   {
