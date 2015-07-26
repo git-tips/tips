@@ -83,5 +83,10 @@
   {
       "title": "Pick commits across branches using cherry-pick",
       "tip": "git checkout <branch-name> && cherry-pick <commit-ish>"
+  },
+  {
+      "title": "Find out branches containing commit-hash",
+      "tip": "git branch -a --contains <commit-ish>",
+      "alternatives": ["git branch --contains <commit-ish>"]
   }
 ]

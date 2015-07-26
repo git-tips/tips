@@ -24,6 +24,7 @@
 * [Get git bash completion](https://github.com/git-tips/tips#get-git-bash-completion)
 * [What changed since two weeks?](https://github.com/git-tips/tips#what-changed-since-two-weeks)
 * [Pick commits across branches using cherry-pick](https://github.com/git-tips/tips#pick-commits-across-branches-using-cherry-pick)
+* [Find out branches containing commit-hash](https://github.com/git-tips/tips#find-out-branches-containing-commit-hash)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -140,6 +141,17 @@ git whatchanged --since='2 weeks ago'
 ## Pick commits across branches using cherry-pick
 ```sh
 git checkout <branch-name> && cherry-pick <commit-ish>
+```
+
+## Find out branches containing commit-hash
+```sh
+git branch -a --contains <commit-ish>
+```
+
+
+__Alternatives:__
+```sh
+git branch --contains <commit-ish>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
