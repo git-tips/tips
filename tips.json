@@ -88,5 +88,9 @@
       "title": "Find out branches containing commit-hash",
       "tip": "git branch -a --contains <commit-ish>",
       "alternatives": ["git branch --contains <commit-ish>"]
+  },
+  {
+      "title": "Git Aliases",
+      "tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
   }
 ]
