@@ -92,5 +92,27 @@
   {
       "title": "Git Aliases",
       "tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
+  },
+  {
+      "title":"Saving current state of tracked files without commiting",
+      "tip": "git stash"
+  },
+  {
+      "title":"Show list of all saved stashes",
+      "tip": "git stash list"
+  },
+  {
+      "title": "Apply any stash without deleting from the stashed list",
+      "tip": "git stash apply <stash@{n}>"
+  },
+  {
+      "title":"Apply last stashed state and delete it from stashed list",
+      "tip": "git stash pop",
+      "alternatives": ["git stash apply stash@{0} && git stash drop stash@{0}"]
+  },
+  {
+      "title": "Delete all stored stashes",
+      "tip": "git stash clear",
+      "alternatives": ["git stash drop <stash@{n}>"]
   }
 ]
