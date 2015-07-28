@@ -126,5 +126,13 @@
       "title": "Delete all stored stashes",
       "tip": "git stash clear",
       "alternatives": ["git stash drop <stash@{n}>"]
+  },
+  {
+      "title":"Show all tracked files",
+      "tip":"git ls-files -t"
+  },
+  {
+      "title":"Show all untracked files",
+      "tip":"git ls-files --others"
   }
 ]

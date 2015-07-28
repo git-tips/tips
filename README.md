@@ -34,6 +34,8 @@
 * [Apply any stash without deleting from the stashed list](https://github.com/git-tips/tips#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](https://github.com/git-tips/tips#apply-last-stashed-state-and-delete-it-from-stashed-list)
 * [Delete all stored stashes](https://github.com/git-tips/tips#delete-all-stored-stashes)
+* [Show all tracked files](https://github.com/git-tips/tips#show-all-tracked-files)
+* [Show all untracked files](https://github.com/git-tips/tips#show-all-untracked-files)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -219,6 +221,16 @@ git stash clear
 __Alternatives:__
 ```sh
 git stash drop <stash@{n}>
+```
+
+## Show all tracked files
+```sh
+git ls-files -t
+```
+
+## Show all untracked files
+```sh
+git ls-files --others
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
