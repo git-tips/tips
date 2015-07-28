@@ -57,7 +57,8 @@
   },
   {
       "title": "Delete remote branch",
-      "tip": "git push origin :<remote_branchname>"
+      "tip": "git push origin --delete <remote_branchname>",
+      "alternatives": ["git push origin :<remote_branchname>"]
   },
   {
       "title": "Undo local changes with the last content in head",
