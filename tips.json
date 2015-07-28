@@ -4,10 +4,6 @@
       "tip": "git fetch --all && git reset --hard origin/master"
   },
   {
-      "title": "List of all files changed in a commit",
-      "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
-  },
-  {
       "title": "List of all files till a commit",
       "tip": "git ls-tree --name-only -r <commit-ish>"
   },
@@ -18,6 +14,22 @@
   {
       "title": "List all the conflicted files",
       "tip": "git diff --name-only --diff-filter=U"
+  },
+  {
+      "title": "List of all files changed in a commit",
+      "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
+  },
+  {
+      "title":"Unstaged changes since last commit",
+      "tip":"git diff"
+  },
+  {
+      "title":"Changes staged for commit",
+      "tip":"git diff --cached"
+  },
+  {
+      "title":"Show both staged and unstaged changes",
+      "tip":"git diff HEAD"
   },
   {
       "title": "List all branches that are already merged into master",
