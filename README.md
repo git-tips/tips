@@ -4,10 +4,13 @@
 <!-- @doxie.inject start toc -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
 * [Overwrite pull](https://github.com/git-tips/tips#overwrite-pull)
-* [List of all files changed in a commit](https://github.com/git-tips/tips#list-of-all-files-changed-in-a-commit)
 * [List of all files till a commit](https://github.com/git-tips/tips#list-of-all-files-till-a-commit)
 * [Git reset first commit](https://github.com/git-tips/tips#git-reset-first-commit)
 * [List all the conflicted files](https://github.com/git-tips/tips#list-all-the-conflicted-files)
+* [List of all files changed in a commit](https://github.com/git-tips/tips#list-of-all-files-changed-in-a-commit)
+* [Unstaged changes since last commit](https://github.com/git-tips/tips#unstaged-changes-since-last-commit)
+* [Changes staged for commit](https://github.com/git-tips/tips#changes-staged-for-commit)
+* [Show both staged and unstaged changes](https://github.com/git-tips/tips#show-both-staged-and-unstaged-changes)
 * [List all branches that are already merged into master](https://github.com/git-tips/tips#list-all-branches-that-are-already-merged-into-master)
 * [Quickly switch to the previous branch](https://github.com/git-tips/tips#quickly-switch-to-the-previous-branch)
 * [Remove branches that have already been merged with master](https://github.com/git-tips/tips#remove-branches-that-have-already-been-merged-with-master)
@@ -43,11 +46,6 @@
 git fetch --all && git reset --hard origin/master
 ```
 
-## List of all files changed in a commit
-```sh
-git diff-tree --no-commit-id --name-only -r <commit-ish>
-```
-
 ## List of all files till a commit
 ```sh
 git ls-tree --name-only -r <commit-ish>
@@ -61,6 +59,26 @@ git update-ref -d HEAD
 ## List all the conflicted files
 ```sh
 git diff --name-only --diff-filter=U
+```
+
+## List of all files changed in a commit
+```sh
+git diff-tree --no-commit-id --name-only -r <commit-ish>
+```
+
+## Unstaged changes since last commit
+```sh
+git diff
+```
+
+## Changes staged for commit
+```sh
+git diff --cached
+```
+
+## Show both staged and unstaged changes
+```sh
+git diff HEAD
 ```
 
 ## List all branches that are already merged into master
