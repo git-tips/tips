@@ -26,6 +26,11 @@
 * [Pick commits across branches using cherry-pick](https://github.com/git-tips/tips#pick-commits-across-branches-using-cherry-pick)
 * [Find out branches containing commit-hash](https://github.com/git-tips/tips#find-out-branches-containing-commit-hash)
 * [Git Aliases](https://github.com/git-tips/tips#git-aliases)
+* [Saving current state of tracked files without commiting](https://github.com/git-tips/tips#saving-current-state-of-tracked-files-without-commiting)
+* [Show list of all saved stashes](https://github.com/git-tips/tips#show-list-of-all-saved-stashes)
+* [Apply any stash without deleting from the stashed list](https://github.com/git-tips/tips#apply-any-stash-without-deleting-from-the-stashed-list)
+* [Apply last stashed state and delete it from stashed list](https://github.com/git-tips/tips#apply-last-stashed-state-and-delete-it-from-stashed-list)
+* [Delete all stored stashes](https://github.com/git-tips/tips#delete-all-stored-stashes)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -159,6 +164,43 @@ git branch --contains <commit-ish>
 ```sh
 git config --global alias.<handle> <command> 
 git config --global alias.st status
+```
+
+## Saving current state of tracked files without commiting
+```sh
+git stash
+```
+
+## Show list of all saved stashes
+```sh
+git stash list
+```
+
+## Apply any stash without deleting from the stashed list
+```sh
+git stash apply <stash@{n}>
+```
+
+## Apply last stashed state and delete it from stashed list
+```sh
+git stash pop
+```
+
+
+__Alternatives:__
+```sh
+git stash apply stash@{0} && git stash drop stash@{0}
+```
+
+## Delete all stored stashes
+```sh
+git stash clear
+```
+
+
+__Alternatives:__
+```sh
+git stash drop <stash@{n}>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
