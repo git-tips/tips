@@ -65,6 +65,10 @@
       "tip": "git checkout -- <file_name>"
   },
   {
+      "title": "Reword the previous commit message",
+      "tip": "git commit -v --amend"
+  },
+  {
       "title": "Changing a remote's URL",
       "tip": "git remote set-url origin <URL>"
   },
