@@ -36,6 +36,7 @@
 * [Delete all stored stashes](https://github.com/git-tips/tips#delete-all-stored-stashes)
 * [Show all tracked files](https://github.com/git-tips/tips#show-all-tracked-files)
 * [Show all untracked files](https://github.com/git-tips/tips#show-all-untracked-files)
+* [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -237,6 +238,11 @@ git ls-files -t
 ## Show all untracked files
 ```sh
 git ls-files --others
+```
+
+## Show all ignored files
+```sh
+git ls-files --others -i --exclude-standard
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

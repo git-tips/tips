@@ -135,5 +135,9 @@
   {
       "title":"Show all untracked files",
       "tip":"git ls-files --others"
+  },
+  {
+      "title": "Show all ignored files",
+      "tip": "git ls-files --others -i --exclude-standard"
   }
 ]
