@@ -27,6 +27,7 @@
 * [Stage parts of a changed file, instead of the entire file](https://github.com/git-tips/tips#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 * [Get git bash completion](https://github.com/git-tips/tips#get-git-bash-completion)
 * [What changed since two weeks?](https://github.com/git-tips/tips#what-changed-since-two-weeks)
+* [See all commits made since forking from master](https://github.com/git-tips/tips#see-all-commits-made-since-forking-from-master)
 * [Pick commits across branches using cherry-pick](https://github.com/git-tips/tips#pick-commits-across-branches-using-cherry-pick)
 * [Find out branches containing commit-hash](https://github.com/git-tips/tips#find-out-branches-containing-commit-hash)
 * [Git Aliases](https://github.com/git-tips/tips#git-aliases)
@@ -175,6 +176,11 @@ curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completio
 ## What changed since two weeks?
 ```sh
 git whatchanged --since='2 weeks ago'
+```
+
+## See all commits made since forking from master
+```sh
+git log --no-merges --stat --reverse master..
 ```
 
 ## Pick commits across branches using cherry-pick
