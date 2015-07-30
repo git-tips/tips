@@ -65,6 +65,10 @@
       "tip": "git checkout -- <file_name>"
   },
   {
+      "title": "Reword the previous commit message",
+      "tip": "git commit -v --amend"
+  },
+  {
       "title": "Changing a remote's URL",
       "tip": "git remote set-url origin <URL>"
   },
@@ -92,6 +96,10 @@
   {
       "title": "What changed since two weeks?",
       "tip": "git whatchanged --since='2 weeks ago'"
+  },
+  {
+      "title": "See all commits made since forking from master",
+      "tip": "git log --no-merges --stat --reverse master.."
   },
   {
       "title": "Pick commits across branches using cherry-pick",
@@ -135,5 +143,9 @@
   {
       "title":"Show all untracked files",
       "tip":"git ls-files --others"
+  },
+  {
+      "title": "Show all ignored files",
+      "tip": "git ls-files --others -i --exclude-standard"
   }
 ]

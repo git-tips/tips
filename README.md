@@ -19,6 +19,7 @@
 * [Delete local branch](https://github.com/git-tips/tips#delete-local-branch)
 * [Delete remote branch](https://github.com/git-tips/tips#delete-remote-branch)
 * [Undo local changes with the last content in head](https://github.com/git-tips/tips#undo-local-changes-with-the-last-content-in-head)
+* [Reword the previous commit message](https://github.com/git-tips/tips#reword-the-previous-commit-message)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
 * [Get list of all remote references](https://github.com/git-tips/tips#get-list-of-all-remote-references)
 * [Get list of all local and remote branches](https://github.com/git-tips/tips#get-list-of-all-local-and-remote-branches)
@@ -26,6 +27,7 @@
 * [Stage parts of a changed file, instead of the entire file](https://github.com/git-tips/tips#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 * [Get git bash completion](https://github.com/git-tips/tips#get-git-bash-completion)
 * [What changed since two weeks?](https://github.com/git-tips/tips#what-changed-since-two-weeks)
+* [See all commits made since forking from master](https://github.com/git-tips/tips#see-all-commits-made-since-forking-from-master)
 * [Pick commits across branches using cherry-pick](https://github.com/git-tips/tips#pick-commits-across-branches-using-cherry-pick)
 * [Find out branches containing commit-hash](https://github.com/git-tips/tips#find-out-branches-containing-commit-hash)
 * [Git Aliases](https://github.com/git-tips/tips#git-aliases)
@@ -36,6 +38,7 @@
 * [Delete all stored stashes](https://github.com/git-tips/tips#delete-all-stored-stashes)
 * [Show all tracked files](https://github.com/git-tips/tips#show-all-tracked-files)
 * [Show all untracked files](https://github.com/git-tips/tips#show-all-untracked-files)
+* [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -129,6 +132,11 @@ git push origin :<remote_branchname>
 git checkout -- <file_name>
 ```
 
+## Reword the previous commit message
+```sh
+git commit -v --amend
+```
+
 ## Changing a remote's URL
 ```sh
 git remote set-url origin <URL>
@@ -168,6 +176,11 @@ curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completio
 ## What changed since two weeks?
 ```sh
 git whatchanged --since='2 weeks ago'
+```
+
+## See all commits made since forking from master
+```sh
+git log --no-merges --stat --reverse master..
 ```
 
 ## Pick commits across branches using cherry-pick
@@ -237,6 +250,11 @@ git ls-files -t
 ## Show all untracked files
 ```sh
 git ls-files --others
+```
+
+## Show all ignored files
+```sh
+git ls-files --others -i --exclude-standard
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
