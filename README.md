@@ -39,6 +39,8 @@
 * [Show all tracked files](https://github.com/git-tips/tips#show-all-tracked-files)
 * [Show all untracked files](https://github.com/git-tips/tips#show-all-untracked-files)
 * [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
+* [Create new working tree from a repository (git 2.5)](https://github.com/git-tips/tips#create-new-working-tree-from-a-repository-git-25)
+* [Create new working tree from HEAD state](https://github.com/git-tips/tips#create-new-working-tree-from-head-state)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -255,6 +257,16 @@ git ls-files --others
 ## Show all ignored files
 ```sh
 git ls-files --others -i --exclude-standard
+```
+
+## Create new working tree from a repository (git 2.5)
+```sh
+git worktree add -b <branch-name> <path> <start-point>
+```
+
+## Create new working tree from HEAD state
+```sh
+git worktree add --detach <path> HEAD
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
