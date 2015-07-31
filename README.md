@@ -19,6 +19,8 @@
 * [Delete local branch](https://github.com/git-tips/tips#delete-local-branch)
 * [Delete remote branch](https://github.com/git-tips/tips#delete-remote-branch)
 * [Undo local changes with the last content in head](https://github.com/git-tips/tips#undo-local-changes-with-the-last-content-in-head)
+* [Revert: Undo a commit by creating a new commit](https://github.com/git-tips/tips#revert-undo-a-commit-by-creating-a-new-commit)
+* [Resert: Discard commits, advised for private branch](https://github.com/git-tips/tips#resert-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](https://github.com/git-tips/tips#reword-the-previous-commit-message)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
 * [Get list of all remote references](https://github.com/git-tips/tips#get-list-of-all-remote-references)
@@ -132,6 +134,16 @@ git push origin :<remote_branchname>
 ## Undo local changes with the last content in head
 ```sh
 git checkout -- <file_name>
+```
+
+## Revert: Undo a commit by creating a new commit
+```sh
+git revert <commit-ish>
+```
+
+## Resert: Discard commits, advised for private branch
+```sh
+git reset <commit-ish>
 ```
 
 ## Reword the previous commit message
