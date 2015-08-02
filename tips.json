@@ -65,6 +65,14 @@
       "tip": "git checkout -- <file_name>"
   },
   {
+      "title":"Revert: Undo a commit by creating a new commit",
+      "tip":"git revert <commit-ish>"
+  },
+  {
+      "title":"Resert: Discard commits, advised for private branch",
+      "tip":"git reset <commit-ish>"
+  },
+  {
       "title": "Reword the previous commit message",
       "tip": "git commit -v --amend"
   },
@@ -147,5 +155,13 @@
   {
       "title": "Show all ignored files",
       "tip": "git ls-files --others -i --exclude-standard"
+  },
+  {
+      "title": "Create new working tree from a repository (git 2.5)",
+      "tip":"git worktree add -b <branch-name> <path> <start-point>"
+  },
+  {
+      "title": "Create new working tree from HEAD state",
+      "tip": "git worktree add --detach <path> HEAD"
   }
 ]
