@@ -69,7 +69,7 @@
       "tip":"git revert <commit-ish>"
   },
   {
-      "title":"Resert: Discard commits, advised for private branch",
+      "title":"Reset: Discard commits, advised for private branch",
       "tip":"git reset <commit-ish>"
   },
   {
@@ -124,7 +124,13 @@
   },
   {
       "title":"Saving current state of tracked files without commiting",
-      "tip": "git stash"
+      "tip": "git stash",
+      "alternatives": ["git stash save"]
+  },
+  {
+      "title":"Saving current state including untracked files",
+      "tip": "git stash save -u",
+      "alternatives": ["git stash save --include-untracked"]
   },
   {
       "title":"Show list of all saved stashes",
