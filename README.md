@@ -20,7 +20,7 @@
 * [Delete remote branch](https://github.com/git-tips/tips#delete-remote-branch)
 * [Undo local changes with the last content in head](https://github.com/git-tips/tips#undo-local-changes-with-the-last-content-in-head)
 * [Revert: Undo a commit by creating a new commit](https://github.com/git-tips/tips#revert-undo-a-commit-by-creating-a-new-commit)
-* [Resert: Discard commits, advised for private branch](https://github.com/git-tips/tips#resert-discard-commits-advised-for-private-branch)
+* [Reset: Discard commits, advised for private branch](https://github.com/git-tips/tips#reset-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](https://github.com/git-tips/tips#reword-the-previous-commit-message)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
 * [Get list of all remote references](https://github.com/git-tips/tips#get-list-of-all-remote-references)
@@ -34,6 +34,7 @@
 * [Find out branches containing commit-hash](https://github.com/git-tips/tips#find-out-branches-containing-commit-hash)
 * [Git Aliases](https://github.com/git-tips/tips#git-aliases)
 * [Saving current state of tracked files without commiting](https://github.com/git-tips/tips#saving-current-state-of-tracked-files-without-commiting)
+* [Saving current state including untracked files](https://github.com/git-tips/tips#saving-current-state-including-untracked-files)
 * [Show list of all saved stashes](https://github.com/git-tips/tips#show-list-of-all-saved-stashes)
 * [Apply any stash without deleting from the stashed list](https://github.com/git-tips/tips#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](https://github.com/git-tips/tips#apply-last-stashed-state-and-delete-it-from-stashed-list)
@@ -141,7 +142,7 @@ git checkout -- <file_name>
 git revert <commit-ish>
 ```
 
-## Resert: Discard commits, advised for private branch
+## Reset: Discard commits, advised for private branch
 ```sh
 git reset <commit-ish>
 ```
@@ -222,6 +223,23 @@ git config --global alias.st status
 ## Saving current state of tracked files without commiting
 ```sh
 git stash
+```
+
+
+__Alternatives:__
+```sh
+git stash save
+```
+
+## Saving current state including untracked files
+```sh
+git stash save -u
+```
+
+
+__Alternatives:__
+```sh
+git stash save --include-untracked
 ```
 
 ## Show list of all saved stashes
