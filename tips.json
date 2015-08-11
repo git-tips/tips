@@ -169,5 +169,18 @@
   {
       "title": "Create new working tree from HEAD state",
       "tip": "git worktree add --detach <path> HEAD"
+  },
+  {
+    "title": "Before deleting untracked files/directory, do a dry run to get the list of these files/directories",
+    "tip": "git clean -n"
+  },
+  {
+    "title": "Forcefully remove untracked files",
+    "tip": "git clean -f"
+  },
+  {
+    "title": "Forcefully remove untracked directory",
+    "tip": "git clean -f -d",
+    "alternatives": ["git clean -df"]
   }
 ]

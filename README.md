@@ -44,6 +44,9 @@
 * [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
 * [Create new working tree from a repository (git 2.5)](https://github.com/git-tips/tips#create-new-working-tree-from-a-repository-git-25)
 * [Create new working tree from HEAD state](https://github.com/git-tips/tips#create-new-working-tree-from-head-state)
+* [Before deleting untracked files/directory, do a dry run to get the list of these files/directories](https://github.com/git-tips/tips#before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories)
+* [Forcefully remove untracked files](https://github.com/git-tips/tips#forcefully-remove-untracked-files)
+* [Forcefully remove untracked directory](https://github.com/git-tips/tips#forcefully-remove-untracked-directory)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -297,6 +300,27 @@ git worktree add -b <branch-name> <path> <start-point>
 ## Create new working tree from HEAD state
 ```sh
 git worktree add --detach <path> HEAD
+```
+
+## Before deleting untracked files/directory, do a dry run to get the list of these files/directories
+```sh
+git clean -n
+```
+
+## Forcefully remove untracked files
+```sh
+git clean -f
+```
+
+## Forcefully remove untracked directory
+```sh
+git clean -f -d
+```
+
+
+__Alternatives:__
+```sh
+git clean -df
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
