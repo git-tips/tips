@@ -317,5 +317,11 @@ git clean -f
 git clean -f -d
 ```
 
+
+__Alternatives:__
+```sh
+git clean -df
+```
+
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end -->
