@@ -180,6 +180,7 @@
   },
   {
     "title": "Forcefully remove untracked directory",
-    "tip": "git clean -f -d"
+    "tip": "git clean -f -d",
+    "alternatives": "git clean -df"
   }
 ]
