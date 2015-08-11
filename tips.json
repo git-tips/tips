@@ -169,5 +169,13 @@
   {
       "title": "Create new working tree from HEAD state",
       "tip": "git worktree add --detach <path> HEAD"
+  },
+  {
+    "title": "Forcefully remove untracked files",
+    "tip": "git clean -f"
+  },
+  {
+    "title": "Forcefully remove unstracted directory",
+    "tip": "git clean -f -d"
   }
 ]

@@ -44,6 +44,8 @@
 * [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
 * [Create new working tree from a repository (git 2.5)](https://github.com/git-tips/tips#create-new-working-tree-from-a-repository-git-25)
 * [Create new working tree from HEAD state](https://github.com/git-tips/tips#create-new-working-tree-from-head-state)
+* [Forcefully remove untracked files](https://github.com/git-tips/tips#forcefully-remove-untracked-files)
+* [Forcefully remove unstracted directory](https://github.com/git-tips/tips#forcefully-remove-unstracted-directory)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -297,6 +299,16 @@ git worktree add -b <branch-name> <path> <start-point>
 ## Create new working tree from HEAD state
 ```sh
 git worktree add --detach <path> HEAD
+```
+
+## Forcefully remove untracked files
+```sh
+git clean -f
+```
+
+## Forcefully remove unstracted directory
+```sh
+git clean -f -d
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
