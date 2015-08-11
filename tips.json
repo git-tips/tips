@@ -171,11 +171,15 @@
       "tip": "git worktree add --detach <path> HEAD"
   },
   {
+    "title": "Before deleting untracked files/directory, do a dry run to get the list of untracked files/directory",
+    "tip": "git clean -n"
+  },
+  {
     "title": "Forcefully remove untracked files",
     "tip": "git clean -f"
   },
   {
-    "title": "Forcefully remove unstracted directory",
+    "title": "Forcefully remove untracked directory",
     "tip": "git clean -f -d"
   }
 ]
