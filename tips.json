@@ -182,5 +182,9 @@
     "title": "Forcefully remove untracked directory",
     "tip": "git clean -f -d",
     "alternatives": ["git clean -df"]
+  },
+  {
+    "title": "Update all the submoudles",
+    "tip": "git submodule foreach git pull"
   }
 ]
