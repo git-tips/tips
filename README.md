@@ -204,7 +204,7 @@ git log --no-merges --stat --reverse master..
 
 ## Pick commits across branches using cherry-pick
 ```sh
-git checkout <branch-name> && cherry-pick <commit-ish>
+git checkout <branch-name> && git cherry-pick <commit-ish>
 ```
 
 ## Find out branches containing commit-hash
@@ -324,7 +324,7 @@ __Alternatives:__
 git clean -df
 ```
 
-## Update all the submoudles
+## Update all the submodules
 ```sh
 git submodule foreach git pull
 ```
