@@ -47,7 +47,7 @@
 * [Before deleting untracked files/directory, do a dry run to get the list of these files/directories](https://github.com/git-tips/tips#before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories)
 * [Forcefully remove untracked files](https://github.com/git-tips/tips#forcefully-remove-untracked-files)
 * [Forcefully remove untracked directory](https://github.com/git-tips/tips#forcefully-remove-untracked-directory)
-* [Update all the submoudles](https://github.com/git-tips/tips#update-all-the-submoudles)
+* [Update all the submodules](https://github.com/git-tips/tips#update-all-the-submodules)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
