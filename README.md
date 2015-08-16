@@ -48,6 +48,7 @@
 * [Forcefully remove untracked files](https://github.com/git-tips/tips#forcefully-remove-untracked-files)
 * [Forcefully remove untracked directory](https://github.com/git-tips/tips#forcefully-remove-untracked-directory)
 * [Update all the submodules](https://github.com/git-tips/tips#update-all-the-submodules)
+* [Show all commits in the current branch yet to be merged to master](https://github.com/git-tips/tips#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -204,7 +205,7 @@ git log --no-merges --stat --reverse master..
 
 ## Pick commits across branches using cherry-pick
 ```sh
-git checkout <branch-name> && git cherry-pick <commit-ish>
+git checkout <branch-name> && cherry-pick <commit-ish>
 ```
 
 ## Find out branches containing commit-hash
@@ -327,6 +328,17 @@ git clean -df
 ## Update all the submodules
 ```sh
 git submodule foreach git pull
+```
+
+## Show all commits in the current branch yet to be merged to master
+```sh
+git cherry -v master
+```
+
+
+__Alternatives:__
+```sh
+git cherry -v master <branch-to-be-merged>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
