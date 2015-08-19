@@ -191,5 +191,10 @@
     "title": "Show all commits in the current branch yet to be merged to master",
     "tip": "git cherry -v master",
     "alternatives": ["git cherry -v master <branch-to-be-merged>"]
+  },
+  {
+    "title": "Rename a branch",
+    "tip": "git branch -m <new-branch-name>",
+    "alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
   }
 ]
