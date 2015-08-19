@@ -49,6 +49,7 @@
 * [Forcefully remove untracked directory](https://github.com/git-tips/tips#forcefully-remove-untracked-directory)
 * [Update all the submodules](https://github.com/git-tips/tips#update-all-the-submodules)
 * [Show all commits in the current branch yet to be merged to master](https://github.com/git-tips/tips#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
+* [Rename a branch](https://github.com/git-tips/tips#rename-a-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -339,6 +340,17 @@ git cherry -v master
 __Alternatives:__
 ```sh
 git cherry -v master <branch-to-be-merged>
+```
+
+## Rename a branch
+```sh
+git branch -m <new-branch-name>
+```
+
+
+__Alternatives:__
+```sh
+git branch -m [<old-branch-name>] <new-branch-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
