@@ -200,5 +200,9 @@
   {
     "title": "rebases 'feature' to 'master' and merges it in to master ",
     "tip": "git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}"
+  },
+  {
+    "title": "Archive the `master` branch",
+    "tip": "git archive master --format=zip --output=master.zip"
   }
 ]

@@ -51,6 +51,7 @@
 * [Show all commits in the current branch yet to be merged to master](https://github.com/git-tips/tips#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
 * [Rename a branch](https://github.com/git-tips/tips#rename-a-branch)
 * [rebases 'feature' to 'master' and merges it in to master ](https://github.com/git-tips/tips#rebases-feature-to-master-and-merges-it-in-to-master)
+* [Archive the `master` branch](https://github.com/git-tips/tips#archive-the-master-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -357,6 +358,11 @@ git branch -m [<old-branch-name>] <new-branch-name>
 ## rebases 'feature' to 'master' and merges it in to master 
 ```sh
 git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}
+```
+
+## Archive the `master` branch
+```sh
+git archive master --format=zip --output=master.zip
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
