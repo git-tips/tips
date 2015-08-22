@@ -204,5 +204,9 @@
   {
     "title": "Archive the `master` branch",
     "tip": "git archive master --format=zip --output=master.zip"
+  },
+  {
+    "title": "Modify previous commit without modifying the commit message",
+    "tip": "git add --all && git commit --amend --no-edit"
   }
 ]
