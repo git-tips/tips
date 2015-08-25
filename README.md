@@ -53,6 +53,7 @@
 * [rebases 'feature' to 'master' and merges it in to master ](https://github.com/git-tips/tips#rebases-feature-to-master-and-merges-it-in-to-master)
 * [Archive the `master` branch](https://github.com/git-tips/tips#archive-the-master-branch)
 * [Modify previous commit without modifying the commit message](https://github.com/git-tips/tips#modify-previous-commit-without-modifying-the-commit-message)
+* [Purnes branches that have been deleted in the remote.](https://github.com/git-tips/tips#purnes-branches-that-have-been-deleted-in-the-remote)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -369,6 +370,17 @@ git archive master --format=zip --output=master.zip
 ## Modify previous commit without modifying the commit message
 ```sh
 git add --all && git commit --amend --no-edit
+```
+
+## Purnes branches that have been deleted in the remote.
+```sh
+git fetch -p
+```
+
+
+__Alternatives:__
+```sh
+git remote prune origin
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

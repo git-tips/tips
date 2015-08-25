@@ -208,5 +208,10 @@
   {
     "title": "Modify previous commit without modifying the commit message",
     "tip": "git add --all && git commit --amend --no-edit"
+  },
+  {
+    "title": "Purnes branches that have been deleted in the remote.",
+    "tip": "git fetch -p",
+    "alternatives":["git remote prune origin"]
   }
 ]
