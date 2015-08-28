@@ -213,5 +213,9 @@
     "title": "Purnes branches that have been deleted in the remote.",
     "tip": "git fetch -p",
     "alternatives":["git remote prune origin"]
+  },
+  {
+    "title": "Retrieve the commit hash of the initial revision.",
+    "tip": " git rev-list --reverse HEAD | head -1"
   }
 ]

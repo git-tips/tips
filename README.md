@@ -54,6 +54,7 @@
 * [Archive the `master` branch](https://github.com/git-tips/tips#archive-the-master-branch)
 * [Modify previous commit without modifying the commit message](https://github.com/git-tips/tips#modify-previous-commit-without-modifying-the-commit-message)
 * [Purnes branches that have been deleted in the remote.](https://github.com/git-tips/tips#purnes-branches-that-have-been-deleted-in-the-remote)
+* [Retrieve the commit hash of the initial revision.](https://github.com/git-tips/tips#retrieve-the-commit-hash-of-the-initial-revision)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -381,6 +382,11 @@ git fetch -p
 __Alternatives:__
 ```sh
 git remote prune origin
+```
+
+## Retrieve the commit hash of the initial revision.
+```sh
+ git rev-list --reverse HEAD | head -1
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
