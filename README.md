@@ -55,6 +55,7 @@
 * [Modify previous commit without modifying the commit message](https://github.com/git-tips/tips#modify-previous-commit-without-modifying-the-commit-message)
 * [Purnes branches that have been deleted in the remote.](https://github.com/git-tips/tips#purnes-branches-that-have-been-deleted-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](https://github.com/git-tips/tips#retrieve-the-commit-hash-of-the-initial-revision)
+* [Visualize the version tree.](https://github.com/git-tips/tips#visualize-the-version-tree)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -387,6 +388,17 @@ git remote prune origin
 ## Retrieve the commit hash of the initial revision.
 ```sh
  git rev-list --reverse HEAD | head -1
+```
+
+## Visualize the version tree.
+```sh
+git log --pretty=oneline --graph --decorate --all
+```
+
+
+__Alternatives:__
+```sh
+gitk --all
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

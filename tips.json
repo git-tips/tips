@@ -217,5 +217,10 @@
   {
     "title": "Retrieve the commit hash of the initial revision.",
     "tip": " git rev-list --reverse HEAD | head -1"
+  },
+  {
+    "title": "Visualize the version tree.",
+    "tip": "git log --pretty=oneline --graph --decorate --all",
+    "alternatives":["gitk --all"]
   }
 ]
