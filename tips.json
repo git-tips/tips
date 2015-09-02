@@ -229,7 +229,11 @@
     "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
   },
   {
-    "title": "Adding a project to repo using subtree. Lets say we are adding in vendor directory",
+    "title": "Adding a project to repo using subtree. For example we are adding in vendor directory",
     "tip": "git subtree add --prefix=vendor/<project_name> --squash git@github.com:<username>/<project_name>.git master"
+  },
+  {
+    "title": "Get latest changes in your repo for a linked subproject using subtree. For example we have the subproject in vendor directory",
+    "tip": "git subtree pull --prefix=vendor/<project_name> --squash git@github.com:<username>/<project_name>.git master"
   }
 ]
