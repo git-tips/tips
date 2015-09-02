@@ -56,6 +56,7 @@
 * [Purnes branches that have been deleted in the remote.](https://github.com/git-tips/tips#purnes-branches-that-have-been-deleted-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](https://github.com/git-tips/tips#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](https://github.com/git-tips/tips#visualize-the-version-tree)
+* [Deploying git tracked subfolder to gh-pages](https://github.com/git-tips/tips#deploying-git-tracked-subfolder-to-gh-pages)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -399,6 +400,11 @@ git log --pretty=oneline --graph --decorate --all
 __Alternatives:__
 ```sh
 gitk --all
+```
+
+## Deploying git tracked subfolder to gh-pages
+```sh
+git subtree push --prefix subfolder_name origin gh-pages
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
