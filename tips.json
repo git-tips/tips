@@ -227,5 +227,9 @@
     "title": "Deploying git tracked subfolder to gh-pages",
     "tip": "git subtree push --prefix subfolder_name origin gh-pages",
     "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
+  },
+  {
+    "title": "Adding a project to repo using subtree. Lets say we are adding in vendor directory",
+    "tip": "git subtree add --prefix=vendor/<project_name> --squash git@github.com:<username>/<project_name>.git master"
   }
 ]
