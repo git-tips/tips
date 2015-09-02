@@ -57,8 +57,8 @@
 * [Retrieve the commit hash of the initial revision.](https://github.com/git-tips/tips#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](https://github.com/git-tips/tips#visualize-the-version-tree)
 * [Deploying git tracked subfolder to gh-pages](https://github.com/git-tips/tips#deploying-git-tracked-subfolder-to-gh-pages)
-* [Adding a project to repo using subtree. For example we are adding in vendor directory](https://github.com/git-tips/tips#adding-a-project-to-repo-using-subtree-for-example-we-are-adding-in-vendor-directory)
-* [Get latest changes in your repo for a linked subproject using subtree. For example we have the subproject in vendor directory](https://github.com/git-tips/tips#get-latest-changes-in-your-repo-for-a-linked-subproject-using-subtree-for-example-we-have-the-subproject-in-vendor-directory)
+* [Adding a project to repo using subtree](https://github.com/git-tips/tips#adding-a-project-to-repo-using-subtree)
+* [Get latest changes in your repo for a linked project using subtree](https://github.com/git-tips/tips#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -409,14 +409,14 @@ gitk --all
 git subtree push --prefix subfolder_name origin gh-pages
 ```
 
-## Adding a project to repo using subtree. For example we are adding in vendor directory
+## Adding a project to repo using subtree
 ```sh
-git subtree add --prefix=vendor/<project_name> --squash git@github.com:<username>/<project_name>.git master
+git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master
 ```
 
-## Get latest changes in your repo for a linked subproject using subtree. For example we have the subproject in vendor directory
+## Get latest changes in your repo for a linked project using subtree
 ```sh
-git subtree pull --prefix=vendor/<project_name> --squash git@github.com:<username>/<project_name>.git master
+git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
