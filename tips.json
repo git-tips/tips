@@ -222,5 +222,18 @@
     "title": "Visualize the version tree.",
     "tip": "git log --pretty=oneline --graph --decorate --all",
     "alternatives":["gitk --all"]
+  },
+  {
+    "title": "Deploying git tracked subfolder to gh-pages",
+    "tip": "git subtree push --prefix subfolder_name origin gh-pages",
+    "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
+  },
+  {
+    "title": "Adding a project to repo using subtree",
+    "tip": "git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
+  },
+  {
+    "title": "Get latest changes in your repo for a linked project using subtree",
+    "tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
   }
 ]
