@@ -59,6 +59,7 @@
 * [Deploying git tracked subfolder to gh-pages](https://github.com/git-tips/tips#deploying-git-tracked-subfolder-to-gh-pages)
 * [Adding a project to repo using subtree](https://github.com/git-tips/tips#adding-a-project-to-repo-using-subtree)
 * [Get latest changes in your repo for a linked project using subtree](https://github.com/git-tips/tips#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
+* [Export a branch with history to the a file.](https://github.com/git-tips/tips#export-a-branch-with-history-to-the-a-file)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -417,6 +418,11 @@ git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com
 ## Get latest changes in your repo for a linked project using subtree
 ```sh
 git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master
+```
+
+## Export a branch with history to the a file.
+```sh
+git bundle create <file> <branch-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
