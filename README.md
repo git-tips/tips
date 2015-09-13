@@ -60,6 +60,7 @@
 * [Adding a project to repo using subtree](https://github.com/git-tips/tips#adding-a-project-to-repo-using-subtree)
 * [Get latest changes in your repo for a linked project using subtree](https://github.com/git-tips/tips#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
 * [Export a branch with history to the a file.](https://github.com/git-tips/tips#export-a-branch-with-history-to-the-a-file)
+* [Import form a bundle](https://github.com/git-tips/tips#import-form-a-bundle)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -423,6 +424,11 @@ git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.co
 ## Export a branch with history to the a file.
 ```sh
 git bundle create <file> <branch-name>
+```
+
+## Import form a bundle
+```sh
+git clone repo.bundle <repo-dir> -b <branch-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

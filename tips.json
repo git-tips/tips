@@ -239,5 +239,9 @@
   {
     "title": "Export a branch with history to the a file.",
     "tip": "git bundle create <file> <branch-name>"
+  },
+  {
+    "title": "Import form a bundle",
+    "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
   }
 ]
