@@ -243,5 +243,9 @@
   {
     "title": "Import form a bundle",
     "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
+  },
+  {
+    "title": "Get the name of current branch.",
+    "tip": "git rev-parse --abbrev-ref HEAD"
   }
 ]

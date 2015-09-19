@@ -61,6 +61,7 @@
 * [Get latest changes in your repo for a linked project using subtree](https://github.com/git-tips/tips#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
 * [Export a branch with history to the a file.](https://github.com/git-tips/tips#export-a-branch-with-history-to-the-a-file)
 * [Import form a bundle](https://github.com/git-tips/tips#import-form-a-bundle)
+* [Get the name of current branch.](https://github.com/git-tips/tips#get-the-name-of-current-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -429,6 +430,11 @@ git bundle create <file> <branch-name>
 ## Import form a bundle
 ```sh
 git clone repo.bundle <repo-dir> -b <branch-name>
+```
+
+## Get the name of current branch.
+```sh
+git rev-parse --abbrev-ref HEAD
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
