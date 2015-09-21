@@ -380,7 +380,7 @@ git archive master --format=zip --output=master.zip
 git add --all && git commit --amend --no-edit
 ```
 
-## Purnes branches that have been deleted in the remote.
+## Prunes branches that have been deleted in the remote.
 ```sh
 git fetch -p
 ```
