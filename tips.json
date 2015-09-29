@@ -247,5 +247,9 @@
   {
     "title": "Get the name of current branch.",
     "tip": "git rev-parse --abbrev-ref HEAD"
+  },
+  {
+    "title": "Ignore one file on commit (e.g. Changelog).",
+    "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
   }
 ]
