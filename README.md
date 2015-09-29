@@ -62,6 +62,7 @@
 * [Export a branch with history to the a file.](https://github.com/git-tips/tips#export-a-branch-with-history-to-the-a-file)
 * [Import form a bundle](https://github.com/git-tips/tips#import-form-a-bundle)
 * [Get the name of current branch.](https://github.com/git-tips/tips#get-the-name-of-current-branch)
+* [Ignore one file on commit (e.g. Changelog).](https://github.com/git-tips/tips#ignore-one-file-on-commit-eg-changelog)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -380,7 +381,7 @@ git archive master --format=zip --output=master.zip
 git add --all && git commit --amend --no-edit
 ```
 
-## Prunes branches that have been deleted in the remote.
+## Purnes branches that have been deleted in the remote.
 ```sh
 git fetch -p
 ```
@@ -435,6 +436,11 @@ git clone repo.bundle <repo-dir> -b <branch-name>
 ## Get the name of current branch.
 ```sh
 git rev-parse --abbrev-ref HEAD
+```
+
+## Ignore one file on commit (e.g. Changelog).
+```sh
+git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
