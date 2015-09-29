@@ -53,7 +53,7 @@
 * [rebases 'feature' to 'master' and merges it in to master ](https://github.com/git-tips/tips#rebases-feature-to-master-and-merges-it-in-to-master)
 * [Archive the `master` branch](https://github.com/git-tips/tips#archive-the-master-branch)
 * [Modify previous commit without modifying the commit message](https://github.com/git-tips/tips#modify-previous-commit-without-modifying-the-commit-message)
-* [Purnes branches that have been deleted in the remote.](https://github.com/git-tips/tips#purnes-branches-that-have-been-deleted-in-the-remote)
+* [Prunes branches that have been deleted in the remote.](https://github.com/git-tips/tips#prunes-branches-that-have-been-deleted-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](https://github.com/git-tips/tips#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](https://github.com/git-tips/tips#visualize-the-version-tree)
 * [Deploying git tracked subfolder to gh-pages](https://github.com/git-tips/tips#deploying-git-tracked-subfolder-to-gh-pages)
@@ -381,7 +381,7 @@ git archive master --format=zip --output=master.zip
 git add --all && git commit --amend --no-edit
 ```
 
-## Purnes branches that have been deleted in the remote.
+## Prunes branches that have been deleted in the remote.
 ```sh
 git fetch -p
 ```
