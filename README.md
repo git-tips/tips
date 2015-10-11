@@ -60,7 +60,7 @@
 * [Adding a project to repo using subtree](https://github.com/git-tips/tips#adding-a-project-to-repo-using-subtree)
 * [Get latest changes in your repo for a linked project using subtree](https://github.com/git-tips/tips#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
 * [Export a branch with history to the a file.](https://github.com/git-tips/tips#export-a-branch-with-history-to-the-a-file)
-* [Import form a bundle](https://github.com/git-tips/tips#import-form-a-bundle)
+* [Import from a bundle](https://github.com/git-tips/tips#import-from-a-bundle)
 * [Get the name of current branch.](https://github.com/git-tips/tips#get-the-name-of-current-branch)
 * [Ignore one file on commit (e.g. Changelog).](https://github.com/git-tips/tips#ignore-one-file-on-commit-eg-changelog)
 
@@ -428,7 +428,7 @@ git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.co
 git bundle create <file> <branch-name>
 ```
 
-## Import form a bundle
+## Import from a bundle
 ```sh
 git clone repo.bundle <repo-dir> -b <branch-name>
 ```
