@@ -251,5 +251,9 @@
   {
     "title": "Ignore one file on commit (e.g. Changelog).",
     "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
+  },
+  {
+    "title": "Visualize each position of HEAD in the last 30 days",
+    "tip": "git reflog"
   }
 ]
