@@ -63,6 +63,7 @@
 * [Import from a bundle](https://github.com/git-tips/tips#import-from-a-bundle)
 * [Get the name of current branch.](https://github.com/git-tips/tips#get-the-name-of-current-branch)
 * [Ignore one file on commit (e.g. Changelog).](https://github.com/git-tips/tips#ignore-one-file-on-commit-eg-changelog)
+* [Visualize each position of HEAD in the last 30 days](https://github.com/git-tips/tips#visualize-each-position-of-head-in-the-last-30-days)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -366,7 +367,7 @@ __Alternatives:__
 git branch -m [<old-branch-name>] <new-branch-name>
 ```
 
-## rebases 'feature' to 'master' and merges it in to master 
+## rebases 'feature' to 'master' and merges it in to master
 ```sh
 git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}
 ```
@@ -441,6 +442,11 @@ git rev-parse --abbrev-ref HEAD
 ## Ignore one file on commit (e.g. Changelog).
 ```sh
 git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog
+```
+
+## Visualize each position of HEAD in the last 30 days
+```sh
+git reflog
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
