@@ -259,5 +259,10 @@
   {
     "title": "Stash changes before rebasing",
     "tip": "git rebase --autostash"
+  },
+  {
+    "title": "Fetch pull request by ID to a local branch",
+    "tip": "git fetch origin pull/<id>/head:<branch-name>",
+    "alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
   }
 ]
