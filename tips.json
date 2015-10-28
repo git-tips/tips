@@ -255,5 +255,9 @@
   {
     "title": "Ignore one file on commit (e.g. Changelog).",
     "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
+  },
+  {
+    "title": "Stash changes before rebasing",
+    "tip": "git rebase --autostash"
   }
 ]
