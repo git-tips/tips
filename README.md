@@ -3,6 +3,7 @@
 
 <!-- @doxie.inject start toc -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
+* [Everyday Git in twenty commands or so](https://github.com/git-tips/tips#everyday-git-in-twenty-commands-or-so)
 * [Overwrite pull](https://github.com/git-tips/tips#overwrite-pull)
 * [List of all files till a commit](https://github.com/git-tips/tips#list-of-all-files-till-a-commit)
 * [Git reset first commit](https://github.com/git-tips/tips#git-reset-first-commit)
@@ -63,6 +64,7 @@
 * [Import from a bundle](https://github.com/git-tips/tips#import-from-a-bundle)
 * [Get the name of current branch.](https://github.com/git-tips/tips#get-the-name-of-current-branch)
 * [Ignore one file on commit (e.g. Changelog).](https://github.com/git-tips/tips#ignore-one-file-on-commit-eg-changelog)
+* [Stash changes before rebasing](https://github.com/git-tips/tips#stash-changes-before-rebasing)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -70,6 +72,11 @@
 
 <!-- @doxie.inject start -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
+## Everyday Git in twenty commands or so
+```sh
+git help everyday
+```
+
 ## Overwrite pull
 ```sh
 git fetch --all && git reset --hard origin/master
@@ -441,6 +448,11 @@ git rev-parse --abbrev-ref HEAD
 ## Ignore one file on commit (e.g. Changelog).
 ```sh
 git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog
+```
+
+## Stash changes before rebasing
+```sh
+git rebase --autostash
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
