@@ -1,5 +1,9 @@
 [
   {
+      "title": "Everyday Git in twenty commands or so",
+      "tip": "git help everyday"
+  },
+  {
       "title": "Overwrite pull",
       "tip": "git fetch --all && git reset --hard origin/master"
   },
@@ -241,7 +245,7 @@
     "tip": "git bundle create <file> <branch-name>"
   },
   {
-    "title": "Import form a bundle",
+    "title": "Import from a bundle",
     "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
   },
   {
