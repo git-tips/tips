@@ -65,6 +65,7 @@
 * [Get the name of current branch.](https://github.com/git-tips/tips#get-the-name-of-current-branch)
 * [Ignore one file on commit (e.g. Changelog).](https://github.com/git-tips/tips#ignore-one-file-on-commit-eg-changelog)
 * [Stash changes before rebasing](https://github.com/git-tips/tips#stash-changes-before-rebasing)
+* [Fetch pull request by ID to a local branch](https://github.com/git-tips/tips#fetch-pull-request-by-id-to-a-local-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -453,6 +454,17 @@ git update-index --assume-unchanged Changelog; git commit -a; git update-index -
 ## Stash changes before rebasing
 ```sh
 git rebase --autostash
+```
+
+## Fetch pull request by ID to a local branch
+```sh
+git fetch origin pull/<id>/head:<branch-name>
+```
+
+
+__Alternatives:__
+```sh
+git pull origin pull/<id>/head:<branch-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
