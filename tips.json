@@ -264,5 +264,9 @@
     "title": "Fetch pull request by ID to a local branch",
     "tip": "git fetch origin pull/<id>/head:<branch-name>",
     "alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
+  },
+  {
+    "title": "Show the most recent tag on the current branch",
+    "tip": "git describe --tags --abbrev=0"
   }
 ]
