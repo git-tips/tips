@@ -4,6 +4,7 @@
 <!-- @doxie.inject start toc -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
 * [Everyday Git in twenty commands or so](https://github.com/git-tips/tips#everyday-git-in-twenty-commands-or-so)
+* [Show helpful guides that come with Git](https://github.com/git-tips/tips#show-helpful-guides-that-come-with-git)
 * [Overwrite pull](https://github.com/git-tips/tips#overwrite-pull)
 * [List of all files till a commit](https://github.com/git-tips/tips#list-of-all-files-till-a-commit)
 * [Git reset first commit](https://github.com/git-tips/tips#git-reset-first-commit)
@@ -77,6 +78,11 @@
 ## Everyday Git in twenty commands or so
 ```sh
 git help everyday
+```
+
+## Show helpful guides that come with Git
+```sh
+git help -g
 ```
 
 ## Overwrite pull

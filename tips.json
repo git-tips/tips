@@ -4,6 +4,10 @@
       "tip": "git help everyday"
   },
   {
+      "title": "Show helpful guides that come with Git",
+      "tip": "git help -g"
+  },
+  {
       "title": "Overwrite pull",
       "tip": "git fetch --all && git reset --hard origin/master"
   },
