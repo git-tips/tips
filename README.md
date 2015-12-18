@@ -67,7 +67,8 @@
 * [Ignore one file on commit (e.g. Changelog).](https://github.com/git-tips/tips#ignore-one-file-on-commit-eg-changelog)
 * [Stash changes before rebasing](https://github.com/git-tips/tips#stash-changes-before-rebasing)
 * [Fetch pull request by ID to a local branch](https://github.com/git-tips/tips#fetch-pull-request-by-id-to-a-local-branch)
-* [Show the most recent tag on the current branch](https://github.com/git-tips/tips#show-the-most-recent-tag-on-the-current-branch)
+* [Show the most recent tag on the current branch.](https://github.com/git-tips/tips#show-the-most-recent-tag-on-the-current-branch)
+* [Show inline word diff.](https://github.com/git-tips/tips#show-inline-word-diff)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -474,9 +475,14 @@ __Alternatives:__
 git pull origin pull/<id>/head:<branch-name>
 ```
 
-## Show the most recent tag on the current branch
+## Show the most recent tag on the current branch.
 ```sh
 git describe --tags --abbrev=0
+```
+
+## Show inline word diff.
+```sh
+git diff --word-diff
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

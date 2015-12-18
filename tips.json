@@ -270,7 +270,11 @@
     "alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
   },
   {
-    "title": "Show the most recent tag on the current branch",
+    "title": "Show the most recent tag on the current branch.",
     "tip": "git describe --tags --abbrev=0"
+  },
+  {
+    "title": "Show inline word diff.",
+    "tip": "git diff --word-diff"
   }
 ]
