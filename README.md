@@ -69,6 +69,8 @@
 * [Fetch pull request by ID to a local branch](https://github.com/git-tips/tips#fetch-pull-request-by-id-to-a-local-branch)
 * [Show the most recent tag on the current branch.](https://github.com/git-tips/tips#show-the-most-recent-tag-on-the-current-branch)
 * [Show inline word diff.](https://github.com/git-tips/tips#show-inline-word-diff)
+* [Don’t consider changes for tracked file.](https://github.com/git-tips/tips#dont-consider-changes-for-tracked-file)
+* [Undo assume-unchanged.](https://github.com/git-tips/tips#undo-assume-unchanged)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -483,6 +485,16 @@ git describe --tags --abbrev=0
 ## Show inline word diff.
 ```sh
 git diff --word-diff
+```
+
+## Don’t consider changes for tracked file.
+```sh
+git update-index --assume-unchanged <file_name>
+```
+
+## Undo assume-unchanged.
+```sh
+git update-index --no-assume-unchanged <file_name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

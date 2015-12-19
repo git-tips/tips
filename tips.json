@@ -276,5 +276,13 @@
   {
     "title": "Show inline word diff.",
     "tip": "git diff --word-diff"
+  },
+  {
+  	"title": "Don’t consider changes for tracked file.",
+  	"tip": "git update-index --assume-unchanged <file_name>"
+  },
+  {
+  	"title": "Undo assume-unchanged.",
+  	"tip": "git update-index --no-assume-unchanged <file_name>"
   }
 ]
