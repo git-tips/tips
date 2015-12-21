@@ -71,6 +71,7 @@
 * [Show inline word diff.](https://github.com/git-tips/tips#show-inline-word-diff)
 * [Don’t consider changes for tracked file.](https://github.com/git-tips/tips#dont-consider-changes-for-tracked-file)
 * [Undo assume-unchanged.](https://github.com/git-tips/tips#undo-assume-unchanged)
+* [Clean the files from `.gitignore`.](https://github.com/git-tips/tips#clean-the-files-from-gitignore)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -495,6 +496,11 @@ git update-index --assume-unchanged <file_name>
 ## Undo assume-unchanged.
 ```sh
 git update-index --no-assume-unchanged <file_name>
+```
+
+## Clean the files from `.gitignore`.
+```sh
+git clean -X -f
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
