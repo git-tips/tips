@@ -288,5 +288,9 @@
 	{
 		"title": "Clean the files from `.gitignore`.",
 		"tip": "git clean -X -f"
+	},
+	{
+		"title": "Restore deleted file.",
+		"tip": "git checkout <deleting_commit>^ -- <file_path>"
 	}
 ]

@@ -72,6 +72,7 @@
 * [Don’t consider changes for tracked file.](https://github.com/git-tips/tips#dont-consider-changes-for-tracked-file)
 * [Undo assume-unchanged.](https://github.com/git-tips/tips#undo-assume-unchanged)
 * [Clean the files from `.gitignore`.](https://github.com/git-tips/tips#clean-the-files-from-gitignore)
+* [Restore deleted file.](https://github.com/git-tips/tips#restore-deleted-file)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -501,6 +502,11 @@ git update-index --no-assume-unchanged <file_name>
 ## Clean the files from `.gitignore`.
 ```sh
 git clean -X -f
+```
+
+## Restore deleted file.
+```sh
+git checkout <deleting_commit>^ -- <file_path>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
