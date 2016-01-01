@@ -292,5 +292,9 @@
 	{
 		"title": "Restore deleted file.",
 		"tip": "git checkout <deleting_commit>^ -- <file_path>"
+	},
+	{
+		"title": "Always rebase instead of merge on pull.",
+		"tip": "git config --global branch.autosetuprebase always"
 	}
 ]

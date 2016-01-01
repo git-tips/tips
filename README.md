@@ -73,6 +73,7 @@
 * [Undo assume-unchanged.](https://github.com/git-tips/tips#undo-assume-unchanged)
 * [Clean the files from `.gitignore`.](https://github.com/git-tips/tips#clean-the-files-from-gitignore)
 * [Restore deleted file.](https://github.com/git-tips/tips#restore-deleted-file)
+* [Always rebase instead of merge on pull.](https://github.com/git-tips/tips#always-rebase-instead-of-merge-on-pull)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -507,6 +508,11 @@ git clean -X -f
 ## Restore deleted file.
 ```sh
 git checkout <deleting_commit>^ -- <file_path>
+```
+
+## Always rebase instead of merge on pull.
+```sh
+git config --global branch.autosetuprebase always
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
