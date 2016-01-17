@@ -24,6 +24,7 @@
 * [Revert: Undo a commit by creating a new commit](https://github.com/git-tips/tips#revert-undo-a-commit-by-creating-a-new-commit)
 * [Reset: Discard commits, advised for private branch](https://github.com/git-tips/tips#reset-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](https://github.com/git-tips/tips#reword-the-previous-commit-message)
+* [Amend author.](https://github.com/git-tips/tips#amend-author)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
 * [Get list of all remote references](https://github.com/git-tips/tips#get-list-of-all-remote-references)
 * [Get list of all local and remote branches](https://github.com/git-tips/tips#get-list-of-all-local-and-remote-branches)
@@ -190,6 +191,11 @@ git reset <commit-ish>
 ## Reword the previous commit message
 ```sh
 git commit -v --amend
+```
+
+## Amend author.
+```sh
+git commit --amend --author='Author Name <email@address.com>'
 ```
 
 ## Changing a remote's URL

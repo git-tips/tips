@@ -85,6 +85,10 @@
 			"tip": "git commit -v --amend"
 	},
 	{
+			"title": "Amend author.",
+			"tip": "git commit --amend --author='Author Name <email@address.com>'"
+	},
+	{
 			"title": "Changing a remote's URL",
 			"tip": "git remote set-url origin <URL>"
 	},
