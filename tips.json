@@ -89,6 +89,10 @@
 			"tip": "git commit --amend --author='Author Name <email@address.com>'"
 	},
 	{
+			"title": "Reset author, after author has been changed in the global config.",
+			"tip": "git commit --amend --reset-author --no-edit"
+	},
+	{
 			"title": "Changing a remote's URL",
 			"tip": "git remote set-url origin <URL>"
 	},

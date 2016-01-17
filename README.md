@@ -25,6 +25,7 @@
 * [Reset: Discard commits, advised for private branch](https://github.com/git-tips/tips#reset-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](https://github.com/git-tips/tips#reword-the-previous-commit-message)
 * [Amend author.](https://github.com/git-tips/tips#amend-author)
+* [Reset author, after author has been changed in the global config.](https://github.com/git-tips/tips#reset-author-after-author-has-been-changed-in-the-global-config)
 * [Changing a remote's URL](https://github.com/git-tips/tips#changing-a-remotes-url)
 * [Get list of all remote references](https://github.com/git-tips/tips#get-list-of-all-remote-references)
 * [Get list of all local and remote branches](https://github.com/git-tips/tips#get-list-of-all-local-and-remote-branches)
@@ -196,6 +197,11 @@ git commit -v --amend
 ## Amend author.
 ```sh
 git commit --amend --author='Author Name <email@address.com>'
+```
+
+## Reset author, after author has been changed in the global config.
+```sh
+git commit --amend --reset-author --no-edit
 ```
 
 ## Changing a remote's URL
