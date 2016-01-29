@@ -76,6 +76,7 @@
 * [Clean the files from `.gitignore`.](https://github.com/git-tips/tips#clean-the-files-from-gitignore)
 * [Restore deleted file.](https://github.com/git-tips/tips#restore-deleted-file)
 * [Always rebase instead of merge on pull.](https://github.com/git-tips/tips#always-rebase-instead-of-merge-on-pull)
+* [List all the alias and configs.](https://github.com/git-tips/tips#list-all-the-alias-and-configs)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -525,6 +526,11 @@ git checkout <deleting_commit>^ -- <file_path>
 ## Always rebase instead of merge on pull.
 ```sh
 git config --global branch.autosetuprebase always
+```
+
+## List all the alias and configs.
+```sh
+git config --list
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
