@@ -77,6 +77,7 @@
 * [Restore deleted file.](https://github.com/git-tips/tips#restore-deleted-file)
 * [Always rebase instead of merge on pull.](https://github.com/git-tips/tips#always-rebase-instead-of-merge-on-pull)
 * [List all the alias and configs.](https://github.com/git-tips/tips#list-all-the-alias-and-configs)
+* [Make git case sensitive.](https://github.com/git-tips/tips#make-git-case-sensitive)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -531,6 +532,11 @@ git config --global branch.autosetuprebase always
 ## List all the alias and configs.
 ```sh
 git config --list
+```
+
+## Make git case sensitive.
+```sh
+git config --global core.ignorecase false
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

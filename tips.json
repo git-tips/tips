@@ -234,4 +234,7 @@
 }, {
 	"title": "List all the alias and configs.",
 	"tip": "git config --list"
+}, {
+	"title": "Make git case sensitive.",
+	"tip": "git config --global core.ignorecase false"
 }]
