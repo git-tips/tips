@@ -237,4 +237,7 @@
 }, {
 	"title": "Make git case sensitive.",
 	"tip": "git config --global core.ignorecase false"
+}, {
+	"title": "Auto correct typos.",
+	"tip": "git config --global help.autocorrect 1"
 }]

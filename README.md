@@ -78,6 +78,7 @@
 * [Always rebase instead of merge on pull.](https://github.com/git-tips/tips#always-rebase-instead-of-merge-on-pull)
 * [List all the alias and configs.](https://github.com/git-tips/tips#list-all-the-alias-and-configs)
 * [Make git case sensitive.](https://github.com/git-tips/tips#make-git-case-sensitive)
+* [Auto correct typos.](https://github.com/git-tips/tips#auto-correct-typos)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -537,6 +538,11 @@ git config --list
 ## Make git case sensitive.
 ```sh
 git config --global core.ignorecase false
+```
+
+## Auto correct typos.
+```sh
+git config --global help.autocorrect 1
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
