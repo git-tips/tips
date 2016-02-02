@@ -240,4 +240,7 @@
 }, {
 	"title": "Auto correct typos.",
 	"tip": "git config --global help.autocorrect 1"
+}, {
+	"title": "Check if the change was a part of a release.",
+	"tip": "git name-rev --name-only <SHA-1>"
 }]
