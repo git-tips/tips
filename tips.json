@@ -243,4 +243,7 @@
 }, {
 	"title": "Check if the change was a part of a release.",
 	"tip": "git name-rev --name-only <SHA-1>"
+}, {
+	"title": "Dry run. (any command that supports dry-run flag should do.)",
+	"tip": "git clean -fd --dry-run"
 }]
