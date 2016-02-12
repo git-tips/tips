@@ -145,6 +145,10 @@
 	"title": "Create new working tree from HEAD state",
 	"tip": "git worktree add --detach <path> HEAD"
 }, {
+	"title": "Untrack files without deleting",
+	"tip": "git rm --cached <file_path>",
+	"alternatives": ["git rm --cached -r <directory_path>"]
+}, {
 	"title": "Before deleting untracked files/directory, do a dry run to get the list of these files/directories",
 	"tip": "git clean -n"
 }, {

@@ -49,6 +49,7 @@
 * [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
 * [Create new working tree from a repository (git 2.5)](https://github.com/git-tips/tips#create-new-working-tree-from-a-repository-git-25)
 * [Create new working tree from HEAD state](https://github.com/git-tips/tips#create-new-working-tree-from-head-state)
+* [Untrack files without deleting](https://github.com/git-tips/tips#untrack-files-without-deleting)
 * [Before deleting untracked files/directory, do a dry run to get the list of these files/directories](https://github.com/git-tips/tips#before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories)
 * [Forcefully remove untracked files](https://github.com/git-tips/tips#forcefully-remove-untracked-files)
 * [Forcefully remove untracked directory](https://github.com/git-tips/tips#forcefully-remove-untracked-directory)
@@ -367,6 +368,17 @@ git worktree add -b <branch-name> <path> <start-point>
 ## Create new working tree from HEAD state
 ```sh
 git worktree add --detach <path> HEAD
+```
+
+## Untrack files without deleting
+```sh
+git rm --cached <file_path>
+```
+
+
+__Alternatives:__
+```sh
+git rm --cached -r <directory_path>
 ```
 
 ## Before deleting untracked files/directory, do a dry run to get the list of these files/directories
