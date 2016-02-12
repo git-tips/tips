@@ -126,6 +126,10 @@
 	"tip": "git stash clear",
 	"alternatives": ["git stash drop <stash@{n}>"]
 }, {
+	"title": "Grab a single file from a stash",
+	"tip": "git checkout <stash@{n}> -- <file_path>",
+	"alternatives": ["git checkout stash@{0} -- <file_path>"]
+}, {
 	"title": "Show all tracked files",
 	"tip": "git ls-files -t"
 }, {
@@ -228,6 +232,9 @@
 }, {
 	"title": "Restore deleted file.",
 	"tip": "git checkout <deleting_commit>^ -- <file_path>"
+}, {
+	"title": "Restore file to a specific commit-hash",
+	"tip": "git checkout <commit-ish> -- <file_path>"
 }, {
 	"title": "Always rebase instead of merge on pull.",
 	"tip": "git config --global branch.autosetuprebase always"

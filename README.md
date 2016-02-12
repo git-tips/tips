@@ -43,6 +43,7 @@
 * [Apply any stash without deleting from the stashed list](https://github.com/git-tips/tips#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](https://github.com/git-tips/tips#apply-last-stashed-state-and-delete-it-from-stashed-list)
 * [Delete all stored stashes](https://github.com/git-tips/tips#delete-all-stored-stashes)
+* [Grab a single file from a stash](https://github.com/git-tips/tips#grab-a-single-file-from-a-stash)
 * [Show all tracked files](https://github.com/git-tips/tips#show-all-tracked-files)
 * [Show all untracked files](https://github.com/git-tips/tips#show-all-untracked-files)
 * [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
@@ -75,6 +76,7 @@
 * [Undo assume-unchanged.](https://github.com/git-tips/tips#undo-assume-unchanged)
 * [Clean the files from `.gitignore`.](https://github.com/git-tips/tips#clean-the-files-from-gitignore)
 * [Restore deleted file.](https://github.com/git-tips/tips#restore-deleted-file)
+* [Restore file to a specific commit-hash](https://github.com/git-tips/tips#restore-file-to-a-specific-commit-hash)
 * [Always rebase instead of merge on pull.](https://github.com/git-tips/tips#always-rebase-instead-of-merge-on-pull)
 * [List all the alias and configs.](https://github.com/git-tips/tips#list-all-the-alias-and-configs)
 * [Make git case sensitive.](https://github.com/git-tips/tips#make-git-case-sensitive)
@@ -331,6 +333,17 @@ __Alternatives:__
 git stash drop <stash@{n}>
 ```
 
+## Grab a single file from a stash
+```sh
+git checkout <stash@{n}> -- <file_path>
+```
+
+
+__Alternatives:__
+```sh
+git checkout stash@{0} -- <file_path>
+```
+
 ## Show all tracked files
 ```sh
 git ls-files -t
@@ -525,6 +538,11 @@ git clean -X -f
 ## Restore deleted file.
 ```sh
 git checkout <deleting_commit>^ -- <file_path>
+```
+
+## Restore file to a specific commit-hash
+```sh
+git checkout <commit-ish> -- <file_path>
 ```
 
 ## Always rebase instead of merge on pull.
