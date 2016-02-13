@@ -43,11 +43,13 @@
 * [Apply any stash without deleting from the stashed list](https://github.com/git-tips/tips#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](https://github.com/git-tips/tips#apply-last-stashed-state-and-delete-it-from-stashed-list)
 * [Delete all stored stashes](https://github.com/git-tips/tips#delete-all-stored-stashes)
+* [Grab a single file from a stash](https://github.com/git-tips/tips#grab-a-single-file-from-a-stash)
 * [Show all tracked files](https://github.com/git-tips/tips#show-all-tracked-files)
 * [Show all untracked files](https://github.com/git-tips/tips#show-all-untracked-files)
 * [Show all ignored files](https://github.com/git-tips/tips#show-all-ignored-files)
 * [Create new working tree from a repository (git 2.5)](https://github.com/git-tips/tips#create-new-working-tree-from-a-repository-git-25)
 * [Create new working tree from HEAD state](https://github.com/git-tips/tips#create-new-working-tree-from-head-state)
+* [Untrack files without deleting](https://github.com/git-tips/tips#untrack-files-without-deleting)
 * [Before deleting untracked files/directory, do a dry run to get the list of these files/directories](https://github.com/git-tips/tips#before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories)
 * [Forcefully remove untracked files](https://github.com/git-tips/tips#forcefully-remove-untracked-files)
 * [Forcefully remove untracked directory](https://github.com/git-tips/tips#forcefully-remove-untracked-directory)
@@ -75,6 +77,7 @@
 * [Undo assume-unchanged.](https://github.com/git-tips/tips#undo-assume-unchanged)
 * [Clean the files from `.gitignore`.](https://github.com/git-tips/tips#clean-the-files-from-gitignore)
 * [Restore deleted file.](https://github.com/git-tips/tips#restore-deleted-file)
+* [Restore file to a specific commit-hash](https://github.com/git-tips/tips#restore-file-to-a-specific-commit-hash)
 * [Always rebase instead of merge on pull.](https://github.com/git-tips/tips#always-rebase-instead-of-merge-on-pull)
 * [List all the alias and configs.](https://github.com/git-tips/tips#list-all-the-alias-and-configs)
 * [Make git case sensitive.](https://github.com/git-tips/tips#make-git-case-sensitive)
@@ -331,6 +334,17 @@ __Alternatives:__
 git stash drop <stash@{n}>
 ```
 
+## Grab a single file from a stash
+```sh
+git checkout <stash@{n}> -- <file_path>
+```
+
+
+__Alternatives:__
+```sh
+git checkout stash@{0} -- <file_path>
+```
+
 ## Show all tracked files
 ```sh
 git ls-files -t
@@ -354,6 +368,17 @@ git worktree add -b <branch-name> <path> <start-point>
 ## Create new working tree from HEAD state
 ```sh
 git worktree add --detach <path> HEAD
+```
+
+## Untrack files without deleting
+```sh
+git rm --cached <file_path>
+```
+
+
+__Alternatives:__
+```sh
+git rm --cached -r <directory_path>
 ```
 
 ## Before deleting untracked files/directory, do a dry run to get the list of these files/directories
@@ -525,6 +550,11 @@ git clean -X -f
 ## Restore deleted file.
 ```sh
 git checkout <deleting_commit>^ -- <file_path>
+```
+
+## Restore file to a specific commit-hash
+```sh
+git checkout <commit-ish> -- <file_path>
 ```
 
 ## Always rebase instead of merge on pull.
