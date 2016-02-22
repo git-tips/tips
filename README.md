@@ -85,6 +85,7 @@
 * [Check if the change was a part of a release.](https://github.com/git-tips/tips#check-if-the-change-was-a-part-of-a-release)
 * [Dry run. (any command that supports dry-run flag should do.)](https://github.com/git-tips/tips#dry-run-any-command-that-supports-dry-run-flag-should-do)
 * [Marks your commit as a fix of a previous commit](https://github.com/git-tips/tips#marks-your-commit-as-a-fix-of-a-previous-commit)
+* [squash fixup commits normal commits.](https://github.com/git-tips/tips#squash-fixup-commits-normal-commits)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -591,6 +592,11 @@ git clean -fd --dry-run
 ## Marks your commit as a fix of a previous commit
 ```sh
 git commit --fixup <SHA-1>
+```
+
+## squash fixup commits normal commits.
+```sh
+git rebase -i --autosquash
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

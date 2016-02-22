@@ -260,4 +260,7 @@
 }, {
 	"title": "Marks your commit as a fix of a previous commit",
 	"tip": "git commit --fixup <SHA-1>"
+}, {
+	"title": "squash fixup commits normal commits.",
+	"tip": "git rebase -i --autosquash"
 }]
