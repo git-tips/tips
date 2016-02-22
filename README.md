@@ -84,6 +84,7 @@
 * [Auto correct typos.](https://github.com/git-tips/tips#auto-correct-typos)
 * [Check if the change was a part of a release.](https://github.com/git-tips/tips#check-if-the-change-was-a-part-of-a-release)
 * [Dry run. (any command that supports dry-run flag should do.)](https://github.com/git-tips/tips#dry-run-any-command-that-supports-dry-run-flag-should-do)
+* [Marks your commit as a fix of a previous commit](https://github.com/git-tips/tips#marks-your-commit-as-a-fix-of-a-previous-commit)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -585,6 +586,11 @@ git name-rev --name-only <SHA-1>
 ## Dry run. (any command that supports dry-run flag should do.)
 ```sh
 git clean -fd --dry-run
+```
+
+## Marks your commit as a fix of a previous commit
+```sh
+git commit --fixup <SHA-1>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

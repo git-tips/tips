@@ -257,4 +257,7 @@
 }, {
 	"title": "Dry run. (any command that supports dry-run flag should do.)",
 	"tip": "git clean -fd --dry-run"
+}, {
+	"title": "Marks your commit as a fix of a previous commit",
+	"tip": "git commit --fixup <SHA-1>"
 }]
