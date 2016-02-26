@@ -598,6 +598,10 @@ git commit --fixup <SHA-1>
 ```sh
 git rebase -i --autosquash
 ```
+## skip staging during commit
+```sh
+git commit -a -m 'commit message'
+```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end -->

@@ -263,4 +263,7 @@
 }, {
 	"title": "squash fixup commits normal commits.",
 	"tip": "git rebase -i --autosquash"
+}, {
+	"title": "skip staging area during commit",
+	"tip": "git commit -a -m 'commit message'"
 }]
