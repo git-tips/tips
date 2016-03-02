@@ -88,6 +88,7 @@
 * [squash fixup commits normal commits.](https://github.com/git-tips/tips#squash-fixup-commits-normal-commits)
 * [skip staging area during commit.](https://github.com/git-tips/tips#skip-staging-area-during-commit)
 * [List ignored files.](https://github.com/git-tips/tips#list-ignored-files)
+* [Status of ignored files.](https://github.com/git-tips/tips#status-of-ignored-files)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -609,6 +610,11 @@ git commit -am 'commit message'
 ## List ignored files.
 ```sh
 git check-ignore *
+```
+
+## Status of ignored files.
+```sh
+git status --ignored
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

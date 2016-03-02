@@ -269,4 +269,7 @@
 },{
 	"title": "List ignored files.",
 	"tip": "git check-ignore *"
+},{
+	"title": "Status of ignored files.",
+	"tip": "git status --ignored"
 }]
