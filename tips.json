@@ -258,12 +258,15 @@
 	"title": "Dry run. (any command that supports dry-run flag should do.)",
 	"tip": "git clean -fd --dry-run"
 }, {
-	"title": "Marks your commit as a fix of a previous commit",
+	"title": "Marks your commit as a fix of a previous commit.",
 	"tip": "git commit --fixup <SHA-1>"
 }, {
 	"title": "squash fixup commits normal commits.",
 	"tip": "git rebase -i --autosquash"
 }, {
-	"title": "skip staging area during commit",
+	"title": "skip staging area during commit.",
 	"tip": "git commit -am 'commit message'"
+},{
+	"title": "List ignored files.",
+	"tip": "git check-ignore *"
 }]
