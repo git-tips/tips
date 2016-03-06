@@ -89,6 +89,7 @@
 * [skip staging area during commit.](https://github.com/git-tips/tips#skip-staging-area-during-commit)
 * [List ignored files.](https://github.com/git-tips/tips#list-ignored-files)
 * [Status of ignored files.](https://github.com/git-tips/tips#status-of-ignored-files)
+* [Commits in Branch1 that are not in Branch2](https://github.com/git-tips/tips#commits-in-branch1-that-are-not-in-branch2)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -615,6 +616,11 @@ git check-ignore *
 ## Status of ignored files.
 ```sh
 git status --ignored
+```
+
+## Commits in Branch1 that are not in Branch2
+```sh
+git log Branch1 ^Branch2
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

@@ -272,4 +272,7 @@
 },{
 	"title": "Status of ignored files.",
 	"tip": "git status --ignored"
+},{
+	"title": "Commits in Branch1 that are not in Branch2",
+	"tip": "git log Branch1 ^Branch2"
 }]
