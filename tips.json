@@ -275,4 +275,7 @@
 },{
 	"title": "Commits in Branch1 that are not in Branch2",
 	"tip": "git log Branch1 ^Branch2"
+}, {
+	"title": "reuse recorded resolution, record and reuse previous conflicts resolutions.",
+	"tip":"git config --global rerere.enabled 1"
 }]
