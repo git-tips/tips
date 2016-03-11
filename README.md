@@ -91,6 +91,7 @@
 * [Status of ignored files.](https://github.com/git-tips/tips#status-of-ignored-files)
 * [Commits in Branch1 that are not in Branch2](https://github.com/git-tips/tips#commits-in-branch1-that-are-not-in-branch2)
 * [reuse recorded resolution, record and reuse previous conflicts resolutions.](https://github.com/git-tips/tips#reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions)
+* [Open all conflicted files in an editor.](https://github.com/git-tips/tips#open-all-conflicted-files-in-an-editor)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -627,6 +628,11 @@ git log Branch1 ^Branch2
 ## reuse recorded resolution, record and reuse previous conflicts resolutions.
 ```sh
 git config --global rerere.enabled 1
+```
+
+## Open all conflicted files in an editor.
+```sh
+git diff --name-only | uniq | xargs $EDITOR
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

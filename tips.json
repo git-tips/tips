@@ -278,4 +278,7 @@
 }, {
 	"title": "reuse recorded resolution, record and reuse previous conflicts resolutions.",
 	"tip":"git config --global rerere.enabled 1"
+},{
+	"title": "Open all conflicted files in an editor.",
+	"tip": "git diff --name-only | uniq | xargs $EDITOR"
 }]
