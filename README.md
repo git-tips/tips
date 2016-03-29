@@ -93,6 +93,7 @@
 * [reuse recorded resolution, record and reuse previous conflicts resolutions.](https://github.com/git-tips/tips#reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions)
 * [Open all conflicted files in an editor.](https://github.com/git-tips/tips#open-all-conflicted-files-in-an-editor)
 * [Count unpacked number of objects and their disk consumption.](https://github.com/git-tips/tips#count-unpacked-number-of-objects-and-their-disk-consumption)
+* [Prune all unreachable objects from the object database.](https://github.com/git-tips/tips#prune-all-unreachable-objects-from-the-object-database)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -639,6 +640,11 @@ git diff --name-only | uniq | xargs $EDITOR
 ## Count unpacked number of objects and their disk consumption.
 ```sh
 git count-objects --human-readable
+```
+
+## Prune all unreachable objects from the object database.
+```sh
+git gc --prune=now --aggressive
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

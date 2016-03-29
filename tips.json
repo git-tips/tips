@@ -284,4 +284,7 @@
 }, {
     "title": "Count unpacked number of objects and their disk consumption.",
     "tip": "git count-objects --human-readable"
+}, {
+   "title": "Prune all unreachable objects from the object database.",
+   "tip": "git gc --prune=now --aggressive"
 }]
