@@ -287,4 +287,7 @@
 }, {
    "title": "Prune all unreachable objects from the object database.",
    "tip": "git gc --prune=now --aggressive"
+},{
+   "title": "Instantly browse your working repository in gitweb.",
+   "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
 }]
