@@ -293,4 +293,7 @@
 },{
    "title": "View the GPG signatures in the commit log",
    "tip": "git log --show-signature"
+}, {
+    "title": "Remove entry in the global config.",
+    "tip": "git config --global --unset <entry-name>"
 }]
