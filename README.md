@@ -95,6 +95,7 @@
 * [Count unpacked number of objects and their disk consumption.](https://github.com/git-tips/tips#count-unpacked-number-of-objects-and-their-disk-consumption)
 * [Prune all unreachable objects from the object database.](https://github.com/git-tips/tips#prune-all-unreachable-objects-from-the-object-database)
 * [Instantly browse your working repository in gitweb.](https://github.com/git-tips/tips#instantly-browse-your-working-repository-in-gitweb)
+* [View the GPG signatures in the commit log](https://github.com/git-tips/tips#view-the-gpg-signatures-in-the-commit-log)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -651,6 +652,11 @@ git gc --prune=now --aggressive
 ## Instantly browse your working repository in gitweb.
 ```sh
 git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]
+```
+
+## View the GPG signatures in the commit log
+```sh
+git log --show-signature
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
