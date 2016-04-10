@@ -97,6 +97,7 @@
 * [Instantly browse your working repository in gitweb.](https://github.com/git-tips/tips#instantly-browse-your-working-repository-in-gitweb)
 * [View the GPG signatures in the commit log](https://github.com/git-tips/tips#view-the-gpg-signatures-in-the-commit-log)
 * [Remove entry in the global config.](https://github.com/git-tips/tips#remove-entry-in-the-global-config)
+* [Checkout a new branch without any history](https://github.com/git-tips/tips#checkout-a-new-branch-without-any-history)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -663,6 +664,11 @@ git log --show-signature
 ## Remove entry in the global config.
 ```sh
 git config --global --unset <entry-name>
+```
+
+## Checkout a new branch without any history
+```sh
+git checkout --orphan <branch_name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

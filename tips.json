@@ -296,4 +296,7 @@
 }, {
     "title": "Remove entry in the global config.",
     "tip": "git config --global --unset <entry-name>"
+},{
+    "title": "Checkout a new branch without any history",
+    "tip": "git checkout --orphan <branch_name>"
 }]
