@@ -99,6 +99,7 @@
 * [Remove entry in the global config.](https://github.com/git-tips/tips#remove-entry-in-the-global-config)
 * [Checkout a new branch without any history](https://github.com/git-tips/tips#checkout-a-new-branch-without-any-history)
 * [File diff between staging and the last file version.](https://github.com/git-tips/tips#file-diff-between-staging-and-the-last-file-version)
+* [Extract file from another branch.](https://github.com/git-tips/tips#extract-file-from-another-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -675,6 +676,11 @@ git checkout --orphan <branch_name>
 ## File diff between staging and the last file version.
 ```sh
 git diff --staged
+```
+
+## Extract file from another branch.
+```sh
+git show <banch_name>:<file_name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
