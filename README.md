@@ -100,6 +100,7 @@
 * [Checkout a new branch without any history](https://github.com/git-tips/tips#checkout-a-new-branch-without-any-history)
 * [File diff between staging and the last file version.](https://github.com/git-tips/tips#file-diff-between-staging-and-the-last-file-version)
 * [Extract file from another branch.](https://github.com/git-tips/tips#extract-file-from-another-branch)
+* [List only the root and merge commits.](https://github.com/git-tips/tips#list-only-the-root-and-merge-commits)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -681,6 +682,11 @@ git diff --staged
 ## Extract file from another branch.
 ```sh
 git show <banch_name>:<file_name>
+```
+
+## List only the root and merge commits.
+```sh
+git log --first-parent
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
