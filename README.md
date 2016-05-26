@@ -698,7 +698,17 @@ git rebase --interactive HEAD~2
 
 ## List of git repositories in multiple directories.
 ```sh
-find /path1 /path2 /path3 -regex '.*\.git' -type d -print0 | xargs -0 -I {} dirname {}
+find -E ${targetdir} \( -regex '.*/\.git
+ -not -regex '.*/\..*/\.git
+ \) -type d -print0 | xargs -0 -I {} dirname {}
+```
+
+
+__Alternatives:__
+```sh
+find ${targetdir} -regextype posix-egrep \( -regex '.*/\.git
+ -not -regex '.*/\..*/\.git
+ \) -type d -print0 | xargs -0 -I {} dirname {}
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
