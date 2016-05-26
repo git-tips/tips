@@ -698,7 +698,7 @@ git rebase --interactive HEAD~2
 
 ## List of git repositories in multiple directories.
 ```sh
-find -E ${targetdir} \( -regex '.*/\.git
+find -E /path1 /path2 /path3 \( -regex '.*/\.git
  -not -regex '.*/\..*/\.git
  \) -type d -print0 | xargs -0 -I {} dirname {}
 ```
@@ -706,7 +706,7 @@ find -E ${targetdir} \( -regex '.*/\.git
 
 __Alternatives:__
 ```sh
-find ${targetdir} -regextype posix-egrep \( -regex '.*/\.git
+find /path1 /path2 /path3 -regextype posix-egrep \( -regex '.*/\.git
  -not -regex '.*/\..*/\.git
  \) -type d -print0 | xargs -0 -I {} dirname {}
 ```
