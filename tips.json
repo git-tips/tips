@@ -311,4 +311,8 @@
 }, {
 	"title": "Merge previous two commits into one.",
   "tip": "git rebase --interactive HEAD~2"
+}, {
+	"title": "List of git repositories in multiple directories.",
+  "tip": "find -E /path1 /path2 /path3 \\( -regex '.*/\\.git$' -not -regex '.*/\\..*/\\.git$' \\) -type d -print0 | xargs -0 -I {} dirname {}",
+   "alternatives": ["find /path1 /path2 /path3 -regextype posix-egrep \\( -regex '.*/\\.git$' -not -regex '.*/\\..*/\\.git$' \\) -type d -print0 | xargs -0 -I {} dirname {}"]
 }]
