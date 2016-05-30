@@ -102,7 +102,6 @@
 * [Extract file from another branch.](https://github.com/git-tips/tips#extract-file-from-another-branch)
 * [List only the root and merge commits.](https://github.com/git-tips/tips#list-only-the-root-and-merge-commits)
 * [Merge previous two commits into one.](https://github.com/git-tips/tips#merge-previous-two-commits-into-one)
-* [List of git repositories in multiple directories.](https://github.com/git-tips/tips#list-of-git-repositories-in-multiple-directories)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -694,21 +693,6 @@ git log --first-parent
 ## Merge previous two commits into one.
 ```sh
 git rebase --interactive HEAD~2
-```
-
-## List of git repositories in multiple directories.
-```sh
-find -E /path1 /path2 /path3 \( -regex '.*/\.git
- -not -regex '.*/\..*/\.git
- \) -type d -print0 | xargs -0 -I {} dirname {}
-```
-
-
-__Alternatives:__
-```sh
-find /path1 /path2 /path3 -regextype posix-egrep \( -regex '.*/\.git
- -not -regex '.*/\..*/\.git
- \) -type d -print0 | xargs -0 -I {} dirname {}
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
