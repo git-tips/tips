@@ -278,7 +278,7 @@ git log --no-merges --stat --reverse master..
 
 ## Pick commits across branches using cherry-pick
 ```sh
-git checkout <branch-name> && cherry-pick <commit-ish>
+git checkout <branch-name> && git cherry-pick <commit-ish>
 ```
 
 ## Find out branches containing commit-hash
