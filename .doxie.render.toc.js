@@ -11,7 +11,7 @@ slugify = function(text){
 var render = function(data) {
   var data = data.data;
 
-  var out = '* [' + data.title + '](https://github.com/git-tips/tips#' + slugify(data.title) + ')\n';
+  var out = '* [' + data.title + '](#' + slugify(data.title) + ')\n';
 
   return out;
 };
