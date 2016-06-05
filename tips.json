@@ -179,7 +179,7 @@
     "title": "Modify previous commit without modifying the commit message",
     "tip": "git add --all && git commit --amend --no-edit"
 }, {
-    "title": "Prunes branches that have been deleted in the remote.",
+    "title": "Prunes references to remote branches that have been deleted in the remote.",
     "tip": "git fetch -p",
     "alternatives": ["git remote prune origin"]
 }, {
