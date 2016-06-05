@@ -24,6 +24,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Delete remote branch](#delete-remote-branch)
 * [Undo local changes with the last content in head](#undo-local-changes-with-the-last-content-in-head)
 * [Revert: Undo a commit by creating a new commit](#revert-undo-a-commit-by-creating-a-new-commit)
+* [Revert: Reverting an entire merge](#revert-reverting-an-entire-merge)
 * [Reset: Discard commits, advised for private branch](#reset-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](#reword-the-previous-commit-message)
 * [Amend author.](#amend-author)
@@ -210,6 +211,11 @@ git checkout -- <file_name>
 ## Revert: Undo a commit by creating a new commit
 ```sh
 git revert <commit-ish>
+```
+
+## Revert: Reverting an entire merge
+```sh
+git revert -m 1 <commit-ish>
 ```
 
 ## Reset: Discard commits, advised for private branch
