@@ -67,7 +67,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Deploying git tracked subfolder to gh-pages](#deploying-git-tracked-subfolder-to-gh-pages)
 * [Adding a project to repo using subtree](#adding-a-project-to-repo-using-subtree)
 * [Get latest changes in your repo for a linked project using subtree](#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
-* [Export a branch with history to the a file.](#export-a-branch-with-history-to-the-a-file)
+* [Export a branch with history to a file.](#export-a-branch-with-history-to-a-file)
 * [Import from a bundle](#import-from-a-bundle)
 * [Get the name of current branch.](#get-the-name-of-current-branch)
 * [Ignore one file on commit (e.g. Changelog).](#ignore-one-file-on-commit-eg-changelog)
@@ -506,7 +506,7 @@ git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com
 git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master
 ```
 
-## Export a branch with history to the a file.
+## Export a branch with history to a file.
 ```sh
 git bundle create <file> <branch-name>
 ```

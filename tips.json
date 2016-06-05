@@ -200,7 +200,7 @@
     "title": "Get latest changes in your repo for a linked project using subtree",
     "tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
 }, {
-    "title": "Export a branch with history to the a file.",
+    "title": "Export a branch with history to a file.",
     "tip": "git bundle create <file> <branch-name>"
 }, {
     "title": "Import from a bundle",
