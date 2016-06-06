@@ -190,6 +190,15 @@
     "tip": "git log --pretty=oneline --graph --decorate --all",
     "alternatives": ["gitk --all"]
 }, {
+    "title": "Changed files",
+    "tip": "git log --name-status"
+}, {
+    "title": "Help",
+    "tip": "git log --help"
+}, {
+    "title": "Retrieve the commit hash of the initial revision.",
+    "tip": " git rev-list --reverse HEAD | head -1"
+}, {
     "title": "Deploying git tracked subfolder to gh-pages",
     "tip": "git subtree push --prefix subfolder_name origin gh-pages",
     "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
