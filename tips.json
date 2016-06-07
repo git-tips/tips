@@ -30,7 +30,7 @@
     "tip": "git diff HEAD"
 }, {
     "title": "List all branches that are already merged into master",
-    "tip": "git checkout master && git branch --merged"
+    "tip": "git branch --merged master"
 }, {
     "title": "Quickly switch to the previous branch",
     "tip": "git checkout -"
