@@ -1,421 +1,320 @@
-[
-  {
+[{
     "title": "Everyday Git in twenty commands or so",
     "tip": "git help everyday"
-  },
-  {
+}, {
     "title": "Show helpful guides that come with Git",
     "tip": "git help -g"
-  },
-  {
+}, {
     "title": "Overwrite pull",
     "tip": "git fetch --all && git reset --hard origin/master"
-  },
-  {
+}, {
     "title": "List of all files till a commit",
     "tip": "git ls-tree --name-only -r <commit-ish>"
-  },
-  {
+}, {
     "title": "Git reset first commit",
     "tip": "git update-ref -d HEAD"
-  },
-  {
+}, {
     "title": "List all the conflicted files",
     "tip": "git diff --name-only --diff-filter=U"
-  },
-  {
+}, {
     "title": "List of all files changed in a commit",
     "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
-  },
-  {
+}, {
     "title": "Unstaged changes since last commit",
     "tip": "git diff"
-  },
-  {
+}, {
     "title": "Changes staged for commit",
     "tip": "git diff --cached"
-  },
-  {
+}, {
     "title": "Show both staged and unstaged changes",
     "tip": "git diff HEAD"
-  },
-  {
+}, {
     "title": "List all branches that are already merged into master",
     "tip": "git checkout master && git branch --merged"
-  },
-  {
+}, {
     "title": "Quickly switch to the previous branch",
     "tip": "git checkout -"
-  },
-  {
+}, {
     "title": "Remove branches that have already been merged with master",
     "tip": "git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-  },
-  {
+}, {
     "title": "List all branches and their upstreams, as well as last commit on branch",
     "tip": "git branch -vv"
-  },
-  {
+}, {
     "title": "Track upstream branch",
     "tip": "git branch -u origin/mybranch"
-  },
-  {
+}, {
     "title": "Delete local branch",
     "tip": "git branch -d <local_branchname>"
-  },
-  {
+}, {
     "title": "Delete remote branch",
     "tip": "git push origin --delete <remote_branchname>",
-    "alternatives": [ "git push origin :<remote_branchname>" ]
-  },
-  {
+    "alternatives": ["git push origin :<remote_branchname>"]
+}, {
     "title": "Undo local changes with the last content in head",
     "tip": "git checkout -- <file_name>"
-  },
-  {
+}, {
     "title": "Revert: Undo a commit by creating a new commit",
     "tip": "git revert <commit-ish>"
-  },
-  {
+}, {
     "title": "Reset: Discard commits, advised for private branch",
     "tip": "git reset <commit-ish>"
-  },
-  {
+}, {
     "title": "Reword the previous commit message",
     "tip": "git commit -v --amend"
-  },
-  {
+}, {
     "title": "Amend author.",
     "tip": "git commit --amend --author='Author Name <email@address.com>'"
-  },
-  {
+}, {
     "title": "Reset author, after author has been changed in the global config.",
     "tip": "git commit --amend --reset-author --no-edit"
-  },
-  {
+}, {
     "title": "Changing a remote's URL",
     "tip": "git remote set-url origin <URL>"
-  },
-  {
+}, {
     "title": "Get list of all remote references",
     "tip": "git remote",
-    "alternatives": [ "git remote show" ]
-  },
-  {
+    "alternatives": ["git remote show"]
+}, {
     "title": "Get list of all local and remote branches",
     "tip": "git branch -a"
-  },
-  {
+}, {
     "title": "Get only remote branches",
     "tip": "git branch -r"
-  },
-  {
+}, {
     "title": "Stage parts of a changed file, instead of the entire file",
     "tip": "git add -p"
-  },
-  {
+}, {
     "title": "Get git bash completion",
     "tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
-  },
-  {
+}, {
     "title": "What changed since two weeks?",
     "tip": "git whatchanged --since='2 weeks ago'"
-  },
-  {
+}, {
     "title": "See all commits made since forking from master",
     "tip": "git log --no-merges --stat --reverse master.."
-  },
-  {
+}, {
     "title": "Pick commits across branches using cherry-pick",
     "tip": "git checkout <branch-name> && git cherry-pick <commit-ish>"
-  },
-  {
+}, {
     "title": "Find out branches containing commit-hash",
     "tip": "git branch -a --contains <commit-ish>",
-    "alternatives": [ "git branch --contains <commit-ish>" ]
-  },
-  {
+    "alternatives": ["git branch --contains <commit-ish>"]
+}, {
     "title": "Git Aliases",
     "tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
-  },
-  {
+}, {
     "title": "Saving current state of tracked files without commiting",
     "tip": "git stash",
-    "alternatives": [ "git stash save" ]
-  },
-  {
+    "alternatives": ["git stash save"]
+}, {
     "title": "Saving current state including untracked files",
     "tip": "git stash save -u",
-    "alternatives": [ "git stash save --include-untracked" ]
-  },
-  {
+    "alternatives": ["git stash save --include-untracked"]
+}, {
     "title": "Show list of all saved stashes",
     "tip": "git stash list"
-  },
-  {
+}, {
     "title": "Apply any stash without deleting from the stashed list",
     "tip": "git stash apply <stash@{n}>"
-  },
-  {
+}, {
     "title": "Apply last stashed state and delete it from stashed list",
     "tip": "git stash pop",
-    "alternatives": [ "git stash apply stash@{0} && git stash drop stash@{0}" ]
-  },
-  {
+    "alternatives": ["git stash apply stash@{0} && git stash drop stash@{0}"]
+}, {
     "title": "Delete all stored stashes",
     "tip": "git stash clear",
-    "alternatives": [ "git stash drop <stash@{n}>" ]
-  },
-  {
+    "alternatives": ["git stash drop <stash@{n}>"]
+}, {
     "title": "Grab a single file from a stash",
     "tip": "git checkout <stash@{n}> -- <file_path>",
-    "alternatives": [ "git checkout stash@{0} -- <file_path>" ]
-  },
-  {
+    "alternatives": ["git checkout stash@{0} -- <file_path>"]
+}, {
     "title": "Show all tracked files",
     "tip": "git ls-files -t"
-  },
-  {
+}, {
     "title": "Show all untracked files",
     "tip": "git ls-files --others"
-  },
-  {
+}, {
     "title": "Show all ignored files",
     "tip": "git ls-files --others -i --exclude-standard"
-  },
-  {
+}, {
     "title": "Create new working tree from a repository (git 2.5)",
     "tip": "git worktree add -b <branch-name> <path> <start-point>"
-  },
-  {
+}, {
     "title": "Create new working tree from HEAD state",
     "tip": "git worktree add --detach <path> HEAD"
-  },
-  {
+}, {
     "title": "Untrack files without deleting",
     "tip": "git rm --cached <file_path>",
-    "alternatives": [ "git rm --cached -r <directory_path>" ]
-  },
-  {
+    "alternatives": ["git rm --cached -r <directory_path>"]
+}, {
     "title": "Before deleting untracked files/directory, do a dry run to get the list of these files/directories",
     "tip": "git clean -n"
-  },
-  {
+}, {
     "title": "Forcefully remove untracked files",
     "tip": "git clean -f"
-  },
-  {
+}, {
     "title": "Forcefully remove untracked directory",
     "tip": "git clean -f -d",
-    "alternatives": [ "git clean -df" ]
-  },
-  {
+    "alternatives": ["git clean -df"]
+}, {
     "title": "Update all the submodules",
     "tip": "git submodule foreach git pull"
-  },
-  {
+}, {
     "title": "Show all commits in the current branch yet to be merged to master",
     "tip": "git cherry -v master",
-    "alternatives": [ "git cherry -v master <branch-to-be-merged>" ]
-  },
-  {
+    "alternatives": ["git cherry -v master <branch-to-be-merged>"]
+}, {
     "title": "Rename a branch",
     "tip": "git branch -m <new-branch-name>",
-    "alternatives": [ "git branch -m [<old-branch-name>] <new-branch-name>" ]
-  },
-  {
+    "alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
+}, {
     "title": "rebases 'feature' to 'master' and merges it in to master ",
     "tip": "git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}"
-  },
-  {
+}, {
     "title": "Archive the `master` branch",
     "tip": "git archive master --format=zip --output=master.zip"
-  },
-  {
+}, {
     "title": "Modify previous commit without modifying the commit message",
     "tip": "git add --all && git commit --amend --no-edit"
-  },
-  {
+}, {
     "title": "Prunes references to remote branches that have been deleted in the remote.",
     "tip": "git fetch -p",
-    "alternatives": [ "git remote prune origin" ]
-  },
-  {
+    "alternatives": ["git remote prune origin"]
+}, {
     "title": "Retrieve the commit hash of the initial revision.",
     "tip": " git rev-list --reverse HEAD | head -1"
-  },
-  {
+}, {
     "title": "Visualize the version tree.",
     "tip": "git log --pretty=oneline --graph --decorate --all",
-    "alternatives": [ "gitk --all" ]
-  },
-  {
+    "alternatives": ["gitk --all"]
+}, {
     "title": "Deploying git tracked subfolder to gh-pages",
     "tip": "git subtree push --prefix subfolder_name origin gh-pages",
     "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
-  },
-  {
+}, {
     "title": "Adding a project to repo using subtree",
     "tip": "git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
-  },
-  {
+}, {
     "title": "Get latest changes in your repo for a linked project using subtree",
     "tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
-  },
-  {
+}, {
     "title": "Export a branch with history to a file.",
     "tip": "git bundle create <file> <branch-name>"
-  },
-  {
+}, {
     "title": "Import from a bundle",
     "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
-  },
-  {
+}, {
     "title": "Get the name of current branch.",
     "tip": "git rev-parse --abbrev-ref HEAD"
-  },
-  {
+}, {
     "title": "Ignore one file on commit (e.g. Changelog).",
     "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
-  },
-  {
+}, {
     "title": "Stash changes before rebasing",
     "tip": "git rebase --autostash"
-  },
-  {
+}, {
     "title": "Fetch pull request by ID to a local branch",
     "tip": "git fetch origin pull/<id>/head:<branch-name>",
-    "alternatives": [ "git pull origin pull/<id>/head:<branch-name>" ]
-  },
-  {
+    "alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
+}, {
     "title": "Show the most recent tag on the current branch.",
     "tip": "git describe --tags --abbrev=0"
-  },
-  {
+}, {
     "title": "Show inline word diff.",
     "tip": "git diff --word-diff"
-  },
-  {
+}, {
     "title": "Don’t consider changes for tracked file.",
     "tip": "git update-index --assume-unchanged <file_name>"
-  },
-  {
+}, {
     "title": "Undo assume-unchanged.",
     "tip": "git update-index --no-assume-unchanged <file_name>"
-  },
-  {
+}, {
     "title": "Clean the files from `.gitignore`.",
     "tip": "git clean -X -f"
-  },
-  {
+}, {
     "title": "Restore deleted file.",
     "tip": "git checkout <deleting_commit>^ -- <file_path>"
-  },
-  {
+}, {
     "title": "Restore file to a specific commit-hash",
     "tip": "git checkout <commit-ish> -- <file_path>"
-  },
-  {
+}, {
     "title": "Always rebase instead of merge on pull.",
     "tip": "git config --global branch.autosetuprebase always"
-  },
-  {
+}, {
     "title": "List all the alias and configs.",
     "tip": "git config --list"
-  },
-  {
+}, {
     "title": "Make git case sensitive.",
     "tip": "git config --global core.ignorecase false"
-  },
-  {
+}, {
     "title": "Auto correct typos.",
     "tip": "git config --global help.autocorrect 1"
-  },
-  {
+}, {
     "title": "Check if the change was a part of a release.",
     "tip": "git name-rev --name-only <SHA-1>"
-  },
-  {
+}, {
     "title": "Dry run. (any command that supports dry-run flag should do.)",
     "tip": "git clean -fd --dry-run"
-  },
-  {
+}, {
     "title": "Marks your commit as a fix of a previous commit.",
     "tip": "git commit --fixup <SHA-1>"
-  },
-  {
+}, {
     "title": "squash fixup commits normal commits.",
     "tip": "git rebase -i --autosquash"
-  },
-  {
+}, {
     "title": "skip staging area during commit.",
     "tip": "git commit -am <commit message>"
-  },
-  {
+}, {
     "title": "List ignored files.",
     "tip": "git check-ignore *"
-  },
-  {
+}, {
     "title": "Status of ignored files.",
     "tip": "git status --ignored"
-  },
-  {
+}, {
     "title": "Commits in Branch1 that are not in Branch2",
     "tip": "git log Branch1 ^Branch2"
-  },
-  {
+}, {
     "title": "reuse recorded resolution, record and reuse previous conflicts resolutions.",
-    "tip": "git config --global rerere.enabled 1"
-  },
-  {
+    "tip":"git config --global rerere.enabled 1"
+}, {
     "title": "Open all conflicted files in an editor.",
     "tip": "git diff --name-only | uniq | xargs $EDITOR"
-  },
-  {
+}, {
     "title": "Count unpacked number of objects and their disk consumption.",
     "tip": "git count-objects --human-readable"
-  },
-  {
-    "title": "Prune all unreachable objects from the object database.",
-    "tip": "git gc --prune=now --aggressive"
-  },
-  {
-    "title": "Instantly browse your working repository in gitweb.",
-    "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
-  },
-  {
-    "title": "View the GPG signatures in the commit log",
-    "tip": "git log --show-signature"
-  },
-  {
+}, {
+   "title": "Prune all unreachable objects from the object database.",
+   "tip": "git gc --prune=now --aggressive"
+},{
+   "title": "Instantly browse your working repository in gitweb.",
+   "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
+},{
+   "title": "View the GPG signatures in the commit log",
+   "tip": "git log --show-signature"
+}, {
     "title": "Remove entry in the global config.",
     "tip": "git config --global --unset <entry-name>"
-  },
-  {
+},{
     "title": "Checkout a new branch without any history",
     "tip": "git checkout --orphan <branch_name>"
-  },
-  {
-    "title": "File diff between staging and the last file version.",
-    "tip": "git diff --staged"
-  },
-  {
-    "title": "Extract file from another branch.",
-    "tip": "git show <banch_name>:<file_name>"
-  },
-  {
-    "title": "List only the root and merge commits.",
-    "tip": "git log --first-parent"
-  },
-  {
-    "title": "Merge previous two commits into one.",
-    "tip": "git rebase --interactive HEAD~2"
-  },
-  {
-    "title": "List all branch is WIP",
-    "tip": "git checkout master && git branch --no-merged"
-  },
-  {
-    "title": "Find guilty with binary search",
-    "tip": "git bisect start\t\t\t\t# Search start \\ngit bisect bad\t\t\t\t\t# Set point to bad commit \\ngit bisect good v2.6.13-rc2\t\t# Set point to good commit|tag \\ngit bisect bad\t\t\t\t\t# Say current state is bad \\ngit bisect good\t\t\t\t\t# Say current state is good \\ngit bisect reset\t\t\t\t# Finish search \\n"
-  }]
+},{
+   "title": "File diff between staging and the last file version.",
+   "tip": "git diff --staged"
+},{
+	"title": "Extract file from another branch.",
+	"tip": "git show <banch_name>:<file_name>"
+}, {
+	"title": "List only the root and merge commits.",
+  "tip": "git log --first-parent"
+}, {
+	"title": "Merge previous two commits into one.",
+  "tip": "git rebase --interactive HEAD~2"
+}, {
+  "title": "List all branch is WIP",
+  "tip": "git checkout master && git branch --no-merged"
+}, {
+  "title": "Find guilty with binary search",
+  "tip": "git bisect start				# Search start \ngit bisect bad					# Set point to bad commit \ngit bisect good v2.6.13-rc2		# Set point to good commit|tag \ngit bisect bad					# Say current state is bad \ngit bisect good					# Say current state is good \ngit bisect reset				# Finish search \n"
+}]
