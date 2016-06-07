@@ -104,6 +104,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Extract file from another branch.](#extract-file-from-another-branch)
 * [List only the root and merge commits.](#list-only-the-root-and-merge-commits)
 * [Merge previous two commits into one.](#merge-previous-two-commits-into-one)
+* [List all branch is WIP](#list-all-branch-is-wip)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -695,6 +696,11 @@ git log --first-parent
 ## Merge previous two commits into one.
 ```sh
 git rebase --interactive HEAD~2
+```
+
+## List all branch is WIP
+```sh
+git checkout master && git branch --no-merged
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
