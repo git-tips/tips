@@ -1,4 +1,4 @@
-## git-tips
+## git-tips this is a change
 > Collection of `git-tips`, want to add your tips? Checkout [contributing.md](./contributing.md)
 
 P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
