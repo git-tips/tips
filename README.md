@@ -686,7 +686,7 @@ git diff --staged
 
 ## Extract file from another branch.
 ```sh
-git show <banch_name>:<file_name>
+git show <branch_name>:<file_name>
 ```
 
 ## List only the root and merge commits.
