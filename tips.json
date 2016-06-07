@@ -311,4 +311,7 @@
 }, {
 	"title": "Merge previous two commits into one.",
   "tip": "git rebase --interactive HEAD~2"
+}, {
+  "title": "List all branch is WIP",
+  "tip": "git checkout master && git branch --no-merged"
 }]
