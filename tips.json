@@ -89,7 +89,8 @@
     "tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
 }, {
     "title": "What changed since two weeks?",
-    "tip": "git whatchanged --since='2 weeks ago'"
+    "tip": "git log --no-merges --raw --since='2 weeks ago'",
+    "alternatives": ["git whatchanged --since='2 weeks ago'"]
 }, {
     "title": "See all commits made since forking from master",
     "tip": "git log --no-merges --stat --reverse master.."
