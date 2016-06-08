@@ -303,8 +303,8 @@
    "title": "File diff between staging and the last file version.",
    "tip": "git diff --staged"
 },{
-	"title": "Extract file from another branch.",
-	"tip": "git show <banch_name>:<file_name>"
+   "title": "Extract file from another branch.",
+   "tip": "git show <banch_name>:<file_name>"
 }, {
 	"title": "List only the root and merge commits.",
   "tip": "git log --first-parent"
