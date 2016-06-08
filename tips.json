@@ -317,4 +317,8 @@
 }, {
   "title": "Find guilty with binary search",
   "tip": "git bisect start				# Search start \ngit bisect bad					# Set point to bad commit \ngit bisect good v2.6.13-rc2		# Set point to good commit|tag \ngit bisect bad					# Say current state is bad \ngit bisect good					# Say current state is good \ngit bisect reset				# Finish search \n"
-}]
+},
+  {
+    "title": "Bypass pre-commit and commit-msg githooks",
+    "tip": "git commit --no-verify"
+  }]
