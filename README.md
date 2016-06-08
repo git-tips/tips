@@ -706,14 +706,14 @@ git checkout master && git branch --no-merged
 ```
 
 ## Find guilty with binary search
-
 ```sh
-git bisect start				# Search start
-git bisect bad					# Set point to bad commit
-git bisect good v2.6.13-rc2		# Set point to good commit|tag
-git bisect bad					# Say current state is bad
-git bisect good					# Say current state is good
-git bisect reset				# Finish search
+git bisect start                    # Search start 
+git bisect bad                      # Set point to bad commit 
+git bisect good v2.6.13-rc2         # Set point to good commit|tag 
+git bisect bad                      # Say current state is bad 
+git bisect good                     # Say current state is good 
+git bisect reset                    # Finish search 
+
 ```
 
 ## Bypass pre-commit and commit-msg githooks

@@ -285,40 +285,39 @@
     "title": "Count unpacked number of objects and their disk consumption.",
     "tip": "git count-objects --human-readable"
 }, {
-   "title": "Prune all unreachable objects from the object database.",
-   "tip": "git gc --prune=now --aggressive"
-},{
-   "title": "Instantly browse your working repository in gitweb.",
-   "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
-},{
-   "title": "View the GPG signatures in the commit log",
-   "tip": "git log --show-signature"
+    "title": "Prune all unreachable objects from the object database.",
+    "tip": "git gc --prune=now --aggressive"
+}, {
+    "title": "Instantly browse your working repository in gitweb.",
+    "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
+}, {
+    "title": "View the GPG signatures in the commit log",
+    "tip": "git log --show-signature"
 }, {
     "title": "Remove entry in the global config.",
     "tip": "git config --global --unset <entry-name>"
-},{
+}, {
     "title": "Checkout a new branch without any history",
     "tip": "git checkout --orphan <branch_name>"
-},{
-   "title": "File diff between staging and the last file version.",
-   "tip": "git diff --staged"
-},{
-	"title": "Extract file from another branch.",
-	"tip": "git show <branch_name>:<file_name>"
 }, {
-	"title": "List only the root and merge commits.",
-  "tip": "git log --first-parent"
+    "title": "File diff between staging and the last file version.",
+    "tip": "git diff --staged"
 }, {
-	"title": "Merge previous two commits into one.",
-  "tip": "git rebase --interactive HEAD~2"
+    "title": "Extract file from another branch.",
+    "tip": "git show <branch_name>:<file_name>"
 }, {
-  "title": "List all branch is WIP",
-  "tip": "git checkout master && git branch --no-merged"
+    "title": "List only the root and merge commits.",
+    "tip": "git log --first-parent"
 }, {
-  "title": "Find guilty with binary search",
-  "tip": "git bisect start				# Search start \ngit bisect bad					# Set point to bad commit \ngit bisect good v2.6.13-rc2		# Set point to good commit|tag \ngit bisect bad					# Say current state is bad \ngit bisect good					# Say current state is good \ngit bisect reset				# Finish search \n"
-},
-  {
+    "title": "Merge previous two commits into one.",
+    "tip": "git rebase --interactive HEAD~2"
+}, {
+    "title": "List all branch is WIP",
+    "tip": "git checkout master && git branch --no-merged"
+}, {
+    "title": "Find guilty with binary search",
+    "tip": "git bisect start                    # Search start \ngit bisect bad                      # Set point to bad commit \ngit bisect good v2.6.13-rc2         # Set point to good commit|tag \ngit bisect bad                      # Say current state is bad \ngit bisect good                     # Say current state is good \ngit bisect reset                    # Finish search \n"
+}, {
     "title": "Bypass pre-commit and commit-msg githooks",
     "tip": "git commit --no-verify"
-  }]
+}]
