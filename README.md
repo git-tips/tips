@@ -107,6 +107,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [List all branch is WIP](#list-all-branch-is-wip)
 * [Find guilty with binary search](#find-guilty-with-binary-search)
 * [Bypass pre-commit and commit-msg githooks](#bypass-pre-commit-and-commit-msg-githooks)
+* [List commits and changes to a specific file (even through renaming)](#list-commits-and-changes-to-a-specific-file-even-through-renaming)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -719,6 +720,11 @@ git bisect reset                    # Finish search
 ## Bypass pre-commit and commit-msg githooks
 ```sh
 git commit --no-verify
+```
+
+## List commits and changes to a specific file (even through renaming)
+```sh
+git log --follow -p -- <file_path>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

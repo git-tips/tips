@@ -277,7 +277,7 @@
     "tip": "git log Branch1 ^Branch2"
 }, {
     "title": "reuse recorded resolution, record and reuse previous conflicts resolutions.",
-    "tip":"git config --global rerere.enabled 1"
+    "tip": "git config --global rerere.enabled 1"
 }, {
     "title": "Open all conflicted files in an editor.",
     "tip": "git diff --name-only | uniq | xargs $EDITOR"
@@ -320,4 +320,7 @@
 }, {
     "title": "Bypass pre-commit and commit-msg githooks",
     "tip": "git commit --no-verify"
+}, {
+    "title": "List commits and changes to a specific file (even through renaming)",
+    "tip": "git log --follow -p -- <file_path>"
 }]
