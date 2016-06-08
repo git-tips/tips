@@ -105,6 +105,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [List only the root and merge commits.](#list-only-the-root-and-merge-commits)
 * [Merge previous two commits into one.](#merge-previous-two-commits-into-one)
 * [List all branch is WIP](#list-all-branch-is-wip)
+* [Find guilty with binary search](#find-guilty-with-binary-search)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -701,6 +702,17 @@ git rebase --interactive HEAD~2
 ## List all branch is WIP
 ```sh
 git checkout master && git branch --no-merged
+```
+
+## Find guilty with binary search
+
+```sh
+git bisect start				# Search start
+git bisect bad					# Set point to bad commit
+git bisect good v2.6.13-rc2		# Set point to good commit|tag
+git bisect bad					# Say current state is bad
+git bisect good					# Say current state is good
+git bisect reset				# Finish search
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
