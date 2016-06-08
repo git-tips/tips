@@ -174,7 +174,7 @@ git checkout -
 
 ## Remove branches that have already been merged with master
 ```sh
-git branch --merged | grep -v '\*' | xargs -n 1 git branch -d
+git branch --merged master | grep -v '^\*' | xargs --no-run-if-empty -n 1 git branch -d
 ```
 
 ## List all branches and their upstreams, as well as last commit on branch
