@@ -304,7 +304,7 @@
    "tip": "git diff --staged"
 },{
 	"title": "Extract file from another branch.",
-	"tip": "git show <banch_name>:<file_name>"
+	"tip": "git show <branch_name>:<file_name>"
 }, {
 	"title": "List only the root and merge commits.",
   "tip": "git log --first-parent"
