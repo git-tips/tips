@@ -7,6 +7,8 @@
   $ cd tips && npm install
   ```
 
+ :warning: don't fail to think that this is optional, because if you don't install the dependencies you won't get the benefit of auto-updating README and TOC and your PR will likely to not get merged because of that.
+
 * Edit [tips.json](./tips.json) to add your tip in the below format:
 
 ```js
