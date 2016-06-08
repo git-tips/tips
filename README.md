@@ -271,6 +271,12 @@ curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completio
 
 ## What changed since two weeks?
 ```sh
+git log --no-merges --raw --since='2 weeks ago'
+```
+
+
+__Alternatives:__
+```sh
 git whatchanged --since='2 weeks ago'
 ```
 
