@@ -64,6 +64,9 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Prunes references to remote branches that have been deleted in the remote.](#prunes-references-to-remote-branches-that-have-been-deleted-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](#visualize-the-version-tree)
+* [Changed files](#changed-files)
+* [Help](#help)
+* [Retrieve the commit hash of the initial revision.](#retrieve-the-commit-hash-of-the-initial-revision)
 * [Deploying git tracked subfolder to gh-pages](#deploying-git-tracked-subfolder-to-gh-pages)
 * [Adding a project to repo using subtree](#adding-a-project-to-repo-using-subtree)
 * [Get latest changes in your repo for a linked project using subtree](#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
@@ -491,6 +494,21 @@ git log --pretty=oneline --graph --decorate --all
 __Alternatives:__
 ```sh
 gitk --all
+```
+
+## Changed files
+```sh
+git log --name-status
+```
+
+## Help
+```sh
+git log --help
+```
+
+## Retrieve the commit hash of the initial revision.
+```sh
+ git rev-list --reverse HEAD | head -1
 ```
 
 ## Deploying git tracked subfolder to gh-pages
