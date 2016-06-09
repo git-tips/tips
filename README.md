@@ -166,7 +166,7 @@ git diff HEAD
 
 ## List all branches that are already merged into master
 ```sh
-git checkout master && git branch --merged
+git branch --merged master
 ```
 
 ## Quickly switch to the previous branch
