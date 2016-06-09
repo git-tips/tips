@@ -36,7 +36,7 @@
     "tip": "git checkout -"
 }, {
     "title": "Remove branches that have already been merged with master",
-    "tip": "git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    "tip": "git branch --merged master | grep -v '^\\*' | xargs --no-run-if-empty -n 1 git branch -d"
 }, {
     "title": "List all branches and their upstreams, as well as last commit on branch",
     "tip": "git branch -vv"
