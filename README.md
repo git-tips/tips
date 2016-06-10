@@ -108,6 +108,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Find guilty with binary search](#find-guilty-with-binary-search)
 * [Bypass pre-commit and commit-msg githooks](#bypass-pre-commit-and-commit-msg-githooks)
 * [List commits and changes to a specific file (even through renaming)](#list-commits-and-changes-to-a-specific-file-even-through-renaming)
+* [Clone a single branch](#clone-a-single-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -731,6 +732,11 @@ git commit --no-verify
 ## List commits and changes to a specific file (even through renaming)
 ```sh
 git log --follow -p -- <file_path>
+```
+
+## Clone a single branch
+```sh
+git clone -b <branch-name> --single-branch https://github.com/user/repo.git
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

@@ -324,4 +324,7 @@
 }, {
     "title": "List commits and changes to a specific file (even through renaming)",
     "tip": "git log --follow -p -- <file_path>"
+},{
+    "title": "Clone a single branch",
+    "tip": "git clone -b <branch-name> --single-branch https://github.com/user/repo.git"
 }]
