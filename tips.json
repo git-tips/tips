@@ -54,6 +54,9 @@
     "title": "Undo local changes with the last content in head",
     "tip": "git checkout -- <file_name>"
 }, {
+    "title": "Diff between HEAD, not considering current changes, and last commit",
+    "tip": "git show"
+}, {
     "title": "Revert: Undo a commit by creating a new commit",
     "tip": "git revert <commit-ish>"
 }, {
