@@ -158,7 +158,7 @@ git diff
 
 ## Changes staged for commit
 ```sh
-git diff --cached or git diff --staged
+git diff --cached
 ```
 
 ## Show both staged and unstaged changes
