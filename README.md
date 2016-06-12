@@ -109,6 +109,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Bypass pre-commit and commit-msg githooks](#bypass-pre-commit-and-commit-msg-githooks)
 * [List commits and changes to a specific file (even through renaming)](#list-commits-and-changes-to-a-specific-file-even-through-renaming)
 * [Clone a single branch](#clone-a-single-branch)
+* [Create and switch new branch](#create-and-switch-new-branch)
 * [Ignore file mode changes on commits](#ignore-file-mode-changes-on-commits)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
@@ -738,6 +739,11 @@ git log --follow -p -- <file_path>
 ## Clone a single branch
 ```sh
 git clone -b <branch-name> --single-branch https://github.com/user/repo.git
+```
+
+## Create and switch new branch
+```sh
+git checkout -b <branch-name>
 ```
 
 ## Ignore file mode changes on commits
