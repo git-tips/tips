@@ -328,6 +328,9 @@
     "title": "Clone a single branch",
     "tip": "git clone -b <branch-name> --single-branch https://github.com/user/repo.git"
 },{
+    "title": "Create and switch new branch",
+    "tip": "git checkout -b <branch-name>"
+},{
     "title": "Ignore file mode changes on commits",
     "tip": "git config core.fileMode false"
 }]
