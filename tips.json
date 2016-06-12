@@ -327,4 +327,7 @@
 },{
     "title": "Clone a single branch",
     "tip": "git clone -b <branch-name> --single-branch https://github.com/user/repo.git"
+},{
+    "title": "Ignore file mode changes on commits",
+    "tip": "git config core.fileMode false"
 }]
