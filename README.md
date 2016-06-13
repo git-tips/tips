@@ -746,6 +746,12 @@ git clone -b <branch-name> --single-branch https://github.com/user/repo.git
 git checkout -b <branch-name>
 ```
 
+
+__Alternatives:__
+```sh
+git branch <branch-name> && git checkout <branch-name>
+```
+
 ## Ignore file mode changes on commits
 ```sh
 git config core.fileMode false
