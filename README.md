@@ -100,7 +100,6 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [View the GPG signatures in the commit log](#view-the-gpg-signatures-in-the-commit-log)
 * [Remove entry in the global config.](#remove-entry-in-the-global-config)
 * [Checkout a new branch without any history](#checkout-a-new-branch-without-any-history)
-* [File diff between staging and the last file version.](#file-diff-between-staging-and-the-last-file-version)
 * [Extract file from another branch.](#extract-file-from-another-branch)
 * [List only the root and merge commits.](#list-only-the-root-and-merge-commits)
 * [Merge previous two commits into one.](#merge-previous-two-commits-into-one)
@@ -161,6 +160,12 @@ git diff
 ## Changes staged for commit
 ```sh
 git diff --cached
+```
+
+
+__Alternatives:__
+```sh
+git diff --staged
 ```
 
 ## Show both staged and unstaged changes
@@ -688,11 +693,6 @@ git config --global --unset <entry-name>
 ## Checkout a new branch without any history
 ```sh
 git checkout --orphan <branch_name>
-```
-
-## File diff between staging and the last file version.
-```sh
-git diff --staged
 ```
 
 ## Extract file from another branch.

@@ -24,7 +24,8 @@
     "tip": "git diff"
 }, {
     "title": "Changes staged for commit",
-    "tip": "git diff --cached"
+    "tip": "git diff --cached",
+    "alternatives": ["git diff --staged"]
 }, {
     "title": "Show both staged and unstaged changes",
     "tip": "git diff HEAD"
@@ -300,9 +301,6 @@
 }, {
     "title": "Checkout a new branch without any history",
     "tip": "git checkout --orphan <branch_name>"
-}, {
-    "title": "File diff between staging and the last file version.",
-    "tip": "git diff --staged"
 }, {
     "title": "Extract file from another branch.",
     "tip": "git show <branch_name>:<file_name>"
