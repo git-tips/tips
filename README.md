@@ -188,6 +188,12 @@ git checkout -
 git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -d
 ```
 
+
+__Alternatives:__
+```sh
+git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d # will not delete master if master is not checked out
+```
+
 ## List all branches and their upstreams, as well as last commit on branch
 ```sh
 git branch -vv
