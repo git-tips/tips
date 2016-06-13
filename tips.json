@@ -333,4 +333,10 @@
 },{
     "title": "Ignore file mode changes on commits",
     "tip": "git config core.fileMode false"
+},{
+  "title": "Turn off git colored terminal output",
+  "tip": "git config --global color.ui false"
+},{
+    "title": "specific color settings",
+    "tip": "git config --global <specific command e.g branch, diff> <true, false or always>"
 }]

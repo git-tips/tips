@@ -111,6 +111,8 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Clone a single branch](#clone-a-single-branch)
 * [Create and switch new branch](#create-and-switch-new-branch)
 * [Ignore file mode changes on commits](#ignore-file-mode-changes-on-commits)
+* [Turn off git colored terminal output](#turn-off-git-colored-terminal-output)
+* [specific color settings](#specific-color-settings)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -749,6 +751,16 @@ git checkout -b <branch-name>
 ## Ignore file mode changes on commits
 ```sh
 git config core.fileMode false
+```
+
+## Turn off git colored terminal output
+```sh
+git config --global color.ui false
+```
+
+## specific color settings
+```sh
+git config --global <specific command e.g branch, diff> <true, false or always>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
