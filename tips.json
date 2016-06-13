@@ -25,7 +25,7 @@
 }, {
     "title": "Changes staged for commit",
     "tip": "git diff --cached",
-    "alternatives": "git diff --staged"
+    "alternatives": ["git diff --staged"]
 }, {
     "title": "Show both staged and unstaged changes",
     "tip": "git diff HEAD"

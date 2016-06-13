@@ -161,6 +161,12 @@ git diff
 git diff --cached
 ```
 
+
+__Alternatives:__
+```sh
+git diff --staged
+```
+
 ## Show both staged and unstaged changes
 ```sh
 git diff HEAD
