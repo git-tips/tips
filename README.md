@@ -26,6 +26,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Revert: Undo a commit by creating a new commit](#revert-undo-a-commit-by-creating-a-new-commit)
 * [Reset: Discard commits, advised for private branch](#reset-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](#reword-the-previous-commit-message)
+* [See commit history for just the current branch](#see-commit-history-for-just-the-current-branch)
 * [Amend author.](#amend-author)
 * [Reset author, after author has been changed in the global config.](#reset-author-after-author-has-been-changed-in-the-global-config)
 * [Changing a remote's URL](#changing-a-remotes-url)
@@ -238,6 +239,11 @@ git reset <commit-ish>
 ## Reword the previous commit message
 ```sh
 git commit -v --amend
+```
+
+## See commit history for just the current branch
+```sh
+git cherry -v master
 ```
 
 ## Amend author.

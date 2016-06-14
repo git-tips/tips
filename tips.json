@@ -65,6 +65,9 @@
     "title": "Reword the previous commit message",
     "tip": "git commit -v --amend"
 }, {
+   "title": "See commit history for just the current branch",
+   "tip": "git cherry -v master"
+}, {
     "title": "Amend author.",
     "tip": "git commit --amend --author='Author Name <email@address.com>'"
 }, {
