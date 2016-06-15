@@ -627,7 +627,7 @@ git config --global core.ignorecase false
 
 ## Add custom editors.
 ```sh
- git config --global core.editor "$MY_EDITOR"
+ git config --global core.editor "MY_EDITOR"
 ```
 
 ## Auto correct typos.
