@@ -84,6 +84,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Always rebase instead of merge on pull.](#always-rebase-instead-of-merge-on-pull)
 * [List all the alias and configs.](#list-all-the-alias-and-configs)
 * [Make git case sensitive.](#make-git-case-sensitive)
+* [Add custom editors.](#add-custom-editors)
 * [Auto correct typos.](#auto-correct-typos)
 * [Check if the change was a part of a release.](#check-if-the-change-was-a-part-of-a-release)
 * [Dry run. (any command that supports dry-run flag should do.)](#dry-run-any-command-that-supports-dry-run-flag-should-do)
@@ -626,7 +627,7 @@ git config --global core.ignorecase false
 
 ## Add custom editors.
 ```sh
- git config core.editor "$MY_EDITOR"
+ git config --global core.editor "$MY_EDITOR"
 ```
 
 ## Auto correct typos.
