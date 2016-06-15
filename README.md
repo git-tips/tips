@@ -624,6 +624,11 @@ git config --list
 git config --global core.ignorecase false
 ```
 
+## Add custom editors.
+```sh
+ git config core.editor "$MY_EDITOR"
+```
+
 ## Auto correct typos.
 ```sh
 git config --global help.autocorrect 1
