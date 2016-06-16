@@ -342,4 +342,7 @@
 },{
     "title": "specific color settings",
     "tip": "git config --global <specific command e.g branch, diff> <true, false or always>"
+},{
+    "title": "Show all local branches ordered by recent commits",
+    "tip": "git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
 }]
