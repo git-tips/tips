@@ -254,6 +254,9 @@
 }, {
     "title": "Make git case sensitive.",
     "tip": "git config --global core.ignorecase false"
+},{
+    "title": "Add custom editors.",
+    "tip": "git config --global core.editor '$EDITOR'"
 }, {
     "title": "Auto correct typos.",
     "tip": "git config --global help.autocorrect 1"
