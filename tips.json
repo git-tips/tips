@@ -348,4 +348,7 @@
 },{
     "title": "Show all local branches ordered by recent commits",
     "tip": "git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
+},{
+    "title": "Find lines matching the pattern (regex or string) in tracked files",
+    "tip": "git grep --heading --line-number 'foo bar'"
 }]

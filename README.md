@@ -115,6 +115,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Turn off git colored terminal output](#turn-off-git-colored-terminal-output)
 * [specific color settings](#specific-color-settings)
 * [Show all local branches ordered by recent commits](#show-all-local-branches-ordered-by-recent-commits)
+* [Find lines matching the pattern (regex or string) in tracked files](#find-lines-matching-the-pattern-regex-or-string-in-tracked-files)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -628,7 +629,7 @@ git config --global core.ignorecase false
 
 ## Add custom editors.
 ```sh
- git config --global core.editor '$EDITOR'
+git config --global core.editor '$EDITOR'
 ```
 
 ## Auto correct typos.
@@ -791,6 +792,11 @@ git config --global <specific command e.g branch, diff> <true, false or always>
 ## Show all local branches ordered by recent commits
 ```sh
 git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/
+```
+
+## Find lines matching the pattern (regex or string) in tracked files
+```sh
+git grep --heading --line-number 'foo bar'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
