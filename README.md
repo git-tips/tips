@@ -22,6 +22,8 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Track upstream branch](#track-upstream-branch)
 * [Delete local branch](#delete-local-branch)
 * [Delete remote branch](#delete-remote-branch)
+* [Delete local tag](#delete-local-tag)
+* [Delete remote tag](#delete-remote-tag)
 * [Undo local changes with the last content in head](#undo-local-changes-with-the-last-content-in-head)
 * [Revert: Undo a commit by creating a new commit](#revert-undo-a-commit-by-creating-a-new-commit)
 * [Reset: Discard commits, advised for private branch](#reset-discard-commits-advised-for-private-branch)
@@ -223,6 +225,16 @@ git push origin --delete <remote_branchname>
 __Alternatives:__
 ```sh
 git push origin :<remote_branchname>
+```
+
+## Delete local tag
+```sh
+git tag -d <tag-name>
+```
+
+## Delete remote tag
+```sh
+git push origin :refs/tags/<tag-name>
 ```
 
 ## Undo local changes with the last content in head
@@ -628,7 +640,7 @@ git config --global core.ignorecase false
 
 ## Add custom editors.
 ```sh
- git config --global core.editor '$EDITOR'
+git config --global core.editor '$EDITOR'
 ```
 
 ## Auto correct typos.
