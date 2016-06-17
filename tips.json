@@ -53,6 +53,12 @@
     "tip": "git push origin --delete <remote_branchname>",
     "alternatives": ["git push origin :<remote_branchname>"]
 }, {
+    "title": "Delete local tag",
+    "tip": "git tag -d <tag-name>"
+}, {
+    "title": "Delete remote tag",
+    "tip": "git push origin :refs/tags/<tag-name>"
+}, {
     "title": "Undo local changes with the last content in head",
     "tip": "git checkout -- <file_name>"
 }, {
