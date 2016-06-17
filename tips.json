@@ -357,4 +357,7 @@
 },{
     "title": "Find lines matching the pattern (regex or string) in tracked files",
     "tip": "git grep --heading --line-number 'foo bar'"
+}, {
+    "title": "Clone a shallow copy of a repository",
+    "tip": "git clone https://github.com/user/repo.git --depth 1"
 }]
