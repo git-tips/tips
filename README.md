@@ -481,6 +481,11 @@ __Alternatives:__
 git submodule update --init --recursive
 ```
 
+
+```sh
+git submodule update --remote
+```
+
 ## Show all commits in the current branch yet to be merged to master
 ```sh
 git cherry -v master
