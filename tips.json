@@ -161,7 +161,8 @@
     "alternatives": ["git clean -df"]
 }, {
     "title": "Update all the submodules",
-    "tip": "git submodule foreach git pull"
+    "tip": "git submodule foreach git pull",
+	"alternatives": ["git submodule update --init --recursive"]
 }, {
     "title": "Show all commits in the current branch yet to be merged to master",
     "tip": "git cherry -v master",

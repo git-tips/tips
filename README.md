@@ -440,6 +440,12 @@ git clean -df
 git submodule foreach git pull
 ```
 
+
+__Alternatives:__
+```sh
+git submodule update --init --recursive
+```
+
 ## Show all commits in the current branch yet to be merged to master
 ```sh
 git cherry -v master
