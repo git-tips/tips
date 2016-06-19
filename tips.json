@@ -361,4 +361,7 @@
 }, {
     "title": "Clone a shallow copy of a repository",
     "tip": "git clone https://github.com/user/repo.git --depth 1"
+}, {
+    "title": "Get first commit in a branch (from master)",
+    "tip": "git log master..<branch-name> --oneline | tail -1"
 }]

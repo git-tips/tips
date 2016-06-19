@@ -119,6 +119,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Show all local branches ordered by recent commits](#show-all-local-branches-ordered-by-recent-commits)
 * [Find lines matching the pattern (regex or string) in tracked files](#find-lines-matching-the-pattern-regex-or-string-in-tracked-files)
 * [Clone a shallow copy of a repository](#clone-a-shallow-copy-of-a-repository)
+* [Get first commit in a branch (from master)](#get-first-commit-in-a-branch-from-master)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -826,6 +827,11 @@ git grep --heading --line-number 'foo bar'
 ## Clone a shallow copy of a repository
 ```sh
 git clone https://github.com/user/repo.git --depth 1
+```
+
+## Get first commit in a branch (from master)
+```sh
+git log master..<branch-name> --oneline | tail -1
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
