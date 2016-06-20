@@ -361,4 +361,7 @@
 }, {
     "title": "Clone a shallow copy of a repository",
     "tip": "git clone https://github.com/user/repo.git --depth 1"
+}, {
+    "title": "Search Commit log across all branches for given text",
+    "tip": "git log --all --grep='<given-text>'"
 }]
