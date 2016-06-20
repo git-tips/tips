@@ -364,4 +364,7 @@
 }, {
     "title": "Search Commit log across all branches for given text",
     "tip": "git log --all --grep='<given-text>'"
+}, {
+    "title": "Get first commit in a branch (from master)",
+    "tip": "git log master..<branch-name> --oneline | tail -1"
 }]
