@@ -281,7 +281,7 @@
     "tip": "git rebase -i --autosquash"
 }, {
     "title": "skip staging area during commit.",
-    "tip": "git commit -am <commit message>"
+    "tip": "git commit --only <file_path>"
 }, {
     "title": "List ignored files.",
     "tip": "git check-ignore *"

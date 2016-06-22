@@ -685,7 +685,7 @@ git rebase -i --autosquash
 
 ## skip staging area during commit.
 ```sh
-git commit -am <commit message>
+git commit --only <file_path>
 ```
 
 ## List ignored files.
