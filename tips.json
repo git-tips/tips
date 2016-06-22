@@ -283,6 +283,9 @@
     "title": "skip staging area during commit.",
     "tip": "git commit -am <commit message>"
 }, {
+    "title": "Interactive staging.",
+    "tip": "git add -i"
+}, {
     "title": "List ignored files.",
     "tip": "git check-ignore *"
 }, {
