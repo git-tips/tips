@@ -93,6 +93,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Marks your commit as a fix of a previous commit.](#marks-your-commit-as-a-fix-of-a-previous-commit)
 * [squash fixup commits normal commits.](#squash-fixup-commits-normal-commits)
 * [skip staging area during commit.](#skip-staging-area-during-commit)
+* [Interactive staging.](#interactive-staging)
 * [List ignored files.](#list-ignored-files)
 * [Status of ignored files.](#status-of-ignored-files)
 * [Commits in Branch1 that are not in Branch2](#commits-in-branch1-that-are-not-in-branch2)
@@ -686,6 +687,11 @@ git rebase -i --autosquash
 ## skip staging area during commit.
 ```sh
 git commit --only <file_path>
+```
+
+## Interactive staging.
+```sh
+git add -i
 ```
 
 ## List ignored files.
