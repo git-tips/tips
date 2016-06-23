@@ -370,4 +370,7 @@
 }, {
     "title": "Get first commit in a branch (from master)",
     "tip": "git log master..<branch-name> --oneline | tail -1"
+}, {
+    "title":"Unstaging Staged file",
+    "tip": "git reset HEAD <file-name>"
 }]

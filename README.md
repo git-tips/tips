@@ -122,6 +122,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Clone a shallow copy of a repository](#clone-a-shallow-copy-of-a-repository)
 * [Search Commit log across all branches for given text](#search-commit-log-across-all-branches-for-given-text)
 * [Get first commit in a branch (from master)](#get-first-commit-in-a-branch-from-master)
+* [Unstaging Staged file](#unstaging-staged-file)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -844,6 +845,11 @@ git log --all --grep='<given-text>'
 ## Get first commit in a branch (from master)
 ```sh
 git log master..<branch-name> --oneline | tail -1
+```
+
+## Unstaging Staged file
+```sh
+git reset HEAD <file-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
