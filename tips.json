@@ -373,4 +373,7 @@
 }, {
     "title":"Unstaging Staged file",
     "tip": "git reset HEAD <file-name>"
+}, {
+    "title": "Force push to Remote Repository",
+    "tip": "git push -f <remote-name> <branch-name>"
 }]

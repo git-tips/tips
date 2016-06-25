@@ -123,6 +123,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Search Commit log across all branches for given text](#search-commit-log-across-all-branches-for-given-text)
 * [Get first commit in a branch (from master)](#get-first-commit-in-a-branch-from-master)
 * [Unstaging Staged file](#unstaging-staged-file)
+* [Force push to Remote Repository](#force-push-to-remote-repository)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -850,6 +851,11 @@ git log master..<branch-name> --oneline | tail -1
 ## Unstaging Staged file
 ```sh
 git reset HEAD <file-name>
+```
+
+## Force push to Remote Repository
+```sh
+git push -f <remote-name> <branch-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
