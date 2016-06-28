@@ -325,7 +325,7 @@
     "title": "List only the root and merge commits.",
     "tip": "git log --first-parent"
 }, {
-    "title": "Merge previous two commits into one.",
+    "title": "Change previous two commits with an interactive rebase.",
     "tip": "git rebase --interactive HEAD~2"
 }, {
     "title": "List all branch is WIP",

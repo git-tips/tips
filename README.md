@@ -107,7 +107,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Checkout a new branch without any history](#checkout-a-new-branch-without-any-history)
 * [Extract file from another branch.](#extract-file-from-another-branch)
 * [List only the root and merge commits.](#list-only-the-root-and-merge-commits)
-* [Merge previous two commits into one.](#merge-previous-two-commits-into-one)
+* [Change previous two commits with an interactive rebase.](#change-previous-two-commits-with-an-interactive-rebase)
 * [List all branch is WIP](#list-all-branch-is-wip)
 * [Find guilty with binary search](#find-guilty-with-binary-search)
 * [Bypass pre-commit and commit-msg githooks](#bypass-pre-commit-and-commit-msg-githooks)
@@ -762,7 +762,7 @@ git show <branch_name>:<file_name>
 git log --first-parent
 ```
 
-## Merge previous two commits into one.
+## Change previous two commits with an interactive rebase.
 ```sh
 git rebase --interactive HEAD~2
 ```
