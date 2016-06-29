@@ -861,7 +861,7 @@ git push -f <remote-name> <branch-name>
 
 ## Adding Remote name
 ```sh
-git remote add origin <remote-url>
+git remote add <remote-nickname> <remote-url>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
