@@ -378,5 +378,5 @@
     "tip": "git push -f <remote-name> <branch-name>"
 }, {
     "title": "Adding Remote name",
-    "tip": "git remote add origin <remote-url>"
+    "tip": "git remote add <remote-nickname> <remote-url>"
 }]
