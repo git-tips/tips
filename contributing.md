@@ -19,4 +19,6 @@
 }
 ```
 
+* Run `npm run precommit` to generate new files.
+
 * Commit, push and send a PR!
