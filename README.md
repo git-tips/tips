@@ -545,6 +545,12 @@ git remote prune origin
  git rev-list --reverse HEAD | head -1
 ```
 
+
+__Alternatives:__
+```sh
+git rev-list --max-parents=0 HEAD
+```
+
 ## Visualize the version tree.
 ```sh
 git log --pretty=oneline --graph --decorate --all
