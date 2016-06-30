@@ -198,7 +198,7 @@
 }, {
     "title": "Retrieve the commit hash of the initial revision.",
     "tip": " git rev-list --reverse HEAD | head -1",
-    "alternatives": ["git rev-list --max-parents=0 HEAD"]
+    "alternatives": ["git rev-list --max-parents=0 HEAD", "git log --pretty=oneline | tail -1 | cut -c 1-40", "git log --pretty=oneline --reverse | head -1 | cut -c 1-40"]
 }, {
     "title": "Visualize the version tree.",
     "tip": "git log --pretty=oneline --graph --decorate --all",

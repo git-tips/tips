@@ -551,6 +551,16 @@ __Alternatives:__
 git rev-list --max-parents=0 HEAD
 ```
 
+
+```sh
+git log --pretty=oneline | tail -1 | cut -c 1-40
+```
+
+
+```sh
+git log --pretty=oneline --reverse | head -1 | cut -c 1-40
+```
+
 ## Visualize the version tree.
 ```sh
 git log --pretty=oneline --graph --decorate --all
