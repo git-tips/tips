@@ -125,6 +125,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Unstaging Staged file](#unstaging-staged-file)
 * [Force push to Remote Repository](#force-push-to-remote-repository)
 * [Adding Remote name](#adding-remote-name)
+* [Show the author, time and last revision made to each line of a given file](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -878,6 +879,11 @@ git push -f <remote-name> <branch-name>
 ## Adding Remote name
 ```sh
 git remote add <remote-nickname> <remote-url>
+```
+
+## Show the author, time and last revision made to each line of a given file
+```sh
+git blame <file-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

@@ -372,7 +372,7 @@
     "title": "Get first commit in a branch (from master)",
     "tip": "git log master..<branch-name> --oneline | tail -1"
 }, {
-    "title":"Unstaging Staged file",
+    "title": "Unstaging Staged file",
     "tip": "git reset HEAD <file-name>"
 }, {
     "title": "Force push to Remote Repository",
@@ -380,4 +380,7 @@
 }, {
     "title": "Adding Remote name",
     "tip": "git remote add <remote-nickname> <remote-url>"
+}, {
+    "title": "Show the author, time and last revision made to each line of a given file",
+    "tip": "git blame <file-name>"
 }]
