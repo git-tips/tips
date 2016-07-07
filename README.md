@@ -78,6 +78,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Fetch pull request by ID to a local branch](#fetch-pull-request-by-id-to-a-local-branch)
 * [Show the most recent tag on the current branch.](#show-the-most-recent-tag-on-the-current-branch)
 * [Show inline word diff.](#show-inline-word-diff)
+* [Show changes using common diff tools.](#show-changes-using-common-diff-tools)
 * [Don’t consider changes for tracked file.](#dont-consider-changes-for-tracked-file)
 * [Undo assume-unchanged.](#undo-assume-unchanged)
 * [Clean the files from `.gitignore`.](#clean-the-files-from-gitignore)
@@ -632,6 +633,11 @@ git describe --tags --abbrev=0
 ## Show inline word diff.
 ```sh
 git diff --word-diff
+```
+
+## Show changes using common diff tools.
+```sh
+git difftool -t <commit1> <commit2> <path>
 ```
 
 ## Don’t consider changes for tracked file.
