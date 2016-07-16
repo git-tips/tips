@@ -386,4 +386,7 @@
 }, {
     "title": "Show the author, time and last revision made to each line of a given file",
     "tip": "git blame <file-name>"
+}, {
+    "title": "Group commits by authors and title",
+    "tip": "git shortlog"
 }]
