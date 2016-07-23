@@ -1,6 +1,8 @@
 ## git-tips
 > Collection of `git-tips`, want to add your tips? Checkout [contributing.md](./contributing.md)
 
+[English](http://git.io/git-tips) | [中文](https://github.com/521xueweihan/git-tips)
+
 P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 
 <!-- @doxie.inject start toc -->
@@ -353,7 +355,7 @@ git branch --contains <commit-ish>
 
 ## Git Aliases
 ```sh
-git config --global alias.<handle> <command> 
+git config --global alias.<handle> <command>
 git config --global alias.st status
 ```
 
@@ -517,7 +519,7 @@ __Alternatives:__
 git branch -m [<old-branch-name>] <new-branch-name>
 ```
 
-## rebases 'feature' to 'master' and merges it in to master 
+## rebases 'feature' to 'master' and merges it in to master
 ```sh
 git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}
 ```
@@ -798,12 +800,12 @@ git checkout master && git branch --no-merged
 
 ## Find guilty with binary search
 ```sh
-git bisect start                    # Search start 
-git bisect bad                      # Set point to bad commit 
-git bisect good v2.6.13-rc2         # Set point to good commit|tag 
-git bisect bad                      # Say current state is bad 
-git bisect good                     # Say current state is good 
-git bisect reset                    # Finish search 
+git bisect start                    # Search start
+git bisect bad                      # Set point to bad commit
+git bisect good v2.6.13-rc2         # Set point to good commit|tag
+git bisect bad                      # Say current state is bad
+git bisect good                     # Say current state is good
+git bisect reset                    # Finish search
 
 ```
 
