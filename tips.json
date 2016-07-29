@@ -12,7 +12,8 @@
     "tip": "git ls-tree --name-only -r <commit-ish>"
 }, {
     "title": "Git reset first commit",
-    "tip": "git update-ref -d HEAD"
+    "tip": "git update-ref -d HEAD",
+    "alternatives": ["git reset --hard HEAD"]
 }, {
     "title": "List all the conflicted files",
     "tip": "git diff --name-only --diff-filter=U"
