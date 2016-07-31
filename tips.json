@@ -183,7 +183,7 @@
     "tip": "git branch -m <new-branch-name>",
     "alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
 }, {
-    "title": "rebases 'feature' to 'master' and merges it in to master ",
+    "title": "Rebases 'feature' to 'master' and merges it in to master ",
     "tip": "git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}"
 }, {
     "title": "Archive the `master` branch",
@@ -281,10 +281,10 @@
     "title": "Marks your commit as a fix of a previous commit.",
     "tip": "git commit --fixup <SHA-1>"
 }, {
-    "title": "squash fixup commits normal commits.",
+    "title": "Squash fixup commits normal commits.",
     "tip": "git rebase -i --autosquash"
 }, {
-    "title": "skip staging area during commit.",
+    "title": "Skip staging area during commit.",
     "tip": "git commit --only <file_path>"
 }, {
     "title": "Interactive staging.",
@@ -299,7 +299,7 @@
     "title": "Commits in Branch1 that are not in Branch2",
     "tip": "git log Branch1 ^Branch2"
 }, {
-    "title": "reuse recorded resolution, record and reuse previous conflicts resolutions.",
+    "title": "Reuse recorded resolution, record and reuse previous conflicts resolutions.",
     "tip": "git config --global rerere.enabled 1"
 }, {
     "title": "Open all conflicted files in an editor.",
@@ -357,7 +357,7 @@
   "title": "Turn off git colored terminal output",
   "tip": "git config --global color.ui false"
 },{
-    "title": "specific color settings",
+    "title": "Specific color settings",
     "tip": "git config --global <specific command e.g branch, diff> <true, false or always>"
 },{
     "title": "Show all local branches ordered by recent commits",

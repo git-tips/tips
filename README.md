@@ -63,7 +63,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Update all the submodules](#update-all-the-submodules)
 * [Show all commits in the current branch yet to be merged to master](#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
 * [Rename a branch](#rename-a-branch)
-* [rebases 'feature' to 'master' and merges it in to master ](#rebases-feature-to-master-and-merges-it-in-to-master)
+* [Rebases 'feature' to 'master' and merges it in to master ](#rebases-feature-to-master-and-merges-it-in-to-master)
 * [Archive the `master` branch](#archive-the-master-branch)
 * [Modify previous commit without modifying the commit message](#modify-previous-commit-without-modifying-the-commit-message)
 * [Prunes references to remote branches that have been deleted in the remote.](#prunes-references-to-remote-branches-that-have-been-deleted-in-the-remote)
@@ -94,13 +94,13 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Check if the change was a part of a release.](#check-if-the-change-was-a-part-of-a-release)
 * [Dry run. (any command that supports dry-run flag should do.)](#dry-run-any-command-that-supports-dry-run-flag-should-do)
 * [Marks your commit as a fix of a previous commit.](#marks-your-commit-as-a-fix-of-a-previous-commit)
-* [squash fixup commits normal commits.](#squash-fixup-commits-normal-commits)
-* [skip staging area during commit.](#skip-staging-area-during-commit)
+* [Squash fixup commits normal commits.](#squash-fixup-commits-normal-commits)
+* [Skip staging area during commit.](#skip-staging-area-during-commit)
 * [Interactive staging.](#interactive-staging)
 * [List ignored files.](#list-ignored-files)
 * [Status of ignored files.](#status-of-ignored-files)
 * [Commits in Branch1 that are not in Branch2](#commits-in-branch1-that-are-not-in-branch2)
-* [reuse recorded resolution, record and reuse previous conflicts resolutions.](#reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions)
+* [Reuse recorded resolution, record and reuse previous conflicts resolutions.](#reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions)
 * [Open all conflicted files in an editor.](#open-all-conflicted-files-in-an-editor)
 * [Count unpacked number of objects and their disk consumption.](#count-unpacked-number-of-objects-and-their-disk-consumption)
 * [Prune all unreachable objects from the object database.](#prune-all-unreachable-objects-from-the-object-database)
@@ -119,7 +119,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Create and switch new branch](#create-and-switch-new-branch)
 * [Ignore file mode changes on commits](#ignore-file-mode-changes-on-commits)
 * [Turn off git colored terminal output](#turn-off-git-colored-terminal-output)
-* [specific color settings](#specific-color-settings)
+* [Specific color settings](#specific-color-settings)
 * [Show all local branches ordered by recent commits](#show-all-local-branches-ordered-by-recent-commits)
 * [Find lines matching the pattern (regex or string) in tracked files](#find-lines-matching-the-pattern-regex-or-string-in-tracked-files)
 * [Clone a shallow copy of a repository](#clone-a-shallow-copy-of-a-repository)
@@ -355,7 +355,7 @@ git branch --contains <commit-ish>
 
 ## Git Aliases
 ```sh
-git config --global alias.<handle> <command>
+git config --global alias.<handle> <command> 
 git config --global alias.st status
 ```
 
@@ -519,7 +519,7 @@ __Alternatives:__
 git branch -m [<old-branch-name>] <new-branch-name>
 ```
 
-## rebases 'feature' to 'master' and merges it in to master
+## Rebases 'feature' to 'master' and merges it in to master 
 ```sh
 git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}
 ```
@@ -708,12 +708,12 @@ git clean -fd --dry-run
 git commit --fixup <SHA-1>
 ```
 
-## squash fixup commits normal commits.
+## Squash fixup commits normal commits.
 ```sh
 git rebase -i --autosquash
 ```
 
-## skip staging area during commit.
+## Skip staging area during commit.
 ```sh
 git commit --only <file_path>
 ```
@@ -738,7 +738,7 @@ git status --ignored
 git log Branch1 ^Branch2
 ```
 
-## reuse recorded resolution, record and reuse previous conflicts resolutions.
+## Reuse recorded resolution, record and reuse previous conflicts resolutions.
 ```sh
 git config --global rerere.enabled 1
 ```
@@ -800,12 +800,12 @@ git checkout master && git branch --no-merged
 
 ## Find guilty with binary search
 ```sh
-git bisect start                    # Search start
-git bisect bad                      # Set point to bad commit
-git bisect good v2.6.13-rc2         # Set point to good commit|tag
-git bisect bad                      # Say current state is bad
-git bisect good                     # Say current state is good
-git bisect reset                    # Finish search
+git bisect start                    # Search start 
+git bisect bad                      # Set point to bad commit 
+git bisect good v2.6.13-rc2         # Set point to good commit|tag 
+git bisect bad                      # Say current state is bad 
+git bisect good                     # Say current state is good 
+git bisect reset                    # Finish search 
 
 ```
 
@@ -845,7 +845,7 @@ git config core.fileMode false
 git config --global color.ui false
 ```
 
-## specific color settings
+## Specific color settings
 ```sh
 git config --global <specific command e.g branch, diff> <true, false or always>
 ```
