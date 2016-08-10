@@ -670,7 +670,7 @@ git checkout <commit-ish> -- <file_path>
 
 ## Always rebase instead of merge on pull.
 ```sh
-git config --global branch.autosetuprebase always
+git config --global pull.rebase true
 ```
 
 ## List all the alias and configs.
