@@ -130,6 +130,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Adding Remote name](#adding-remote-name)
 * [Show the author, time and last revision made to each line of a given file](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
 * [Group commits by authors and title](#group-commits-by-authors-and-title)
+* [Forced push but still ensure you don't overwrite other's work](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -898,6 +899,11 @@ git blame <file-name>
 ## Group commits by authors and title
 ```sh
 git shortlog
+```
+
+## Forced push but still ensure you don't overwrite other's work
+```sh
+git push --force-with-lease <remote-name> <branch-name>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
