@@ -389,4 +389,7 @@
 }, {
     "title": "Group commits by authors and title",
     "tip": "git shortlog"
+}, {
+    "title": "Forced push but still ensure you don't overwrite other's work",
+    "tip": "git push --force-with-lease <remote-name> <branch-name>"
 }]
