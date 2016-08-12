@@ -135,6 +135,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Show the author, time and last revision made to each line of a given file](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
 * [Group commits by authors and title](#group-commits-by-authors-and-title)
 * [Forced push but still ensure you don't overwrite other's work](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
+* [Show how many lines does an author contribute](#show-how-many-lines-does-an-author-contribute)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -908,6 +909,19 @@ git shortlog
 ## Forced push but still ensure you don't overwrite other's work
 ```sh
 git push --force-with-lease <remote-name> <branch-name>
+```
+
+## Show how many lines does an author contribute
+```sh
+git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s removed lines: %s total lines: %s
+", add, subs, loc }' -
+```
+
+
+__Alternatives:__
+```sh
+git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s, removed lines: %s, total lines: %s
+", add, subs, loc }' - # on Mac OSX
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
