@@ -168,6 +168,12 @@ git ls-tree --name-only -r <commit-ish>
 git update-ref -d HEAD
 ```
 
+
+__Alternatives:__
+```sh
+git reset --hard HEAD
+```
+
 ## List all the conflicted files
 ```sh
 git diff --name-only --diff-filter=U
