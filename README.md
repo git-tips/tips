@@ -136,6 +136,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Group commits by authors and title](#group-commits-by-authors-and-title)
 * [Forced push but still ensure you don't overwrite other's work](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
 * [Show how many lines does an author contribute](#show-how-many-lines-does-an-author-contribute)
+* [Revert: Reverting an entire merge](#revert-reverting-an-entire-merge)
 * [Number of commits in a branch](#number-of-commits-in-a-branch)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
@@ -929,6 +930,11 @@ __Alternatives:__
 ```sh
 git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s, removed lines: %s, total lines: %s
 ", add, subs, loc }' - # on Mac OSX
+```
+
+## Revert: Reverting an entire merge
+```sh
+git revert -m 1 <commit-ish>
 ```
 
 ## Number of commits in a branch
