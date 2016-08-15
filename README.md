@@ -534,7 +534,7 @@ git branch -m [<old-branch-name>] <new-branch-name>
 
 ## Rebases 'feature' to 'master' and merges it in to master 
 ```sh
-git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}
+git rebase master feature && git checkout master && git merge -
 ```
 
 ## Archive the `master` branch
