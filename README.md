@@ -138,6 +138,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Show how many lines does an author contribute](#show-how-many-lines-does-an-author-contribute)
 * [Revert: Reverting an entire merge](#revert-reverting-an-entire-merge)
 * [Number of commits in a branch](#number-of-commits-in-a-branch)
+* [Alias: git undo](#alias-git-undo)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -940,6 +941,11 @@ git revert -m 1 <commit-ish>
 ## Number of commits in a branch
 ```sh
 git rev-list --count <branch-name>
+```
+
+## Alias: git undo
+```sh
+git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
