@@ -403,4 +403,7 @@
 },{
     "title": "Number of commits in a branch",
     "tip": "git rev-list --count <branch-name>"
+},{
+    "title": "Alias: git undo",
+    "tip": "git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'"
 }]
