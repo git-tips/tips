@@ -140,6 +140,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Number of commits in a branch](#number-of-commits-in-a-branch)
 * [Alias: git undo](#alias-git-undo)
 * [Add object notes](#add-object-notes)
+* [Show all the git-notes](#show-all-the-git-notes)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -946,6 +947,11 @@ git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev
 ## Add object notes
 ```sh
 git notes add -m 'Note on the previous commit....'
+```
+
+## Show all the git-notes
+```sh
+git log --show-notes='*'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

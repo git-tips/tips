@@ -408,4 +408,7 @@
 }, {
     "title": "Add object notes",
     "tip": "git notes add -m 'Note on the previous commit....'"
+}, {
+    "title": "Show all the git-notes",
+    "tip": "git log --show-notes='*'"
 }]
