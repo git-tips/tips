@@ -405,4 +405,7 @@
 },{
     "title": "Alias: git undo",
     "tip": "git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'"
+}, {
+    "title": "Add object notes",
+    "tip": "git notes add -m 'Note on the previous commit....'"
 }]

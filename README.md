@@ -139,6 +139,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Revert: Reverting an entire merge](#revert-reverting-an-entire-merge)
 * [Number of commits in a branch](#number-of-commits-in-a-branch)
 * [Alias: git undo](#alias-git-undo)
+* [Add object notes](#add-object-notes)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -940,6 +941,11 @@ git rev-list --count <branch-name>
 ## Alias: git undo
 ```sh
 git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'
+```
+
+## Add object notes
+```sh
+git notes add -m 'Note on the previous commit....'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
