@@ -414,4 +414,7 @@
 }, {
     "title": "Apply commit from another repository",
     "tip": "git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k"
+}, {
+    "title": "Find common ancestor of two branches",
+    "tip": "diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1"
 }]
