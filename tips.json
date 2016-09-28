@@ -411,4 +411,7 @@
 }, {
     "title": "Show all the git-notes",
     "tip": "git log --show-notes='*'"
+}, {
+    "title": "Apply commit from another repository",
+    "tip": "git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k"
 }]
