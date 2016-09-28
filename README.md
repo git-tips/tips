@@ -141,6 +141,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Alias: git undo](#alias-git-undo)
 * [Add object notes](#add-object-notes)
 * [Show all the git-notes](#show-all-the-git-notes)
+* [Apply commit from another repository](#apply-commit-from-another-repository)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -952,6 +953,11 @@ git notes add -m 'Note on the previous commit....'
 ## Show all the git-notes
 ```sh
 git log --show-notes='*'
+```
+
+## Apply commit from another repository
+```sh
+git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
