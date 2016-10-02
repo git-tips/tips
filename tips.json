@@ -414,4 +414,7 @@
 }, {
     "title": "Apply commit from another repository",
     "tip": "git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k"
+},{
+    "title": "Specific fetch reference",
+    "tip": "git fetch origin master:refs/remotes/origin/mymaster"
 }]

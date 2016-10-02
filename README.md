@@ -142,6 +142,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Add object notes](#add-object-notes)
 * [Show all the git-notes](#show-all-the-git-notes)
 * [Apply commit from another repository](#apply-commit-from-another-repository)
+* [Specific fetch reference](#specific-fetch-reference)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -958,6 +959,11 @@ git log --show-notes='*'
 ## Apply commit from another repository
 ```sh
 git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k
+```
+
+## Specific fetch reference
+```sh
+git fetch origin master:refs/remotes/origin/mymaster
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
