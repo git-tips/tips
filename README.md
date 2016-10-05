@@ -686,6 +686,13 @@ git checkout <commit-ish> -- <file_path>
 git config --global pull.rebase true
 ```
 
+
+__Alternatives:__
+```sh
+#git < 1.7.9
+git config --global branch.autosetuprebase always
+```
+
 ## List all the alias and configs.
 ```sh
 git config --list
