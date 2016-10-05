@@ -258,7 +258,8 @@
     "tip": "git checkout <commit-ish> -- <file_path>"
 }, {
     "title": "Always rebase instead of merge on pull.",
-    "tip": "git config --global pull.rebase true"
+    "tip": "git config --global pull.rebase true",
+    "alternatives" : ["#git < 1.7.9\ngit config --global branch.autosetuprebase always"]
 }, {
     "title": "List all the alias and configs.",
     "tip": "git config --list"
