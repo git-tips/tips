@@ -143,6 +143,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Show all the git-notes](#show-all-the-git-notes)
 * [Apply commit from another repository](#apply-commit-from-another-repository)
 * [Specific fetch reference](#specific-fetch-reference)
+* [Find common ancestor of two branches](#find-common-ancestor-of-two-branches)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -971,6 +972,11 @@ git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -
 ## Specific fetch reference
 ```sh
 git fetch origin master:refs/remotes/origin/mymaster
+```
+
+## Find common ancestor of two branches
+```sh
+diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
