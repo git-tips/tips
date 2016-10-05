@@ -418,4 +418,7 @@
 },{
     "title": "Specific fetch reference",
     "tip": "git fetch origin master:refs/remotes/origin/mymaster"
+}, {
+    "title": "Find common ancestor of two branches",
+    "tip": "diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1"
 }]
