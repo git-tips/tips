@@ -144,6 +144,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Apply commit from another repository](#apply-commit-from-another-repository)
 * [Specific fetch reference](#specific-fetch-reference)
 * [Find common ancestor of two branches](#find-common-ancestor-of-two-branches)
+* [List unpushed git commits](#list-unpushed-git-commits)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -977,6 +978,22 @@ git fetch origin master:refs/remotes/origin/mymaster
 ## Find common ancestor of two branches
 ```sh
 diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1
+```
+
+## List unpushed git commits
+```sh
+git log --branches --not --remotes
+```
+
+
+__Alternatives:__
+```sh
+git log @{u}..
+```
+
+
+```sh
+git cherry -v
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

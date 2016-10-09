@@ -421,4 +421,8 @@
 }, {
     "title": "Find common ancestor of two branches",
     "tip": "diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1"
+}, {
+    "title": "List unpushed git commits",
+    "tip": "git log --branches --not --remotes",
+    "alternatives": ["git log @{u}..", "git cherry -v"]
 }]
