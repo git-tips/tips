@@ -425,4 +425,7 @@
     "title": "List unpushed git commits",
     "tip": "git log --branches --not --remotes",
     "alternatives": ["git log @{u}..", "git cherry -v"]
+}, {
+    "title": "Add everything, but whitespace changes",
+    "tip": "git diff --ignore-all-space | git apply --cached"
 }]
