@@ -146,6 +146,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Find common ancestor of two branches](#find-common-ancestor-of-two-branches)
 * [List unpushed git commits](#list-unpushed-git-commits)
 * [Add everything, but whitespace changes](#add-everything-but-whitespace-changes)
+* [Edit [local/global] git config](#edit-localglobal-git-config)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1000,6 +1001,11 @@ git cherry -v
 ## Add everything, but whitespace changes
 ```sh
 git diff --ignore-all-space | git apply --cached
+```
+
+## Edit [local/global] git config
+```sh
+git config [--global] --edit
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

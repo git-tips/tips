@@ -428,4 +428,7 @@
 }, {
     "title": "Add everything, but whitespace changes",
     "tip": "git diff --ignore-all-space | git apply --cached"
+}, {
+    "title": "Edit [local/global] git config",
+    "tip": "git config [--global] --edit"
 }]
