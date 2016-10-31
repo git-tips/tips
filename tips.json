@@ -431,4 +431,7 @@
 }, {
     "title": "Edit [local/global] git config",
     "tip": "git config [--global] --edit"
+}, {
+    "title": "blame on certain range",
+    "tip": "git blame -L <start>,<end>"
 }]
