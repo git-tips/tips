@@ -434,4 +434,7 @@
 }, {
     "title": "blame on certain range",
     "tip": "git blame -L <start>,<end>"
+}, {
+    "title": "Show a Git logical variable.",
+    "tip":"git var -l | <variable>"
 }]

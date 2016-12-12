@@ -148,6 +148,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Add everything, but whitespace changes](#add-everything-but-whitespace-changes)
 * [Edit [local/global] git config](#edit-localglobal-git-config)
 * [blame on certain range](#blame-on-certain-range)
+* [Show a Git logical variable.](#show-a-git-logical-variable)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -336,7 +337,7 @@ git add -p
 
 ## Get git bash completion
 ```sh
-curl -L http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc
+curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc
 ```
 
 ## What changed since two weeks?
@@ -1012,6 +1013,11 @@ git config [--global] --edit
 ## blame on certain range
 ```sh
 git blame -L <start>,<end>
+```
+
+## Show a Git logical variable.
+```sh
+git var -l | <variable>
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
