@@ -437,4 +437,7 @@
 }, {
     "title": "Show a Git logical variable.",
     "tip":"git var -l | <variable>"
+}, {
+    "title": "Preformatted patch file.",
+    "tip": "git format-patch -M upstream..topic"
 }]

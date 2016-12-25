@@ -149,6 +149,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Edit [local/global] git config](#edit-localglobal-git-config)
 * [blame on certain range](#blame-on-certain-range)
 * [Show a Git logical variable.](#show-a-git-logical-variable)
+* [Preformatted patch file.](#preformatted-patch-file)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1018,6 +1019,11 @@ git blame -L <start>,<end>
 ## Show a Git logical variable.
 ```sh
 git var -l | <variable>
+```
+
+## Preformatted patch file.
+```sh
+git format-patch -M upstream..topic
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
