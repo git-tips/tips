@@ -150,6 +150,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [blame on certain range](#blame-on-certain-range)
 * [Show a Git logical variable.](#show-a-git-logical-variable)
 * [Preformatted patch file.](#preformatted-patch-file)
+* [Get the repo name.](#get-the-repo-name)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1024,6 +1025,11 @@ git var -l | <variable>
 ## Preformatted patch file.
 ```sh
 git format-patch -M upstream..topic
+```
+
+## Get the repo name.
+```sh
+git rev-parse --show-toplevel
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

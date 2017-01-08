@@ -440,4 +440,7 @@
 }, {
     "title": "Preformatted patch file.",
     "tip": "git format-patch -M upstream..topic"
+}, {
+    "title": "Get the repo name.",
+    "tip": "git rev-parse --show-toplevel"
 }]
