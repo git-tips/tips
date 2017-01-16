@@ -443,4 +443,7 @@
 }, {
     "title": "Get the repo name.",
     "tip": "git rev-parse --show-toplevel"
+}, {
+   "title": "logs between date range",
+	 "tip": "git log --since='FEB 1 2017' --until='FEB 14 2017'"
 }]

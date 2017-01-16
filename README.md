@@ -151,6 +151,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Show a Git logical variable.](#show-a-git-logical-variable)
 * [Preformatted patch file.](#preformatted-patch-file)
 * [Get the repo name.](#get-the-repo-name)
+* [logs between date range](#logs-between-date-range)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1030,6 +1031,11 @@ git format-patch -M upstream..topic
 ## Get the repo name.
 ```sh
 git rev-parse --show-toplevel
+```
+
+## logs between date range
+```sh
+git log --since='FEB 1 2017' --until='FEB 14 2017'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
