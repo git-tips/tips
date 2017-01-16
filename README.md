@@ -152,6 +152,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Preformatted patch file.](#preformatted-patch-file)
 * [Get the repo name.](#get-the-repo-name)
 * [logs between date range](#logs-between-date-range)
+* [Exclude author from logs](#exclude-author-from-logs)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1036,6 +1037,12 @@ git rev-parse --show-toplevel
 ## logs between date range
 ```sh
 git log --since='FEB 1 2017' --until='FEB 14 2017'
+```
+
+## Exclude author from logs
+```sh
+git log --perl-regexp --author='^((?!excluded-author-regex).*)
+
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

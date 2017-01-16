@@ -446,4 +446,7 @@
 }, {
    "title": "logs between date range",
 	 "tip": "git log --since='FEB 1 2017' --until='FEB 14 2017'"
+}, {
+   "title": "Exclude author from logs",
+   "tip": "git log --perl-regexp --author='^((?!excluded-author-regex).*)$'"
 }]
