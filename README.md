@@ -5,7 +5,7 @@
 
 ### __Tools:__
 
-* [git-tip](https://www.npmjs.com/package/git-tip) - A handy CLI to make optimum use of these tips.
+* [git-tip](https://www.npmjs.com/package/git-tip) - A handy CLI to make optimum use of these tips. ([Here in Docker container](https://github.com/djoudi5/docker-git-tip))
 
 P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 
