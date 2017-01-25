@@ -153,6 +153,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Get the repo name.](#get-the-repo-name)
 * [logs between date range](#logs-between-date-range)
 * [Exclude author from logs](#exclude-author-from-logs)
+* [Generates a summary of pending changes](#generates-a-summary-of-pending-changes)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1043,6 +1044,11 @@ git log --since='FEB 1 2017' --until='FEB 14 2017'
 ```sh
 git log --perl-regexp --author='^((?!excluded-author-regex).*)
 
+```
+
+## Generates a summary of pending changes
+```sh
+git request-pull v1.0 https://git.ko.xz/project master:for-linus
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

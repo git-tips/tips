@@ -449,4 +449,7 @@
 }, {
    "title": "Exclude author from logs",
    "tip": "git log --perl-regexp --author='^((?!excluded-author-regex).*)$'"
+}, {
+    "title": "Generates a summary of pending changes",
+    "tip": "git request-pull v1.0 https://git.ko.xz/project master:for-linus"
 }]
