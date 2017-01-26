@@ -154,6 +154,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [logs between date range](#logs-between-date-range)
 * [Exclude author from logs](#exclude-author-from-logs)
 * [Generates a summary of pending changes](#generates-a-summary-of-pending-changes)
+* [List references in a remote repository](#list-references-in-a-remote-repository)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1049,6 +1050,11 @@ git log --perl-regexp --author='^((?!excluded-author-regex).*)
 ## Generates a summary of pending changes
 ```sh
 git request-pull v1.0 https://git.ko.xz/project master:for-linus
+```
+
+## List references in a remote repository
+```sh
+git ls-remote git://git.kernel.org/pub/scm/git/git.git
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
