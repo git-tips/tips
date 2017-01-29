@@ -155,6 +155,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Exclude author from logs](#exclude-author-from-logs)
 * [Generates a summary of pending changes](#generates-a-summary-of-pending-changes)
 * [List references in a remote repository](#list-references-in-a-remote-repository)
+* [Backup untracked files.](#backup-untracked-files)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1055,6 +1056,11 @@ git request-pull v1.0 https://git.ko.xz/project master:for-linus
 ## List references in a remote repository
 ```sh
 git ls-remote git://git.kernel.org/pub/scm/git/git.git
+```
+
+## Backup untracked files.
+```sh
+git ls-files --others -i --exclude-standard | xargs zip untracked.zip
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

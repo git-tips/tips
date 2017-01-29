@@ -455,4 +455,7 @@
 }, {
     "title":"List references in a remote repository",
     "tip": "git ls-remote git://git.kernel.org/pub/scm/git/git.git"
+}, {
+    "title": "Backup untracked files.",
+    "tip": "git ls-files --others -i --exclude-standard | xargs zip untracked.zip"
 }]
