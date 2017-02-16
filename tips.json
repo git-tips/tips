@@ -34,7 +34,8 @@
     "tip": "git branch --merged master"
 }, {
     "title": "Quickly switch to the previous branch",
-    "tip": "git checkout -"
+    "tip": "git checkout -",
+    "alternatives": ["git checkout @{-1}"]
 }, {
     "title": "Remove branches that have already been merged with master",
     "tip": "git branch --merged master | grep -v '^\\*' | xargs -n 1 git branch -d",

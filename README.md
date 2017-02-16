@@ -229,6 +229,12 @@ git branch --merged master
 git checkout -
 ```
 
+
+__Alternatives:__
+```sh
+git checkout @{-1}
+```
+
 ## Remove branches that have already been merged with master
 ```sh
 git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -d
