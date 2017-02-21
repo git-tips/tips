@@ -125,6 +125,9 @@
     "tip": "git stash save -u",
     "alternatives": ["git stash save --include-untracked"]
 }, {
+    "title": "Saving current state with message",
+    "tip": "git stash save <message>"
+}, {
     "title": "Show list of all saved stashes",
     "tip": "git stash list"
 }, {
