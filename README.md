@@ -50,6 +50,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Git Aliases](#git-aliases)
 * [Saving current state of tracked files without commiting](#saving-current-state-of-tracked-files-without-commiting)
 * [Saving current state including untracked files](#saving-current-state-including-untracked-files)
+* [Saving current state with message](#saving-current-state-with-message)
 * [Show list of all saved stashes](#show-list-of-all-saved-stashes)
 * [Apply any stash without deleting from the stashed list](#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](#apply-last-stashed-state-and-delete-it-from-stashed-list)
@@ -412,6 +413,11 @@ git stash save -u
 __Alternatives:__
 ```sh
 git stash save --include-untracked
+```
+
+## Saving current state with message
+```sh
+git stash save <message>
 ```
 
 ## Show list of all saved stashes
