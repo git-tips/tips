@@ -104,6 +104,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [List ignored files.](#list-ignored-files)
 * [Status of ignored files.](#status-of-ignored-files)
 * [Commits in Branch1 that are not in Branch2](#commits-in-branch1-that-are-not-in-branch2)
+* [List n last commits](#list-n-last-commits)
 * [Reuse recorded resolution, record and reuse previous conflicts resolutions.](#reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions)
 * [Open all conflicted files in an editor.](#open-all-conflicted-files-in-an-editor)
 * [Count unpacked number of objects and their disk consumption.](#count-unpacked-number-of-objects-and-their-disk-consumption)
@@ -775,6 +776,17 @@ git status --ignored
 ## Commits in Branch1 that are not in Branch2
 ```sh
 git log Branch1 ^Branch2
+```
+
+## List n last commits
+```sh
+git log -<n>
+```
+
+
+__Alternatives:__
+```sh
+git log -n <n>
 ```
 
 ## Reuse recorded resolution, record and reuse previous conflicts resolutions.
