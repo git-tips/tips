@@ -158,6 +158,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Generates a summary of pending changes](#generates-a-summary-of-pending-changes)
 * [List references in a remote repository](#list-references-in-a-remote-repository)
 * [Backup untracked files.](#backup-untracked-files)
+* [List all git aliases](#list-all-git-aliases)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1085,6 +1086,17 @@ git ls-remote git://git.kernel.org/pub/scm/git/git.git
 ## Backup untracked files.
 ```sh
 git ls-files --others -i --exclude-standard | xargs zip untracked.zip
+```
+
+## List all git aliases
+```sh
+git config -l | grep alias | sed 's/^alias\.//g'
+```
+
+
+__Alternatives:__
+```sh
+git config -l | grep alias | cut -d '.' -f 2
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
