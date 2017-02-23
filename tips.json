@@ -470,4 +470,8 @@
     "title": "List all git aliases",
     "tip": "git config -l | grep alias | sed 's/^alias\\.//g'",
     "alternatives": ["git config -l | grep alias | cut -d '.' -f 2"]
-}]
+},{
+    "title": "Show git status short",
+    "tip": "git status --short --branch"
+}
+]
