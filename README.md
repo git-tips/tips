@@ -160,6 +160,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Backup untracked files.](#backup-untracked-files)
 * [List all git aliases](#list-all-git-aliases)
 * [Show git status short](#show-git-status-short)
+* [Follow up your last commit](#follow-up-your-last-commit)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1103,6 +1104,11 @@ git config -l | grep alias | cut -d '.' -f 2
 ## Show git status short
 ```sh
 git status --short --branch
+```
+
+## Follow up your last commit
+```sh
+git log --oneline --max-count=1 --date=short --pretty="%C(auto)%h %C(auto)%ad %C(auto)%C(auto)|%d %s %C(cyan)[%cn]" --author "$(git config --global user.email)"
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
