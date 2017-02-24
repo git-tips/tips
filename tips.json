@@ -121,12 +121,20 @@
     "tip": "git stash",
     "alternatives": ["git stash save"]
 }, {
+    "title": "Saving current state of unstaged changes to tracked files",
+    "tip": "git stash -k",
+    "alternatives": ["git stash --keep-index", "git stash save --keep-index"]
+}, {
     "title": "Saving current state including untracked files",
-    "tip": "git stash save -u",
-    "alternatives": ["git stash save --include-untracked"]
+    "tip": "git stash -u",
+    "alternatives": ["git stash save -u", "git stash save --include-untracked"]
 }, {
     "title": "Saving current state with message",
     "tip": "git stash save <message>"
+}, {
+    "title": "Saving current state of all files (ignored, untracked, and tracked)",
+    "tip": "git stash -a",
+    "alternatives": ["git stash --all", "git stash save --all"]
 }, {
     "title": "Show list of all saved stashes",
     "tip": "git stash list"
