@@ -426,11 +426,16 @@ git stash save --keep-index
 
 ## Saving current state including untracked files
 ```sh
-git stash save -u
+git stash -u
 ```
 
 
 __Alternatives:__
+```sh
+git stash save -u
+```
+
+
 ```sh
 git stash save --include-untracked
 ```

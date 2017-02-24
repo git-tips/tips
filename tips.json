@@ -126,8 +126,8 @@
     "alternatives": ["git stash --keep-index", "git stash save --keep-index"]
 }, {
     "title": "Saving current state including untracked files",
-    "tip": "git stash save -u",
-    "alternatives": ["git stash save --include-untracked"]
+    "tip": "git stash -u",
+    "alternatives": ["git stash save -u", "git stash save --include-untracked"]
 }, {
     "title": "Saving current state with message",
     "tip": "git stash save <message>"
