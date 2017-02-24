@@ -6,7 +6,7 @@
     "tip": "git help -g"
 }, {
     "title": "Overwrite pull",
-    "tip": "git fetch --all && git reset --hard origin/master"
+    "tip": "git fetch origin && git reset --hard origin/master"
 }, {
     "title": "List of all files till a commit",
     "tip": "git ls-tree --name-only -r <commit-ish>"
