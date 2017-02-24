@@ -52,6 +52,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Saving current state of unstaged changes to tracked files](#saving-current-state-of-unstaged-changes-to-tracked-files)
 * [Saving current state including untracked files](#saving-current-state-including-untracked-files)
 * [Saving current state with message](#saving-current-state-with-message)
+* [Saving current state of all files (ignored, untracked, and tracked)](#saving-current-state-of-all-files-ignored-untracked-and-tracked)
 * [Show list of all saved stashes](#show-list-of-all-saved-stashes)
 * [Apply any stash without deleting from the stashed list](#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](#apply-last-stashed-state-and-delete-it-from-stashed-list)
@@ -437,6 +438,22 @@ git stash save --include-untracked
 ## Saving current state with message
 ```sh
 git stash save <message>
+```
+
+## Saving current state of all files (ignored, untracked, and tracked)
+```sh
+git stash -a
+```
+
+
+__Alternatives:__
+```sh
+git stash --all
+```
+
+
+```sh
+git stash save --all
 ```
 
 ## Show list of all saved stashes

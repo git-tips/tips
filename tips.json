@@ -132,6 +132,10 @@
     "title": "Saving current state with message",
     "tip": "git stash save <message>"
 }, {
+    "title": "Saving current state of all files (ignored, untracked, and tracked)",
+    "tip": "git stash -a",
+    "alternatives": ["git stash --all", "git stash save --all"]
+}, {
     "title": "Show list of all saved stashes",
     "tip": "git stash list"
 }, {
