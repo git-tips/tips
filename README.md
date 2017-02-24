@@ -179,7 +179,7 @@ git help -g
 
 ## Overwrite pull
 ```sh
-git fetch --all && git reset --hard origin/master
+git fetch origin && git reset --hard origin/master
 ```
 
 ## List of all files till a commit
