@@ -285,7 +285,13 @@ git tag -d <tag-name>
 
 ## Delete remote tag
 ```sh
-git push origin :refs/tags/<tag-name>
+git push origin :<remote_tagname>
+```
+
+
+__Alternatives:__
+```sh
+git push origin :refs/tags/<remote_tagname>
 ```
 
 ## Undo local changes with the last content in head
