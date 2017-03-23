@@ -5,6 +5,9 @@
     "title": "Show helpful guides that come with Git",
     "tip": "git help -g"
 }, {
+    "title": "Search change by content",
+    "tip": "git log -S'<a term in the source>'"
+}, {
     "title": "Overwrite pull",
     "tip": "git fetch origin && git reset --hard origin/master"
 }, {
