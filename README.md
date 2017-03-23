@@ -13,6 +13,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
 * [Everyday Git in twenty commands or so](#everyday-git-in-twenty-commands-or-so)
 * [Show helpful guides that come with Git](#show-helpful-guides-that-come-with-git)
+* [Search change by content](#search-change-by-content)
 * [Overwrite pull](#overwrite-pull)
 * [List of all files till a commit](#list-of-all-files-till-a-commit)
 * [Git reset first commit](#git-reset-first-commit)
@@ -177,6 +178,11 @@ git help everyday
 ## Show helpful guides that come with Git
 ```sh
 git help -g
+```
+
+## Search change by content
+```sh
+git log -S'<a term in the source>'
 ```
 
 ## Overwrite pull
