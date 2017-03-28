@@ -14,7 +14,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Everyday Git in twenty commands or so](#everyday-git-in-twenty-commands-or-so)
 * [Show helpful guides that come with Git](#show-helpful-guides-that-come-with-git)
 * [Search change by content](#search-change-by-content)
-* [Sync with remote - overwrite local changes](#sync-with-remote-overwrite-local-changes)
+* [Sync with remote (overwrite local changes)](#sync-with-remote-overwrite-local-changes)
 * [List of all files till a commit](#list-of-all-files-till-a-commit)
 * [Git reset first commit](#git-reset-first-commit)
 * [List all the conflicted files](#list-all-the-conflicted-files)
@@ -185,7 +185,7 @@ git help -g
 git log -S'<a term in the source>'
 ```
 
-## Sync with remote - overwrite local changes
+## Sync with remote (overwrite local changes)
 ```sh
 git fetch origin && git reset --hard origin/master && git clean -f -d
 ```
