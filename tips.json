@@ -8,8 +8,8 @@
     "title": "Search change by content",
     "tip": "git log -S'<a term in the source>'"
 }, {
-    "title": "Overwrite pull",
-    "tip": "git fetch origin && git reset --hard origin/master"
+    "title": "Sync with remote - overwrite local changes",
+    "tip": "git fetch origin && git reset --hard origin/master && git clean -f -d"
 }, {
     "title": "List of all files till a commit",
     "tip": "git ls-tree --name-only -r <commit-ish>"
