@@ -484,5 +484,7 @@
 },{
     "title": "Show git status short",
     "tip": "git status --short --branch"
-}
-]
+},{
+    "title": "Follow up your last commit",
+    "tip": "git log --oneline --max-count=1 --date=short --pretty=\"%C(auto)%h %C(auto)%ad %C(auto)%C(auto)|%d %s %C(cyan)[%cn]\" --author \"$(git config --global user.email)\""
+}]
