@@ -484,5 +484,9 @@
 },{
     "title": "Show git status short",
     "tip": "git status --short --branch"
-}
+},
+ {
+     "title": "Checkout a commit prior to a day ago",
+     "tip": "git checkout master@{yesterday}"
+ }
 ]

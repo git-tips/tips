@@ -163,6 +163,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Backup untracked files.](#backup-untracked-files)
 * [List all git aliases](#list-all-git-aliases)
 * [Show git status short](#show-git-status-short)
+* [Checkout a commit prior to a day ago](#checkout-a-commit-prior-to-a-day-ago)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1148,6 +1149,11 @@ git config -l | grep alias | cut -d '.' -f 2
 ## Show git status short
 ```sh
 git status --short --branch
+```
+
+## Checkout a commit prior to a day ago
+```sh
+git checkout master@{yesterday}
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
