@@ -276,6 +276,9 @@
     "tip": "git config --global pull.rebase true",
     "alternatives" : ["#git < 1.7.9\ngit config --global branch.autosetuprebase always"]
 }, {
+    "title": "Find common ancestor of two branches.",
+    "tip": "git merge-base branch1 branch2"
+}, {
     "title": "List all the alias and configs.",
     "tip": "git config --list"
 }, {
