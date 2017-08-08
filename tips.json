@@ -488,5 +488,8 @@
  {
      "title": "Checkout a commit prior to a day ago",
      "tip": "git checkout master@{yesterday}"
- }
+ }, {
+	"title": "Push a new local branch to remote repository and track",
+	"tip": "git push -u origin <branch_name>"
+}
 ]
