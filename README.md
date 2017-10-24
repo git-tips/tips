@@ -563,12 +563,6 @@ git clean -f
 git clean -f -d
 ```
 
-
-__Alternatives:__
-```sh
-git clean -df
-```
-
 ## Update all the submodules
 ```sh
 git submodule foreach git pull
