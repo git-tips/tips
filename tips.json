@@ -101,7 +101,7 @@
     "tip": "git add -p"
 }, {
     "title": "Get git bash completion",
-    "tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
+    "tip": "curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
 }, {
     "title": "What changed since two weeks?",
     "tip": "git log --no-merges --raw --since='2 weeks ago'",
