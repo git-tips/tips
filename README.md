@@ -14,6 +14,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Everyday Git in twenty commands or so](#everyday-git-in-twenty-commands-or-so)
 * [Show helpful guides that come with Git](#show-helpful-guides-that-come-with-git)
 * [Search change by content](#search-change-by-content)
+* [Remove sensitive data from history, after a push](#remove-sensitive-data-from-history-after-a-push)
 * [Sync with remote, overwrite local changes](#sync-with-remote-overwrite-local-changes)
 * [List of all files till a commit](#list-of-all-files-till-a-commit)
 * [Git reset first commit](#git-reset-first-commit)
@@ -185,6 +186,11 @@ git help -g
 ## Search change by content
 ```sh
 git log -S'<a term in the source>'
+```
+
+## Remove sensitive data from history, after a push
+```sh
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all
 ```
 
 ## Sync with remote, overwrite local changes

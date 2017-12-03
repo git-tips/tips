@@ -8,6 +8,9 @@
     "title": "Search change by content",
     "tip": "git log -S'<a term in the source>'"
 }, {
+    "title": "Remove sensitive data from history, after a push",
+    "tip": "git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all"
+}, {
     "title": "Sync with remote, overwrite local changes",
     "tip": "git fetch origin && git reset --hard origin/master && git clean -f -d"
 }, {
