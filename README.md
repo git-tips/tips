@@ -728,7 +728,7 @@ git diff --word-diff
 
 ## Show changes using common diff tools.
 ```sh
-git difftool -t <commit1> <commit2> <path>
+git difftool [-t <tool>] <commit1> <commit2> <path>
 ```
 
 ## Don’t consider changes for tracked file.
