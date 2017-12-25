@@ -257,7 +257,7 @@
     "tip": "git diff --word-diff"
 }, {
     "title": "Show changes using common diff tools.",
-    "tip": "git difftool -t <commit1> <commit2> <path>"
+    "tip": "git difftool [-t <tool>] <commit1> <commit2> <path>"
 }, {
     "title": "Don’t consider changes for tracked file.",
     "tip": "git update-index --assume-unchanged <file_name>"
