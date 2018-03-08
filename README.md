@@ -665,6 +665,11 @@ __Alternatives:__
 gitk --all
 ```
 
+
+```sh
+git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'
+```
+
 ## Deploying git tracked subfolder to gh-pages
 ```sh
 git subtree push --prefix subfolder_name origin gh-pages

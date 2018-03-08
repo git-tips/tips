@@ -219,7 +219,7 @@
 }, {
     "title": "Visualize the version tree.",
     "tip": "git log --pretty=oneline --graph --decorate --all",
-    "alternatives": ["gitk --all"]
+    "alternatives": ["gitk --all","git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"]
 }, {
     "title": "Deploying git tracked subfolder to gh-pages",
     "tip": "git subtree push --prefix subfolder_name origin gh-pages",
