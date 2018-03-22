@@ -493,5 +493,9 @@
  }, {
 	"title": "Push a new local branch to remote repository and track",
 	"tip": "git push -u origin <branch_name>"
+ }, {
+    "title": "Change a branch base",
+    "tip": "git rebase --onto <new_base> <old_base>"
 }
+
 ]
