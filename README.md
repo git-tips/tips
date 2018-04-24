@@ -984,7 +984,13 @@ git log --all --grep='<given-text>'
 
 ## Get first commit in a branch (from master)
 ```sh
-git log master..<branch-name> --oneline | tail -1
+git log --oneline master..<branch-name> | tail -1
+```
+
+
+__Alternatives:__
+```sh
+git log --reverse master..<branch-name> | head -6
 ```
 
 ## Unstaging Staged file
