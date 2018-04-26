@@ -395,7 +395,8 @@
     "tip": "git log --all --grep='<given-text>'"
 }, {
     "title": "Get first commit in a branch (from master)",
-    "tip": "git log master..<branch-name> --oneline | tail -1"
+    "tip": "git log --oneline master..<branch-name> | tail -1",
+    "alternatives": ["git log --reverse master..<branch-name> | head -6"]
 }, {
     "title": "Unstaging Staged file",
     "tip": "git reset HEAD <file-name>"
