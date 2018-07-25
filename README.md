@@ -167,6 +167,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Checkout a commit prior to a day ago](#checkout-a-commit-prior-to-a-day-ago)
 * [Push a new local branch to remote repository and track](#push-a-new-local-branch-to-remote-repository-and-track)
 * [Change a branch base](#change-a-branch-base)
+* [Use SSH instead of HTTPs for remotes](#use-ssh-instead-of-https-for-remotes)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -1177,6 +1178,11 @@ git push -u origin <branch_name>
 ## Change a branch base
 ```sh
 git rebase --onto <new_base> <old_base>
+```
+
+## Use SSH instead of HTTPs for remotes
+```sh
+git config --global url.'git@github.com:'.insteadOf 'https://github.com/'
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->

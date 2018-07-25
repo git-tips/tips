@@ -1,502 +1,504 @@
 [{
-    "title": "Everyday Git in twenty commands or so",
-    "tip": "git help everyday"
-}, {
-    "title": "Show helpful guides that come with Git",
-    "tip": "git help -g"
-}, {
-    "title": "Search change by content",
-    "tip": "git log -S'<a term in the source>'"
-}, {
-    "title": "Remove sensitive data from history, after a push",
-    "tip": "git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all"
-}, {
-    "title": "Sync with remote, overwrite local changes",
-    "tip": "git fetch origin && git reset --hard origin/master && git clean -f -d"
-}, {
-    "title": "List of all files till a commit",
-    "tip": "git ls-tree --name-only -r <commit-ish>"
-}, {
-    "title": "Git reset first commit",
-    "tip": "git update-ref -d HEAD"
-}, {
-    "title": "List all the conflicted files",
-    "tip": "git diff --name-only --diff-filter=U"
-}, {
-    "title": "List of all files changed in a commit",
-    "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
-}, {
-    "title": "Unstaged changes since last commit",
-    "tip": "git diff"
-}, {
-    "title": "Changes staged for commit",
-    "tip": "git diff --cached",
-    "alternatives": ["git diff --staged"]
-}, {
-    "title": "Show both staged and unstaged changes",
-    "tip": "git diff HEAD"
-}, {
-    "title": "List all branches that are already merged into master",
-    "tip": "git branch --merged master"
-}, {
-    "title": "Quickly switch to the previous branch",
-    "tip": "git checkout -",
-    "alternatives": ["git checkout @{-1}"]
-}, {
-    "title": "Remove branches that have already been merged with master",
-    "tip": "git branch --merged master | grep -v '^\\*' | xargs -n 1 git branch -d",
-    "alternatives": ["git branch --merged master | grep -v '^\\*\\|  master' | xargs -n 1 git branch -d # will not delete master if master is not checked out"]
-}, {
-    "title": "List all branches and their upstreams, as well as last commit on branch",
-    "tip": "git branch -vv"
-}, {
-    "title": "Track upstream branch",
-    "tip": "git branch -u origin/mybranch"
-}, {
-    "title": "Delete local branch",
-    "tip": "git branch -d <local_branchname>"
-}, {
-    "title": "Delete remote branch",
-    "tip": "git push origin --delete <remote_branchname>",
-    "alternatives": ["git push origin :<remote_branchname>"]
-}, {
-    "title": "Delete local tag",
-    "tip": "git tag -d <tag-name>"
-}, {
-    "title": "Delete remote tag",
-    "tip": "git push origin :refs/tags/<tag-name>"
-}, {
-    "title": "Undo local changes with the last content in head",
-    "tip": "git checkout -- <file_name>"
-}, {
-    "title": "Revert: Undo a commit by creating a new commit",
-    "tip": "git revert <commit-ish>"
-}, {
-    "title": "Reset: Discard commits, advised for private branch",
-    "tip": "git reset <commit-ish>"
-}, {
-    "title": "Reword the previous commit message",
-    "tip": "git commit -v --amend"
-}, {
-   "title": "See commit history for just the current branch",
-   "tip": "git cherry -v master"
-}, {
-    "title": "Amend author.",
-    "tip": "git commit --amend --author='Author Name <email@address.com>'"
-}, {
-    "title": "Reset author, after author has been changed in the global config.",
-    "tip": "git commit --amend --reset-author --no-edit"
-}, {
-    "title": "Changing a remote's URL",
-    "tip": "git remote set-url origin <URL>"
-}, {
-    "title": "Get list of all remote references",
-    "tip": "git remote",
-    "alternatives": ["git remote show"]
-}, {
-    "title": "Get list of all local and remote branches",
-    "tip": "git branch -a"
-}, {
-    "title": "Get only remote branches",
-    "tip": "git branch -r"
-}, {
-    "title": "Stage parts of a changed file, instead of the entire file",
-    "tip": "git add -p"
-}, {
-    "title": "Get git bash completion",
-    "tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
-}, {
-    "title": "What changed since two weeks?",
-    "tip": "git log --no-merges --raw --since='2 weeks ago'",
-    "alternatives": ["git whatchanged --since='2 weeks ago'"]
-}, {
-    "title": "See all commits made since forking from master",
-    "tip": "git log --no-merges --stat --reverse master.."
-}, {
-    "title": "Pick commits across branches using cherry-pick",
-    "tip": "git checkout <branch-name> && git cherry-pick <commit-ish>"
-}, {
-    "title": "Find out branches containing commit-hash",
-    "tip": "git branch -a --contains <commit-ish>",
-    "alternatives": ["git branch --contains <commit-ish>"]
-}, {
-    "title": "Git Aliases",
-    "tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
-}, {
-    "title": "Saving current state of tracked files without commiting",
-    "tip": "git stash",
-    "alternatives": ["git stash save"]
-}, {
-    "title": "Saving current state of unstaged changes to tracked files",
-    "tip": "git stash -k",
-    "alternatives": ["git stash --keep-index", "git stash save --keep-index"]
-}, {
-    "title": "Saving current state including untracked files",
-    "tip": "git stash -u",
-    "alternatives": ["git stash save -u", "git stash save --include-untracked"]
-}, {
-    "title": "Saving current state with message",
-    "tip": "git stash save <message>"
-}, {
-    "title": "Saving current state of all files (ignored, untracked, and tracked)",
-    "tip": "git stash -a",
-    "alternatives": ["git stash --all", "git stash save --all"]
-}, {
-    "title": "Show list of all saved stashes",
-    "tip": "git stash list"
-}, {
-    "title": "Apply any stash without deleting from the stashed list",
-    "tip": "git stash apply <stash@{n}>"
-}, {
-    "title": "Apply last stashed state and delete it from stashed list",
-    "tip": "git stash pop",
-    "alternatives": ["git stash apply stash@{0} && git stash drop stash@{0}"]
-}, {
-    "title": "Delete all stored stashes",
-    "tip": "git stash clear",
-    "alternatives": ["git stash drop <stash@{n}>"]
-}, {
-    "title": "Grab a single file from a stash",
-    "tip": "git checkout <stash@{n}> -- <file_path>",
-    "alternatives": ["git checkout stash@{0} -- <file_path>"]
-}, {
-    "title": "Show all tracked files",
-    "tip": "git ls-files -t"
-}, {
-    "title": "Show all untracked files",
-    "tip": "git ls-files --others"
-}, {
-    "title": "Show all ignored files",
-    "tip": "git ls-files --others -i --exclude-standard"
-}, {
-    "title": "Create new working tree from a repository (git 2.5)",
-    "tip": "git worktree add -b <branch-name> <path> <start-point>"
-}, {
-    "title": "Create new working tree from HEAD state",
-    "tip": "git worktree add --detach <path> HEAD"
-}, {
-    "title": "Untrack files without deleting",
-    "tip": "git rm --cached <file_path>",
-    "alternatives": ["git rm --cached -r <directory_path>"]
-}, {
-    "title": "Before deleting untracked files/directory, do a dry run to get the list of these files/directories",
-    "tip": "git clean -n"
-}, {
-    "title": "Forcefully remove untracked files",
-    "tip": "git clean -f"
-}, {
-    "title": "Forcefully remove untracked directory",
-    "tip": "git clean -f -d"
-}, {
-    "title": "Update all the submodules",
-    "tip": "git submodule foreach git pull",
-    "alternatives": ["git submodule update --init --recursive", "git submodule update --remote"]
-}, {
-    "title": "Show all commits in the current branch yet to be merged to master",
-    "tip": "git cherry -v master",
-    "alternatives": ["git cherry -v master <branch-to-be-merged>"]
-}, {
-    "title": "Rename a branch",
-    "tip": "git branch -m <new-branch-name>",
-    "alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
-}, {
-    "title": "Rebases 'feature' to 'master' and merges it in to master ",
-    "tip": "git rebase master feature && git checkout master && git merge -"
-}, {
-    "title": "Archive the `master` branch",
-    "tip": "git archive master --format=zip --output=master.zip"
-}, {
-    "title": "Modify previous commit without modifying the commit message",
-    "tip": "git add --all && git commit --amend --no-edit"
-}, {
-    "title": "Prunes references to remote branches that have been deleted in the remote.",
-    "tip": "git fetch -p",
-    "alternatives": ["git remote prune origin"]
-}, {
-    "title": "Retrieve the commit hash of the initial revision.",
-    "tip": " git rev-list --reverse HEAD | head -1",
-    "alternatives": ["git rev-list --max-parents=0 HEAD", "git log --pretty=oneline | tail -1 | cut -c 1-40", "git log --pretty=oneline --reverse | head -1 | cut -c 1-40"]
-}, {
-    "title": "Visualize the version tree.",
-    "tip": "git log --pretty=oneline --graph --decorate --all",
-    "alternatives": ["gitk --all","git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"]
-}, {
-    "title": "Deploying git tracked subfolder to gh-pages",
-    "tip": "git subtree push --prefix subfolder_name origin gh-pages",
-    "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
-}, {
-    "title": "Adding a project to repo using subtree",
-    "tip": "git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
-}, {
-    "title": "Get latest changes in your repo for a linked project using subtree",
-    "tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
-}, {
-    "title": "Export a branch with history to a file.",
-    "tip": "git bundle create <file> <branch-name>"
-}, {
-    "title": "Import from a bundle",
-    "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
-}, {
-    "title": "Get the name of current branch.",
-    "tip": "git rev-parse --abbrev-ref HEAD"
-}, {
-    "title": "Ignore one file on commit (e.g. Changelog).",
-    "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
-}, {
-    "title": "Stash changes before rebasing",
-    "tip": "git rebase --autostash"
-}, {
-    "title": "Fetch pull request by ID to a local branch",
-    "tip": "git fetch origin pull/<id>/head:<branch-name>",
-    "alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
-}, {
-    "title": "Show the most recent tag on the current branch.",
-    "tip": "git describe --tags --abbrev=0"
-}, {
-    "title": "Show inline word diff.",
-    "tip": "git diff --word-diff"
-}, {
-    "title": "Show changes using common diff tools.",
-    "tip": "git difftool [-t <tool>] <commit1> <commit2> <path>"
-}, {
-    "title": "Don’t consider changes for tracked file.",
-    "tip": "git update-index --assume-unchanged <file_name>"
-}, {
-    "title": "Undo assume-unchanged.",
-    "tip": "git update-index --no-assume-unchanged <file_name>"
-}, {
-    "title": "Clean the files from `.gitignore`.",
-    "tip": "git clean -X -f"
-}, {
-    "title": "Restore deleted file.",
-    "tip": "git checkout <deleting_commit>^ -- <file_path>"
-}, {
-    "title": "Restore file to a specific commit-hash",
-    "tip": "git checkout <commit-ish> -- <file_path>"
-}, {
-    "title": "Always rebase instead of merge on pull.",
-    "tip": "git config --global pull.rebase true",
-    "alternatives" : ["#git < 1.7.9\ngit config --global branch.autosetuprebase always"]
-}, {
-    "title": "List all the alias and configs.",
-    "tip": "git config --list"
-}, {
-    "title": "Make git case sensitive.",
-    "tip": "git config --global core.ignorecase false"
-},{
-    "title": "Add custom editors.",
-    "tip": "git config --global core.editor '$EDITOR'"
-}, {
-    "title": "Auto correct typos.",
-    "tip": "git config --global help.autocorrect 1"
-}, {
-    "title": "Check if the change was a part of a release.",
-    "tip": "git name-rev --name-only <SHA-1>"
-}, {
-    "title": "Dry run. (any command that supports dry-run flag should do.)",
-    "tip": "git clean -fd --dry-run"
-}, {
-    "title": "Marks your commit as a fix of a previous commit.",
-    "tip": "git commit --fixup <SHA-1>"
-}, {
-    "title": "Squash fixup commits normal commits.",
-    "tip": "git rebase -i --autosquash"
-}, {
-    "title": "Skip staging area during commit.",
-    "tip": "git commit --only <file_path>"
-}, {
-    "title": "Interactive staging.",
-    "tip": "git add -i"
-}, {
-    "title": "List ignored files.",
-    "tip": "git check-ignore *"
-}, {
-    "title": "Status of ignored files.",
-    "tip": "git status --ignored"
-}, {
-    "title": "Commits in Branch1 that are not in Branch2",
-    "tip": "git log Branch1 ^Branch2"
-}, {
-    "title": "List n last commits",
-    "tip": "git log -<n>",
-    "alternatives": ["git log -n <n>"]
-}, {
-    "title": "Reuse recorded resolution, record and reuse previous conflicts resolutions.",
-    "tip": "git config --global rerere.enabled 1"
-}, {
-    "title": "Open all conflicted files in an editor.",
-    "tip": "git diff --name-only | uniq | xargs $EDITOR"
-}, {
-    "title": "Count unpacked number of objects and their disk consumption.",
-    "tip": "git count-objects --human-readable"
-}, {
-    "title": "Prune all unreachable objects from the object database.",
-    "tip": "git gc --prune=now --aggressive"
-}, {
-    "title": "Instantly browse your working repository in gitweb.",
-    "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
-}, {
-    "title": "View the GPG signatures in the commit log",
-    "tip": "git log --show-signature"
-}, {
-    "title": "Remove entry in the global config.",
-    "tip": "git config --global --unset <entry-name>"
-}, {
-    "title": "Checkout a new branch without any history",
-    "tip": "git checkout --orphan <branch_name>"
-}, {
-    "title": "Extract file from another branch.",
-    "tip": "git show <branch_name>:<file_name>"
-}, {
-    "title": "List only the root and merge commits.",
-    "tip": "git log --first-parent"
-}, {
-    "title": "Change previous two commits with an interactive rebase.",
-    "tip": "git rebase --interactive HEAD~2"
-}, {
-    "title": "List all branch is WIP",
-    "tip": "git checkout master && git branch --no-merged"
-}, {
-    "title": "Find guilty with binary search",
-    "tip": "git bisect start                    # Search start \ngit bisect bad                      # Set point to bad commit \ngit bisect good v2.6.13-rc2         # Set point to good commit|tag \ngit bisect bad                      # Say current state is bad \ngit bisect good                     # Say current state is good \ngit bisect reset                    # Finish search \n"
-}, {
-    "title": "Bypass pre-commit and commit-msg githooks",
-    "tip": "git commit --no-verify"
-}, {
-    "title": "List commits and changes to a specific file (even through renaming)",
-    "tip": "git log --follow -p -- <file_path>"
-},{
-    "title": "Clone a single branch",
-    "tip": "git clone -b <branch-name> --single-branch https://github.com/user/repo.git"
-},{
-    "title": "Create and switch new branch",
-    "tip": "git checkout -b <branch-name>",
-    "alternatives": ["git branch <branch-name> && git checkout <branch-name>"]
-},{
-    "title": "Ignore file mode changes on commits",
-    "tip": "git config core.fileMode false"
-},{
-  "title": "Turn off git colored terminal output",
-  "tip": "git config --global color.ui false"
-},{
-    "title": "Specific color settings",
-    "tip": "git config --global <specific command e.g branch, diff> <true, false or always>"
-},{
-    "title": "Show all local branches ordered by recent commits",
-    "tip": "git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
-},{
-    "title": "Find lines matching the pattern (regex or string) in tracked files",
-    "tip": "git grep --heading --line-number 'foo bar'"
-}, {
-    "title": "Clone a shallow copy of a repository",
-    "tip": "git clone https://github.com/user/repo.git --depth 1"
-}, {
-    "title": "Search Commit log across all branches for given text",
-    "tip": "git log --all --grep='<given-text>'"
-}, {
-    "title": "Get first commit in a branch (from master)",
-    "tip": "git log --oneline master..<branch-name> | tail -1",
-    "alternatives": ["git log --reverse master..<branch-name> | head -6"]
-}, {
-    "title": "Unstaging Staged file",
-    "tip": "git reset HEAD <file-name>"
-}, {
-    "title": "Force push to Remote Repository",
-    "tip": "git push -f <remote-name> <branch-name>"
-}, {
-    "title": "Adding Remote name",
-    "tip": "git remote add <remote-nickname> <remote-url>"
-}, {
-    "title": "Show the author, time and last revision made to each line of a given file",
-    "tip": "git blame <file-name>"
-}, {
-    "title": "Group commits by authors and title",
-    "tip": "git shortlog"
-}, {
-    "title": "Forced push but still ensure you don't overwrite other's work",
-    "tip": "git push --force-with-lease <remote-name> <branch-name>"
-},{
-    "title": "Show how many lines does an author contribute",
-    "tip": "git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s removed lines: %s total lines: %s\n\", add, subs, loc }' -",
-    "alternatives": ["git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\n\", add, subs, loc }' - # on Mac OSX"]
-},{
-    "title": "Revert: Reverting an entire merge",
-    "tip": "git revert -m 1 <commit-ish>"
-},{
-    "title": "Number of commits in a branch",
-    "tip": "git rev-list --count <branch-name>"
-},{
-    "title": "Alias: git undo",
-    "tip": "git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'"
-}, {
-    "title": "Add object notes",
-    "tip": "git notes add -m 'Note on the previous commit....'"
-}, {
-    "title": "Show all the git-notes",
-    "tip": "git log --show-notes='*'"
-}, {
-    "title": "Apply commit from another repository",
-    "tip": "git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k"
-},{
-    "title": "Specific fetch reference",
-    "tip": "git fetch origin master:refs/remotes/origin/mymaster"
-}, {
-    "title": "Find common ancestor of two branches",
-    "tip": "diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1"
-}, {
-    "title": "List unpushed git commits",
-    "tip": "git log --branches --not --remotes",
-    "alternatives": ["git log @{u}..", "git cherry -v"]
-}, {
-    "title": "Add everything, but whitespace changes",
-    "tip": "git diff --ignore-all-space | git apply --cached"
-}, {
-    "title": "Edit [local/global] git config",
-    "tip": "git config [--global] --edit"
-}, {
-    "title": "blame on certain range",
-    "tip": "git blame -L <start>,<end>"
-}, {
-    "title": "Show a Git logical variable.",
-    "tip":"git var -l | <variable>"
-}, {
-    "title": "Preformatted patch file.",
-    "tip": "git format-patch -M upstream..topic"
-}, {
-    "title": "Get the repo name.",
-    "tip": "git rev-parse --show-toplevel"
-}, {
-   "title": "logs between date range",
-	 "tip": "git log --since='FEB 1 2017' --until='FEB 14 2017'"
-}, {
-   "title": "Exclude author from logs",
-   "tip": "git log --perl-regexp --author='^((?!excluded-author-regex).*)$'"
-}, {
-    "title": "Generates a summary of pending changes",
-    "tip": "git request-pull v1.0 https://git.ko.xz/project master:for-linus"
-}, {
-    "title":"List references in a remote repository",
-    "tip": "git ls-remote git://git.kernel.org/pub/scm/git/git.git"
-}, {
-    "title": "Backup untracked files.",
-    "tip": "git ls-files --others -i --exclude-standard | xargs zip untracked.zip"
-}, {
-    "title": "List all git aliases",
-    "tip": "git config -l | grep alias | sed 's/^alias\\.//g'",
-    "alternatives": ["git config -l | grep alias | cut -d '.' -f 2"]
-},{
-    "title": "Show git status short",
-    "tip": "git status --short --branch"
-},
- {
-     "title": "Checkout a commit prior to a day ago",
-     "tip": "git checkout master@{yesterday}"
- }, {
-	"title": "Push a new local branch to remote repository and track",
-	"tip": "git push -u origin <branch_name>"
- }, {
-    "title": "Change a branch base",
-    "tip": "git rebase --onto <new_base> <old_base>"
-}
-
+		"title": "Everyday Git in twenty commands or so",
+		"tip": "git help everyday"
+	}, {
+		"title": "Show helpful guides that come with Git",
+		"tip": "git help -g"
+	}, {
+		"title": "Search change by content",
+		"tip": "git log -S'<a term in the source>'"
+	}, {
+		"title": "Remove sensitive data from history, after a push",
+		"tip": "git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all"
+	}, {
+		"title": "Sync with remote, overwrite local changes",
+		"tip": "git fetch origin && git reset --hard origin/master && git clean -f -d"
+	}, {
+		"title": "List of all files till a commit",
+		"tip": "git ls-tree --name-only -r <commit-ish>"
+	}, {
+		"title": "Git reset first commit",
+		"tip": "git update-ref -d HEAD"
+	}, {
+		"title": "List all the conflicted files",
+		"tip": "git diff --name-only --diff-filter=U"
+	}, {
+		"title": "List of all files changed in a commit",
+		"tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
+	}, {
+		"title": "Unstaged changes since last commit",
+		"tip": "git diff"
+	}, {
+		"title": "Changes staged for commit",
+		"tip": "git diff --cached",
+		"alternatives": ["git diff --staged"]
+	}, {
+		"title": "Show both staged and unstaged changes",
+		"tip": "git diff HEAD"
+	}, {
+		"title": "List all branches that are already merged into master",
+		"tip": "git branch --merged master"
+	}, {
+		"title": "Quickly switch to the previous branch",
+		"tip": "git checkout -",
+		"alternatives": ["git checkout @{-1}"]
+	}, {
+		"title": "Remove branches that have already been merged with master",
+		"tip": "git branch --merged master | grep -v '^\\*' | xargs -n 1 git branch -d",
+		"alternatives": ["git branch --merged master | grep -v '^\\*\\|  master' | xargs -n 1 git branch -d # will not delete master if master is not checked out"]
+	}, {
+		"title": "List all branches and their upstreams, as well as last commit on branch",
+		"tip": "git branch -vv"
+	}, {
+		"title": "Track upstream branch",
+		"tip": "git branch -u origin/mybranch"
+	}, {
+		"title": "Delete local branch",
+		"tip": "git branch -d <local_branchname>"
+	}, {
+		"title": "Delete remote branch",
+		"tip": "git push origin --delete <remote_branchname>",
+		"alternatives": ["git push origin :<remote_branchname>"]
+	}, {
+		"title": "Delete local tag",
+		"tip": "git tag -d <tag-name>"
+	}, {
+		"title": "Delete remote tag",
+		"tip": "git push origin :refs/tags/<tag-name>"
+	}, {
+		"title": "Undo local changes with the last content in head",
+		"tip": "git checkout -- <file_name>"
+	}, {
+		"title": "Revert: Undo a commit by creating a new commit",
+		"tip": "git revert <commit-ish>"
+	}, {
+		"title": "Reset: Discard commits, advised for private branch",
+		"tip": "git reset <commit-ish>"
+	}, {
+		"title": "Reword the previous commit message",
+		"tip": "git commit -v --amend"
+	}, {
+		"title": "See commit history for just the current branch",
+		"tip": "git cherry -v master"
+	}, {
+		"title": "Amend author.",
+		"tip": "git commit --amend --author='Author Name <email@address.com>'"
+	}, {
+		"title": "Reset author, after author has been changed in the global config.",
+		"tip": "git commit --amend --reset-author --no-edit"
+	}, {
+		"title": "Changing a remote's URL",
+		"tip": "git remote set-url origin <URL>"
+	}, {
+		"title": "Get list of all remote references",
+		"tip": "git remote",
+		"alternatives": ["git remote show"]
+	}, {
+		"title": "Get list of all local and remote branches",
+		"tip": "git branch -a"
+	}, {
+		"title": "Get only remote branches",
+		"tip": "git branch -r"
+	}, {
+		"title": "Stage parts of a changed file, instead of the entire file",
+		"tip": "git add -p"
+	}, {
+		"title": "Get git bash completion",
+		"tip": "curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
+	}, {
+		"title": "What changed since two weeks?",
+		"tip": "git log --no-merges --raw --since='2 weeks ago'",
+		"alternatives": ["git whatchanged --since='2 weeks ago'"]
+	}, {
+		"title": "See all commits made since forking from master",
+		"tip": "git log --no-merges --stat --reverse master.."
+	}, {
+		"title": "Pick commits across branches using cherry-pick",
+		"tip": "git checkout <branch-name> && git cherry-pick <commit-ish>"
+	}, {
+		"title": "Find out branches containing commit-hash",
+		"tip": "git branch -a --contains <commit-ish>",
+		"alternatives": ["git branch --contains <commit-ish>"]
+	}, {
+		"title": "Git Aliases",
+		"tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
+	}, {
+		"title": "Saving current state of tracked files without commiting",
+		"tip": "git stash",
+		"alternatives": ["git stash save"]
+	}, {
+		"title": "Saving current state of unstaged changes to tracked files",
+		"tip": "git stash -k",
+		"alternatives": ["git stash --keep-index", "git stash save --keep-index"]
+	}, {
+		"title": "Saving current state including untracked files",
+		"tip": "git stash -u",
+		"alternatives": ["git stash save -u", "git stash save --include-untracked"]
+	}, {
+		"title": "Saving current state with message",
+		"tip": "git stash save <message>"
+	}, {
+		"title": "Saving current state of all files (ignored, untracked, and tracked)",
+		"tip": "git stash -a",
+		"alternatives": ["git stash --all", "git stash save --all"]
+	}, {
+		"title": "Show list of all saved stashes",
+		"tip": "git stash list"
+	}, {
+		"title": "Apply any stash without deleting from the stashed list",
+		"tip": "git stash apply <stash@{n}>"
+	}, {
+		"title": "Apply last stashed state and delete it from stashed list",
+		"tip": "git stash pop",
+		"alternatives": ["git stash apply stash@{0} && git stash drop stash@{0}"]
+	}, {
+		"title": "Delete all stored stashes",
+		"tip": "git stash clear",
+		"alternatives": ["git stash drop <stash@{n}>"]
+	}, {
+		"title": "Grab a single file from a stash",
+		"tip": "git checkout <stash@{n}> -- <file_path>",
+		"alternatives": ["git checkout stash@{0} -- <file_path>"]
+	}, {
+		"title": "Show all tracked files",
+		"tip": "git ls-files -t"
+	}, {
+		"title": "Show all untracked files",
+		"tip": "git ls-files --others"
+	}, {
+		"title": "Show all ignored files",
+		"tip": "git ls-files --others -i --exclude-standard"
+	}, {
+		"title": "Create new working tree from a repository (git 2.5)",
+		"tip": "git worktree add -b <branch-name> <path> <start-point>"
+	}, {
+		"title": "Create new working tree from HEAD state",
+		"tip": "git worktree add --detach <path> HEAD"
+	}, {
+		"title": "Untrack files without deleting",
+		"tip": "git rm --cached <file_path>",
+		"alternatives": ["git rm --cached -r <directory_path>"]
+	}, {
+		"title": "Before deleting untracked files/directory, do a dry run to get the list of these files/directories",
+		"tip": "git clean -n"
+	}, {
+		"title": "Forcefully remove untracked files",
+		"tip": "git clean -f"
+	}, {
+		"title": "Forcefully remove untracked directory",
+		"tip": "git clean -f -d"
+	}, {
+		"title": "Update all the submodules",
+		"tip": "git submodule foreach git pull",
+		"alternatives": ["git submodule update --init --recursive", "git submodule update --remote"]
+	}, {
+		"title": "Show all commits in the current branch yet to be merged to master",
+		"tip": "git cherry -v master",
+		"alternatives": ["git cherry -v master <branch-to-be-merged>"]
+	}, {
+		"title": "Rename a branch",
+		"tip": "git branch -m <new-branch-name>",
+		"alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
+	}, {
+		"title": "Rebases 'feature' to 'master' and merges it in to master ",
+		"tip": "git rebase master feature && git checkout master && git merge -"
+	}, {
+		"title": "Archive the `master` branch",
+		"tip": "git archive master --format=zip --output=master.zip"
+	}, {
+		"title": "Modify previous commit without modifying the commit message",
+		"tip": "git add --all && git commit --amend --no-edit"
+	}, {
+		"title": "Prunes references to remote branches that have been deleted in the remote.",
+		"tip": "git fetch -p",
+		"alternatives": ["git remote prune origin"]
+	}, {
+		"title": "Retrieve the commit hash of the initial revision.",
+		"tip": " git rev-list --reverse HEAD | head -1",
+		"alternatives": ["git rev-list --max-parents=0 HEAD", "git log --pretty=oneline | tail -1 | cut -c 1-40", "git log --pretty=oneline --reverse | head -1 | cut -c 1-40"]
+	}, {
+		"title": "Visualize the version tree.",
+		"tip": "git log --pretty=oneline --graph --decorate --all",
+		"alternatives": ["gitk --all", "git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"]
+	}, {
+		"title": "Deploying git tracked subfolder to gh-pages",
+		"tip": "git subtree push --prefix subfolder_name origin gh-pages",
+		"alternatives": "git subtree push --prefix subfolder_name origin branch_name"
+	}, {
+		"title": "Adding a project to repo using subtree",
+		"tip": "git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
+	}, {
+		"title": "Get latest changes in your repo for a linked project using subtree",
+		"tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
+	}, {
+		"title": "Export a branch with history to a file.",
+		"tip": "git bundle create <file> <branch-name>"
+	}, {
+		"title": "Import from a bundle",
+		"tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
+	}, {
+		"title": "Get the name of current branch.",
+		"tip": "git rev-parse --abbrev-ref HEAD"
+	}, {
+		"title": "Ignore one file on commit (e.g. Changelog).",
+		"tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
+	}, {
+		"title": "Stash changes before rebasing",
+		"tip": "git rebase --autostash"
+	}, {
+		"title": "Fetch pull request by ID to a local branch",
+		"tip": "git fetch origin pull/<id>/head:<branch-name>",
+		"alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
+	}, {
+		"title": "Show the most recent tag on the current branch.",
+		"tip": "git describe --tags --abbrev=0"
+	}, {
+		"title": "Show inline word diff.",
+		"tip": "git diff --word-diff"
+	}, {
+		"title": "Show changes using common diff tools.",
+		"tip": "git difftool [-t <tool>] <commit1> <commit2> <path>"
+	}, {
+		"title": "Don’t consider changes for tracked file.",
+		"tip": "git update-index --assume-unchanged <file_name>"
+	}, {
+		"title": "Undo assume-unchanged.",
+		"tip": "git update-index --no-assume-unchanged <file_name>"
+	}, {
+		"title": "Clean the files from `.gitignore`.",
+		"tip": "git clean -X -f"
+	}, {
+		"title": "Restore deleted file.",
+		"tip": "git checkout <deleting_commit>^ -- <file_path>"
+	}, {
+		"title": "Restore file to a specific commit-hash",
+		"tip": "git checkout <commit-ish> -- <file_path>"
+	}, {
+		"title": "Always rebase instead of merge on pull.",
+		"tip": "git config --global pull.rebase true",
+		"alternatives": ["#git < 1.7.9\ngit config --global branch.autosetuprebase always"]
+	}, {
+		"title": "List all the alias and configs.",
+		"tip": "git config --list"
+	}, {
+		"title": "Make git case sensitive.",
+		"tip": "git config --global core.ignorecase false"
+	}, {
+		"title": "Add custom editors.",
+		"tip": "git config --global core.editor '$EDITOR'"
+	}, {
+		"title": "Auto correct typos.",
+		"tip": "git config --global help.autocorrect 1"
+	}, {
+		"title": "Check if the change was a part of a release.",
+		"tip": "git name-rev --name-only <SHA-1>"
+	}, {
+		"title": "Dry run. (any command that supports dry-run flag should do.)",
+		"tip": "git clean -fd --dry-run"
+	}, {
+		"title": "Marks your commit as a fix of a previous commit.",
+		"tip": "git commit --fixup <SHA-1>"
+	}, {
+		"title": "Squash fixup commits normal commits.",
+		"tip": "git rebase -i --autosquash"
+	}, {
+		"title": "Skip staging area during commit.",
+		"tip": "git commit --only <file_path>"
+	}, {
+		"title": "Interactive staging.",
+		"tip": "git add -i"
+	}, {
+		"title": "List ignored files.",
+		"tip": "git check-ignore *"
+	}, {
+		"title": "Status of ignored files.",
+		"tip": "git status --ignored"
+	}, {
+		"title": "Commits in Branch1 that are not in Branch2",
+		"tip": "git log Branch1 ^Branch2"
+	}, {
+		"title": "List n last commits",
+		"tip": "git log -<n>",
+		"alternatives": ["git log -n <n>"]
+	}, {
+		"title": "Reuse recorded resolution, record and reuse previous conflicts resolutions.",
+		"tip": "git config --global rerere.enabled 1"
+	}, {
+		"title": "Open all conflicted files in an editor.",
+		"tip": "git diff --name-only | uniq | xargs $EDITOR"
+	}, {
+		"title": "Count unpacked number of objects and their disk consumption.",
+		"tip": "git count-objects --human-readable"
+	}, {
+		"title": "Prune all unreachable objects from the object database.",
+		"tip": "git gc --prune=now --aggressive"
+	}, {
+		"title": "Instantly browse your working repository in gitweb.",
+		"tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
+	}, {
+		"title": "View the GPG signatures in the commit log",
+		"tip": "git log --show-signature"
+	}, {
+		"title": "Remove entry in the global config.",
+		"tip": "git config --global --unset <entry-name>"
+	}, {
+		"title": "Checkout a new branch without any history",
+		"tip": "git checkout --orphan <branch_name>"
+	}, {
+		"title": "Extract file from another branch.",
+		"tip": "git show <branch_name>:<file_name>"
+	}, {
+		"title": "List only the root and merge commits.",
+		"tip": "git log --first-parent"
+	}, {
+		"title": "Change previous two commits with an interactive rebase.",
+		"tip": "git rebase --interactive HEAD~2"
+	}, {
+		"title": "List all branch is WIP",
+		"tip": "git checkout master && git branch --no-merged"
+	}, {
+		"title": "Find guilty with binary search",
+		"tip": "git bisect start                    # Search start \ngit bisect bad                      # Set point to bad commit \ngit bisect good v2.6.13-rc2         # Set point to good commit|tag \ngit bisect bad                      # Say current state is bad \ngit bisect good                     # Say current state is good \ngit bisect reset                    # Finish search \n"
+	}, {
+		"title": "Bypass pre-commit and commit-msg githooks",
+		"tip": "git commit --no-verify"
+	}, {
+		"title": "List commits and changes to a specific file (even through renaming)",
+		"tip": "git log --follow -p -- <file_path>"
+	}, {
+		"title": "Clone a single branch",
+		"tip": "git clone -b <branch-name> --single-branch https://github.com/user/repo.git"
+	}, {
+		"title": "Create and switch new branch",
+		"tip": "git checkout -b <branch-name>",
+		"alternatives": ["git branch <branch-name> && git checkout <branch-name>"]
+	}, {
+		"title": "Ignore file mode changes on commits",
+		"tip": "git config core.fileMode false"
+	}, {
+		"title": "Turn off git colored terminal output",
+		"tip": "git config --global color.ui false"
+	}, {
+		"title": "Specific color settings",
+		"tip": "git config --global <specific command e.g branch, diff> <true, false or always>"
+	}, {
+		"title": "Show all local branches ordered by recent commits",
+		"tip": "git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
+	}, {
+		"title": "Find lines matching the pattern (regex or string) in tracked files",
+		"tip": "git grep --heading --line-number 'foo bar'"
+	}, {
+		"title": "Clone a shallow copy of a repository",
+		"tip": "git clone https://github.com/user/repo.git --depth 1"
+	}, {
+		"title": "Search Commit log across all branches for given text",
+		"tip": "git log --all --grep='<given-text>'"
+	}, {
+		"title": "Get first commit in a branch (from master)",
+		"tip": "git log --oneline master..<branch-name> | tail -1",
+		"alternatives": ["git log --reverse master..<branch-name> | head -6"]
+	}, {
+		"title": "Unstaging Staged file",
+		"tip": "git reset HEAD <file-name>"
+	}, {
+		"title": "Force push to Remote Repository",
+		"tip": "git push -f <remote-name> <branch-name>"
+	}, {
+		"title": "Adding Remote name",
+		"tip": "git remote add <remote-nickname> <remote-url>"
+	}, {
+		"title": "Show the author, time and last revision made to each line of a given file",
+		"tip": "git blame <file-name>"
+	}, {
+		"title": "Group commits by authors and title",
+		"tip": "git shortlog"
+	}, {
+		"title": "Forced push but still ensure you don't overwrite other's work",
+		"tip": "git push --force-with-lease <remote-name> <branch-name>"
+	}, {
+		"title": "Show how many lines does an author contribute",
+		"tip": "git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s removed lines: %s total lines: %s\n\", add, subs, loc }' -",
+		"alternatives": ["git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\n\", add, subs, loc }' - # on Mac OSX"]
+	}, {
+		"title": "Revert: Reverting an entire merge",
+		"tip": "git revert -m 1 <commit-ish>"
+	}, {
+		"title": "Number of commits in a branch",
+		"tip": "git rev-list --count <branch-name>"
+	}, {
+		"title": "Alias: git undo",
+		"tip": "git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'"
+	}, {
+		"title": "Add object notes",
+		"tip": "git notes add -m 'Note on the previous commit....'"
+	}, {
+		"title": "Show all the git-notes",
+		"tip": "git log --show-notes='*'"
+	}, {
+		"title": "Apply commit from another repository",
+		"tip": "git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k"
+	}, {
+		"title": "Specific fetch reference",
+		"tip": "git fetch origin master:refs/remotes/origin/mymaster"
+	}, {
+		"title": "Find common ancestor of two branches",
+		"tip": "diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1"
+	}, {
+		"title": "List unpushed git commits",
+		"tip": "git log --branches --not --remotes",
+		"alternatives": ["git log @{u}..", "git cherry -v"]
+	}, {
+		"title": "Add everything, but whitespace changes",
+		"tip": "git diff --ignore-all-space | git apply --cached"
+	}, {
+		"title": "Edit [local/global] git config",
+		"tip": "git config [--global] --edit"
+	}, {
+		"title": "blame on certain range",
+		"tip": "git blame -L <start>,<end>"
+	}, {
+		"title": "Show a Git logical variable.",
+		"tip": "git var -l | <variable>"
+	}, {
+		"title": "Preformatted patch file.",
+		"tip": "git format-patch -M upstream..topic"
+	}, {
+		"title": "Get the repo name.",
+		"tip": "git rev-parse --show-toplevel"
+	}, {
+		"title": "logs between date range",
+		"tip": "git log --since='FEB 1 2017' --until='FEB 14 2017'"
+	}, {
+		"title": "Exclude author from logs",
+		"tip": "git log --perl-regexp --author='^((?!excluded-author-regex).*)$'"
+	}, {
+		"title": "Generates a summary of pending changes",
+		"tip": "git request-pull v1.0 https://git.ko.xz/project master:for-linus"
+	}, {
+		"title": "List references in a remote repository",
+		"tip": "git ls-remote git://git.kernel.org/pub/scm/git/git.git"
+	}, {
+		"title": "Backup untracked files.",
+		"tip": "git ls-files --others -i --exclude-standard | xargs zip untracked.zip"
+	}, {
+		"title": "List all git aliases",
+		"tip": "git config -l | grep alias | sed 's/^alias\\.//g'",
+		"alternatives": ["git config -l | grep alias | cut -d '.' -f 2"]
+	}, {
+		"title": "Show git status short",
+		"tip": "git status --short --branch"
+	},
+	{
+		"title": "Checkout a commit prior to a day ago",
+		"tip": "git checkout master@{yesterday}"
+	}, {
+		"title": "Push a new local branch to remote repository and track",
+		"tip": "git push -u origin <branch_name>"
+	}, {
+		"title": "Change a branch base",
+		"tip": "git rebase --onto <new_base> <old_base>"
+	}, {
+		"title": "Use SSH instead of HTTPs for remotes",
+		"tip": "git config --global url.'git@github.com:'.insteadOf 'https://github.com/'"
+	}
 ]
