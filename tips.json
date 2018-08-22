@@ -110,6 +110,9 @@
 		"tip": "git log --no-merges --raw --since='2 weeks ago'",
 		"alternatives": ["git whatchanged --since='2 weeks ago'"]
 	}, {
+		"title": "Which files have changed most since two weeks?",
+		"tip": "git log -M -C --name-only --since=\"2 weeks ago\" --all --format='format:' \"$@\" | sort | grep -v '^$' | uniq -c | sort -n | awk 'BEGIN {print \"count\\tfile\"} {print $1 \"\\t\" $2}'"
+	}, {
 		"title": "See all commits made since forking from master",
 		"tip": "git log --no-merges --stat --reverse master.."
 	}, {
