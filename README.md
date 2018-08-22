@@ -46,6 +46,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Stage parts of a changed file, instead of the entire file](#stage-parts-of-a-changed-file-instead-of-the-entire-file)
 * [Get git bash completion](#get-git-bash-completion)
 * [What changed since two weeks?](#what-changed-since-two-weeks)
+* [Which files have changed most since two weeks?](#which-files-have-changed-most-since-two-weeks)
 * [See all commits made since forking from master](#see-all-commits-made-since-forking-from-master)
 * [Pick commits across branches using cherry-pick](#pick-commits-across-branches-using-cherry-pick)
 * [Find out branches containing commit-hash](#find-out-branches-containing-commit-hash)
@@ -384,6 +385,12 @@ git log --no-merges --raw --since='2 weeks ago'
 __Alternatives:__
 ```sh
 git whatchanged --since='2 weeks ago'
+```
+
+## Which files have changed most since two weeks?
+```sh
+git log -M -C --name-only --since="2 weeks ago" --all --format='format:' "$@" | sort | grep -v '^
+ | uniq -c | sort -n | awk 'BEGIN {print "count\tfile"} {print <!-- @doxie.inject start --> "\t" <!-- @doxie.inject end -->}'
 ```
 
 ## See all commits made since forking from master
