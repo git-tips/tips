@@ -221,6 +221,9 @@
 		"tip": "git log --pretty=oneline --graph --decorate --all",
 		"alternatives": ["gitk --all", "git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"]
 	}, {
+		"title": "Visualize the tree including commits that are only referenced from reflogs",
+		"tip": "git log --graph --decorate --oneline $(git rev-list --walk-reflogs --all)"
+	}, {
 		"title": "Deploying git tracked subfolder to gh-pages",
 		"tip": "git subtree push --prefix subfolder_name origin gh-pages",
 		"alternatives": "git subtree push --prefix subfolder_name origin branch_name"
