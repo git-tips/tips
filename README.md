@@ -78,6 +78,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Prunes references to remote branches that have been deleted in the remote.](#prunes-references-to-remote-branches-that-have-been-deleted-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](#visualize-the-version-tree)
+* [Visualize the tree including commits that are only referenced from reflogs](#visualize-the-tree-including-commits-that-are-only-referenced-from-reflogs)
 * [Deploying git tracked subfolder to gh-pages](#deploying-git-tracked-subfolder-to-gh-pages)
 * [Adding a project to repo using subtree](#adding-a-project-to-repo-using-subtree)
 * [Get latest changes in your repo for a linked project using subtree](#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
@@ -670,6 +671,11 @@ gitk --all
 
 ```sh
 git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'
+```
+
+## Visualize the tree including commits that are only referenced from reflogs
+```sh
+git log --graph --decorate --oneline $(git rev-list --walk-reflogs --all)
 ```
 
 ## Deploying git tracked subfolder to gh-pages
