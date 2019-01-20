@@ -1080,7 +1080,7 @@ git fetch origin master:refs/remotes/origin/mymaster
 
 ## Find common ancestor of two branches
 ```sh
-diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1
+git merge-base <branch-name> <other-branch-name>
 ```
 
 ## List unpushed git commits
