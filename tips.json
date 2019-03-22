@@ -8,6 +8,9 @@
 		"title": "Search change by content",
 		"tip": "git log -S'<a term in the source>'"
 	}, {
+		"title": "Show changes over time for specific file",
+		"tip": "git log -p <file_name>"
+	}, {
 		"title": "Remove sensitive data from history, after a push",
 		"tip": "git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all"
 	}, {
@@ -19,6 +22,9 @@
 	}, {
 		"title": "Git reset first commit",
 		"tip": "git update-ref -d HEAD"
+	}, {
+		"title": "Reset: preserve uncommitted local changes",
+		"tip": "git reset --keep <commit>"
 	}, {
 		"title": "List all the conflicted files",
 		"tip": "git diff --name-only --diff-filter=U"
@@ -58,7 +64,7 @@
 	}, {
 		"title": "Delete remote branch",
 		"tip": "git push origin --delete <remote_branchname>",
-		"alternatives": ["git push origin :<remote_branchname>"]
+		"alternatives": ["git push origin :<remote_branchname>", "git branch -dr <remote/branch>"]
 	}, {
 		"title": "Delete local tag",
 		"tip": "git tag -d <tag-name>"
@@ -409,6 +415,9 @@
 	}, {
 		"title": "Adding Remote name",
 		"tip": "git remote add <remote-nickname> <remote-url>"
+	}, {
+		"title": "List all currently configured remotes",
+		"tip": "git remote -v"
 	}, {
 		"title": "Show the author, time and last revision made to each line of a given file",
 		"tip": "git blame <file-name>"
