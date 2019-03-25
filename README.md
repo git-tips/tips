@@ -30,6 +30,8 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Track upstream branch](#track-upstream-branch)
 * [Delete local branch](#delete-local-branch)
 * [Delete remote branch](#delete-remote-branch)
+* [Create tag](#create-tag)
+* [Push tag](#push-tag)
 * [Delete local tag](#delete-local-tag)
 * [Delete remote tag](#delete-remote-tag)
 * [Undo local changes with the last content in head](#undo-local-changes-with-the-last-content-in-head)
@@ -293,6 +295,18 @@ git push origin --delete <remote_branchname>
 __Alternatives:__
 ```sh
 git push origin :<remote_branchname>
+```
+
+
+## Create tag
+```sh
+git tag <tag-name>
+```
+
+
+## Push tag
+```sh
+git push origin <tag-name>
 ```
 
 ## Delete local tag
