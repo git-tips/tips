@@ -14,10 +14,12 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Everyday Git in twenty commands or so](#everyday-git-in-twenty-commands-or-so)
 * [Show helpful guides that come with Git](#show-helpful-guides-that-come-with-git)
 * [Search change by content](#search-change-by-content)
+* [Show changes over time for specific file](#show-changes-over-time-for-specific-file)
 * [Remove sensitive data from history, after a push](#remove-sensitive-data-from-history-after-a-push)
 * [Sync with remote, overwrite local changes](#sync-with-remote-overwrite-local-changes)
 * [List of all files till a commit](#list-of-all-files-till-a-commit)
 * [Git reset first commit](#git-reset-first-commit)
+* [Reset: preserve uncommitted local changes](#reset-preserve-uncommitted-local-changes)
 * [List all the conflicted files](#list-all-the-conflicted-files)
 * [List of all files changed in a commit](#list-of-all-files-changed-in-a-commit)
 * [Unstaged changes since last commit](#unstaged-changes-since-last-commit)
@@ -139,6 +141,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Unstaging Staged file](#unstaging-staged-file)
 * [Force push to Remote Repository](#force-push-to-remote-repository)
 * [Adding Remote name](#adding-remote-name)
+* [List all currently configured remotes](#list-all-currently-configured-remotes)
 * [Show the author, time and last revision made to each line of a given file](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
 * [Group commits by authors and title](#group-commits-by-authors-and-title)
 * [Forced push but still ensure you don't overwrite other's work](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
@@ -169,6 +172,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Push a new local branch to remote repository and track](#push-a-new-local-branch-to-remote-repository-and-track)
 * [Change a branch base](#change-a-branch-base)
 * [Use SSH instead of HTTPs for remotes](#use-ssh-instead-of-https-for-remotes)
+* [Update a submodule to the latest commit](#update-a-submodule-to-the-latest-commit)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -191,6 +195,11 @@ git help -g
 git log -S'<a term in the source>'
 ```
 
+## Show changes over time for specific file
+```sh
+git log -p <file_name>
+```
+
 ## Remove sensitive data from history, after a push
 ```sh
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all
@@ -209,6 +218,11 @@ git ls-tree --name-only -r <commit-ish>
 ## Git reset first commit
 ```sh
 git update-ref -d HEAD
+```
+
+## Reset: preserve uncommitted local changes
+```sh
+git reset --keep <commit>
 ```
 
 ## List all the conflicted files
@@ -293,6 +307,11 @@ git push origin --delete <remote_branchname>
 __Alternatives:__
 ```sh
 git push origin :<remote_branchname>
+```
+
+
+```sh
+git branch -dr <remote/branch>
 ```
 
 ## Delete local tag
@@ -1015,6 +1034,11 @@ git push -f <remote-name> <branch-name>
 git remote add <remote-nickname> <remote-url>
 ```
 
+## List all currently configured remotes
+```sh
+git remote -v
+```
+
 ## Show the author, time and last revision made to each line of a given file
 ```sh
 git blame <file-name>
@@ -1189,6 +1213,15 @@ git rebase --onto <new_base> <old_base>
 ## Use SSH instead of HTTPs for remotes
 ```sh
 git config --global url.'git@github.com:'.insteadOf 'https://github.com/'
+```
+
+## Update a submodule to the latest commit
+```sh
+cd <path-to-submodule>
+git pull origin <branch>
+cd <root-of-your-main-project>
+git add <path-to-submodule>
+git commit -m "submodule updated"
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
