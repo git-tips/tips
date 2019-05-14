@@ -512,5 +512,8 @@
 	}, {
 		"title": "Use SSH instead of HTTPs for remotes",
 		"tip": "git config --global url.'git@github.com:'.insteadOf 'https://github.com/'"
-	}
+	}, {
+		"title": "Update a submodule to the latest commit",
+		"tip": "cd <path-to-submodule>\ngit pull origin <branch>\ncd <root-of-your-main-project>\ngit add <path-to-submodule>\ngit commit -m \"submodule updated\""
+        }
 ]
