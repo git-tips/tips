@@ -515,5 +515,8 @@
 	}, {
 		"title": "Update a submodule to the latest commit",
 		"tip": "cd <path-to-submodule>\ngit pull origin <branch>\ncd <root-of-your-main-project>\ngit add <path-to-submodule>\ngit commit -m \"submodule updated\""
-        }
+	}, {
+		"title": "Prevent auto replacing LF with CRLF",
+		"tip": "git config --global core.autocrlf false"
+	}
 ]
