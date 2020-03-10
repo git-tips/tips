@@ -1,13 +1,13 @@
 ## git-tips
-> Collection of `git-tips`, want to add your tips? Checkout [contributing.md](./contributing.md)
+> Kolekcja`git-tips`, chcesz dodać swoje wskazówki? Sprawdź [contributing.md](./contributing.md)
 
-[English](http://git.io/git-tips) | [中文](https://github.com/521xueweihan/git-tips) | [Русский](https://github.com/Imangazaliev/git-tips) | [한국어](https://github.com/mingrammer/git-tips) | [Tiếng Việt](https://github.com/hprobotic/git-tips) | [日本語](https://github.com/isotai/git-tips) | [नेपाली](https://github.com/amarduwal/git-tips)
+[English](http://git.io/git-tips) | [中文](https://github.com/521xueweihan/git-tips) | [Русский](https://github.com/Imangazaliev/git-tips) | [한국어](https://github.com/mingrammer/git-tips) | [Tiếng Việt](https://github.com/hprobotic/git-tips) | [日本語](https://github.com/isotai/git-tips) | [नेपाली](https://github.com/amarduwal/git-tips) | [Polski](https://github.com/mbiesiad/tips)
 
-### __Tools:__
+### __Narzędzia:__
 
-* [git-tip](https://www.npmjs.com/package/git-tip) - A handy CLI to make optimum use of these tips. ([Here in Docker container](https://github.com/djoudi5/docker-git-tip))
+* [git-tip](https://www.npmjs.com/package/git-tip) - Poręczny interfejs CLI umożliwiający optymalne wykorzystanie tych wskazówek. ([Tutaj jest kontener Docker](https://github.com/djoudi5/docker-git-tip))
 
-P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
+P.S: Wszystkie te polecenia są testowane na `git version 2.7.4 (Apple Git-66)`.
 
 <!-- @doxie.inject start toc -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
