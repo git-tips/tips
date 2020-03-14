@@ -181,57 +181,57 @@ P.S: Wszystkie te polecenia są testowane na `git version 2.7.4 (Apple Git-66)`.
 
 <!-- @doxie.inject start -->
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
-## Everyday Git in twenty commands or so
+## Codziennie Git w około dwudziestu poleceniach
 ```sh
 git help everyday
 ```
 
-## Show helpful guides that come with Git
+## Pokaż przydatne przewodniki dla Git
 ```sh
 git help -g
 ```
 
-## Search change by content
+## Wyszukaj zmianę według zawartości
 ```sh
 git log -S'<a term in the source>'
 ```
 
-## Show changes over time for specific file
+## Pokaż zmiany w czasie dla określonego pliku
 ```sh
 git log -p <file_name>
 ```
 
-## Remove sensitive data from history, after a push
+## Usuń wrażliwe dane z historii po push
 ```sh
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <path-to-your-file>' --prune-empty --tag-name-filter cat -- --all && git push origin --force --all
 ```
 
-## Sync with remote, overwrite local changes
+## Synchronizuj ze zdalnym, zastępuj lokalne zmiany
 ```sh
 git fetch origin && git reset --hard origin/master && git clean -f -d
 ```
 
-## List of all files till a commit
+## Lista wszystkich plików do commita
 ```sh
 git ls-tree --name-only -r <commit-ish>
 ```
 
-## Git reset first commit
+## Git zresetuj pierwszy commit
 ```sh
 git update-ref -d HEAD
 ```
 
-## Reset: preserve uncommitted local changes
+## Reset: zachowaj niezatwierdzone zmiany lokalne
 ```sh
 git reset --keep <commit>
 ```
 
-## List all the conflicted files
+## Wyświetl wszystkie skonfliktowane pliki
 ```sh
 git diff --name-only --diff-filter=U
 ```
 
-## List of all files changed in a commit
+## Lista wszystkich plików zmienionych w commitcie
 ```sh
 git diff-tree --no-commit-id --name-only -r <commit-ish>
 ```
