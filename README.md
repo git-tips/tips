@@ -236,76 +236,76 @@ git diff --name-only --diff-filter=U
 git diff-tree --no-commit-id --name-only -r <commit-ish>
 ```
 
-## Unstaged changes since last commit
+## Zmienione ale niezaktualizowane zmiany od ostatniego zatwierdzenia
 ```sh
 git diff
 ```
 
-## Changes staged for commit
+## Porównanie zmian z poczekalni z ostatnią zmianą
 ```sh
 git diff --cached
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git diff --staged
 ```
 
-## Show both staged and unstaged changes
+## Pokaż wszystkie zmiany w śledzonych plikach.
 ```sh
 git diff HEAD
 ```
 
-## List all branches that are already merged into master
+## Lista wszystkich gałęzi, które są już zmergowane do mastera
 ```sh
 git branch --merged master
 ```
 
-## Quickly switch to the previous branch
+## Szybko przełącz na poprzednią gałąź
 ```sh
 git checkout -
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git checkout @{-1}
 ```
 
-## Remove branches that have already been merged with master
+## Usuń gałęzie które zostały już połączone z master
 ```sh
 git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -d
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d # will not delete master if master is not checked out
 ```
 
-## List all branches and their upstreams, as well as last commit on branch
+## Wymień wszystkie gałęzie i ich wyższe poziomy, a także ostatnie zatwierdzenie na gałęzi
 ```sh
 git branch -vv
 ```
 
-## Track upstream branch
+## Śledź odgałęzienie
 ```sh
 git branch -u origin/mybranch
 ```
 
-## Delete local branch
+## Usuń lokalną gałąź
 ```sh
 git branch -d <local_branchname>
 ```
 
-## Delete remote branch
+## Usuń zdalną gałąź
 ```sh
 git push origin --delete <remote_branchname>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git push origin :<remote_branchname>
 ```
@@ -315,132 +315,132 @@ git push origin :<remote_branchname>
 git branch -dr <remote/branch>
 ```
 
-## Delete local tag
+## Usuń lokalny tag
 ```sh
 git tag -d <tag-name>
 ```
 
-## Delete remote tag
+## Usuń zdalny tag
 ```sh
 git push origin :refs/tags/<tag-name>
 ```
 
-## Undo local changes with the last content in head
+## Cofnij zmiany lokalne z ostatnią zawartością w head
 ```sh
 git checkout -- <file_name>
 ```
 
-## Revert: Undo a commit by creating a new commit
+## Cofnij: Cofnij commita, tworząc nowego commita
 ```sh
 git revert <commit-ish>
 ```
 
-## Reset: Discard commits, advised for private branch
+## Reset: Odrzuć commity, zalecane dla prywatnej gałęzi
 ```sh
 git reset <commit-ish>
 ```
 
-## Reword the previous commit message
+## Zmień kolejność poprzedniej wiadomości commita
 ```sh
 git commit -v --amend
 ```
 
-## See commit history for just the current branch
+## Zobacz historię zatwierdzeń tylko dla bieżącej gałęzi
 ```sh
 git cherry -v master
 ```
 
-## Amend author.
+## Zmień autora.
 ```sh
 git commit --amend --author='Author Name <email@address.com>'
 ```
 
-## Reset author, after author has been changed in the global config.
+## Resetuj autora po zmianie autora w global config.
 ```sh
 git commit --amend --reset-author --no-edit
 ```
 
-## Changing a remote's URL
+## Zmiana zdalnego adresu URL
 ```sh
 git remote set-url origin <URL>
 ```
 
-## Get list of all remote references
+## Uzyskaj listę wszystkich zdalnych referencji
 ```sh
 git remote
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git remote show
 ```
 
-## Get list of all local and remote branches
+## Uzyskaj listę wszystkich lokalnych i zdalnych gałęzi
 ```sh
 git branch -a
 ```
 
-## Get only remote branches
+## Uzyskaj tylko zdalne gałęzie
 ```sh
 git branch -r
 ```
 
-## Stage parts of a changed file, instead of the entire file
+## Śledź części zmienionego pliku zamiast całego pliku
 ```sh
 git add -p
 ```
 
-## Get git bash completion
+## Uzyskaj ukończenie git bash
 ```sh
 curl -L http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc
 ```
 
-## What changed since two weeks?
+## Co zmieniło się od dwóch tygodni?
 ```sh
 git log --no-merges --raw --since='2 weeks ago'
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git whatchanged --since='2 weeks ago'
 ```
 
-## See all commits made since forking from master
+## Zobacz wszystkie zatwierdzenia dokonane od czasu forkowania z mastera
 ```sh
 git log --no-merges --stat --reverse master..
 ```
 
-## Pick commits across branches using cherry-pick
+## Wybierz zatwierdzenia między gałęziami za pomocą cherry-pick
 ```sh
 git checkout <branch-name> && git cherry-pick <commit-ish>
 ```
 
-## Find out branches containing commit-hash
+## Znajdź gałęzie zawierające commit-hash
 ```sh
 git branch -a --contains <commit-ish>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git branch --contains <commit-ish>
 ```
 
-## Git Aliases
+## Aliasy Gita
 ```sh
 git config --global alias.<handle> <command> 
 git config --global alias.st status
 ```
 
-## Saving current state of tracked files without commiting
+## Zapisywanie bieżącego stanu śledzonych plików bez zatwierdzania
 ```sh
 git stash
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git stash save
 ```
@@ -451,7 +451,7 @@ git stash -k
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git stash --keep-index
 ```
@@ -467,7 +467,7 @@ git stash -u
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git stash save -u
 ```
@@ -488,7 +488,7 @@ git stash -a
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git stash --all
 ```
@@ -514,7 +514,7 @@ git stash pop
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git stash apply stash@{0} && git stash drop stash@{0}
 ```
@@ -525,7 +525,7 @@ git stash clear
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git stash drop <stash@{n}>
 ```
@@ -536,7 +536,7 @@ git checkout <stash@{n}> -- <file_path>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git checkout stash@{0} -- <file_path>
 ```
@@ -572,7 +572,7 @@ git rm --cached <file_path>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git rm --cached -r <directory_path>
 ```
@@ -598,7 +598,7 @@ git submodule foreach git pull
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git submodule update --init --recursive
 ```
@@ -614,7 +614,7 @@ git cherry -v master
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git cherry -v master <branch-to-be-merged>
 ```
@@ -625,7 +625,7 @@ git branch -m <new-branch-name>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git branch -m [<old-branch-name>] <new-branch-name>
 ```
@@ -651,7 +651,7 @@ git fetch -p
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git remote prune origin
 ```
@@ -662,7 +662,7 @@ git remote prune origin
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git rev-list --max-parents=0 HEAD
 ```
@@ -683,7 +683,7 @@ git log --pretty=oneline --graph --decorate --all
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 gitk --all
 ```
@@ -744,7 +744,7 @@ git fetch origin pull/<id>/head:<branch-name>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git pull origin pull/<id>/head:<branch-name>
 ```
@@ -795,7 +795,7 @@ git config --global pull.rebase true
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 #git < 1.7.9
 git config --global branch.autosetuprebase always
@@ -872,7 +872,7 @@ git log -<n>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git log -n <n>
 ```
@@ -969,7 +969,7 @@ git checkout -b <branch-name>
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git branch <branch-name> && git checkout <branch-name>
 ```
@@ -1015,7 +1015,7 @@ git log --oneline master..<branch-name> | tail -1
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git log --reverse master..<branch-name> | head -6
 ```
@@ -1062,7 +1062,7 @@ git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add +=
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s, removed lines: %s, total lines: %s
 ", add, subs, loc }' - # on Mac OSX
@@ -1114,7 +1114,7 @@ git log --branches --not --remotes
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git log @{u}..
 ```
@@ -1186,7 +1186,7 @@ git config -l | grep alias | sed 's/^alias\.//g'
 ```
 
 
-__Alternatives:__
+__Alternatywnie:__
 ```sh
 git config -l | grep alias | cut -d '.' -f 2
 ```
