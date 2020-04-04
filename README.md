@@ -127,7 +127,7 @@ P.S: Wszystkie te polecenia są testowane na `git version 2.7.4 (Apple Git-66)`.
 * [Wymień wszystkie gałęzie, których praca jest w toku (WIP)](#wymień-wszystkie-gałęzie-których-praca-jest-w-toku-wip)
 * [Znajdź nieczyste korzystając z wyszukiwania binarnego](#znajdź-nieczyste-korzystając-z-wyszukiwania-binarnego)
 * [Bypass pre-commit and commit-msg githooks](#bypass-pre-commit-and-commit-msg-githooks)
-* [Lista zatwierdzeń i zmian w określonym pliku (nawet poprzez zmianę nazwy)](#lista-zatwierdzeń-i-zmian-w-określonym-pliku- nawet-poprzez-zmianę-nazwy)
+* [Lista zatwierdzeń i zmian w określonym pliku (nawet poprzez zmianę nazwy)](#lista-zatwierdzeń-i-zmian-w-określonym-pliku-nawet-poprzez-zmianę-nazwy)
 * [Klonuj pojedynczy branch](#klonuj-pojedynczy-branch)
 * [Utwórz i zmień nowy branch](#utwórz-i-zmień-nowy-branch)
 * [Ignoruj tryb zmiany plików na commitach](#ignoruj-tryb-zmiany-plików-na-commitach)
