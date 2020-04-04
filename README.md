@@ -132,48 +132,48 @@ P.S: Wszystkie te polecenia są testowane na `git version 2.7.4 (Apple Git-66)`.
 * [Utwórz i zmień nowy branch](#utwórz-i-zmień-nowy-branch)
 * [Ignoruj tryb zmiany plików na commitach](#ignoruj-tryb-zmiany-plików-na-commitach)
 * [Wyłącz git colored terminal output](#wyłącz-git-colored-terminal-output)
-* [Specific color settings](#specific-color-settings)
-* [Show all local branches ordered by recent commits](#show-all-local-branches-ordered-by-recent-commits)
-* [Find lines matching the pattern (regex or string) in tracked files](#find-lines-matching-the-pattern-regex-or-string-in-tracked-files)
-* [Clone a shallow copy of a repository](#clone-a-shallow-copy-of-a-repository)
-* [Search Commit log across all branches for given text](#search-commit-log-across-all-branches-for-given-text)
-* [Get first commit in a branch (from master)](#get-first-commit-in-a-branch-from-master)
+* [Określone ustawienia kolorów](#określone-ustawienia-kolorów)
+* [Pokaż wszystkie lokalne branche uporządkowane według ostatnich commitów](#pokaż-wszystkie-lokalne-branche-uporządkowane-według-ostatnich-commitów)
+* [Znajdź wiersze pasujące do wzorca (wyrażenia regularnego lub ciągu) w śledzonych plikach](#znajdź-wiersze-pasujące-do-wzorca-wyrażenia-regularnego-lub-ciągu-w-śledzonych-plikach)
+* [Sklonuj płytką kopię repozytorium](#Sklonuj płytką kopię repozytorium)
+* [Wyszukaj Commit log we wszystkich branchach dla podanego tekstu](#wyszukaj-commit-log-we-wszystkich-branchach-dla-podanego-tekstu)
+* [Uzyskaj pierwszy commit w branchu (z master)](#uzyskaj-pierwszy-commit-w-branchu-z-master)
 * [Unstaging Staged file](#unstaging-staged-file)
-* [Force push to Remote Repository](#force-push-to-remote-repository)
-* [Adding Remote name](#adding-remote-name)
-* [List all currently configured remotes](#list-all-currently-configured-remotes)
-* [Show the author, time and last revision made to each line of a given file](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
-* [Group commits by authors and title](#group-commits-by-authors-and-title)
-* [Forced push but still ensure you don't overwrite other's work](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
-* [Show how many lines does an author contribute](#show-how-many-lines-does-an-author-contribute)
-* [Revert: Reverting an entire merge](#revert-reverting-an-entire-merge)
-* [Number of commits in a branch](#number-of-commits-in-a-branch)
-* [Alias: git undo](#alias-git-undo)
-* [Add object notes](#add-object-notes)
-* [Show all the git-notes](#show-all-the-git-notes)
-* [Apply commit from another repository](#apply-commit-from-another-repository)
+* [Wymuś wypchnięcie do zdalnego repozytorium](#wymuś-wypchnięcie-do-zdalnego-repozytorium)
+* [Dodawanie nazwy zdalnej](#dodawanie-nazwy-zdalnej)
+* [Wyświetl listę wszystkich aktualnie skonfigurowanych zdalnych](#wyświetl-listę-wszystkich-aktualnie-skonfigurowanych zdalnych)
+* [Pokaż autora, czas i ostatnią wersję dokonaną w każdej linii danego pliku](#pokaż-autora-czas-i-ostatnią-wersję-dokonaną-w-każdej-linii-danego-pliku)
+* [Grupuj commity według autorów i tytułów](#grupuj-commity-według-autorów-i-tytułów)
+* [Wymuś pusha, ale nadal upewnij się, że nie nadpisujesz pracy innych](#wymuś-pusha-ale-nadal-upewnij-się-że-nie-nadpisujesz-pracy-innych)
+* [Pokaż, ile wierszy ma współautor](#pokaż-ile-wierszy-ma-współautor)
+* [Cofnij: Cofnięcie całego merge](#cofnij-cofnięcie-całego-merge)
+* [Liczba commitów w branchu](#liczba-commitów-w-branchu)
+* [Alias: git undo - cofnij](#alias-git-undo-cofnij)
+* [Dodaj notatkę obiektu](#dodaj-notatkę-obiektu)
+* [Pokaż wszystkie git-notes](#pokaż-wszystkie-git-notes)
+* [Zastosuj commit z innego repozytorium](#zastosuj-commit-z-innego-repozytorium)
 * [Specific fetch reference](#specific-fetch-reference)
-* [Find common ancestor of two branches](#find-common-ancestor-of-two-branches)
-* [List unpushed git commits](#list-unpushed-git-commits)
-* [Add everything, but whitespace changes](#add-everything-but-whitespace-changes)
-* [Edit [local/global] git config](#edit-localglobal-git-config)
-* [blame on certain range](#blame-on-certain-range)
-* [Show a Git logical variable.](#show-a-git-logical-variable)
+* [Znajdź wspólnego przodka dwóch gałęzi](#znajdź-wspólnego-przodka-dwóch-gałęzi)
+* [Wyświetl unpushed git commits](#wyświetl-unpushed-git-commits)
+* [Dodaj wszystko, ale bez zmiany białych znaków](#dodaj-wszystko-ale-bez-zmiany-białych-znaków)
+* [Edytuj [local/global] git config](edytuj-local-global-git-config)
+* [Blame on certain range](#blame-on-certain-range)
+* [Pokaż zmienną logiczną Git.](#pokaż-zmienną-logiczną-git)
 * [Preformatted patch file.](#preformatted-patch-file)
-* [Get the repo name.](#get-the-repo-name)
-* [logs between date range](#logs-between-date-range)
-* [Exclude author from logs](#exclude-author-from-logs)
-* [Generates a summary of pending changes](#generates-a-summary-of-pending-changes)
-* [List references in a remote repository](#list-references-in-a-remote-repository)
-* [Backup untracked files.](#backup-untracked-files)
-* [List all git aliases](#list-all-git-aliases)
-* [Show git status short](#show-git-status-short)
-* [Checkout a commit prior to a day ago](#checkout-a-commit-prior-to-a-day-ago)
-* [Push a new local branch to remote repository and track](#push-a-new-local-branch-to-remote-repository-and-track)
-* [Change a branch base](#change-a-branch-base)
-* [Use SSH instead of HTTPs for remotes](#use-ssh-instead-of-https-for-remotes)
-* [Update a submodule to the latest commit](#update-a-submodule-to-the-latest-commit)
-* [Prevent auto replacing LF with CRLF](#prevent-auto-replacing-lf-with-crlf)
+* [Uzyskaj nazwę repozytorium.](#Uzyskaj nazwę repozytorium)
+* [Logi między zakresem dat](#logi-między-zakresem-dat)
+* [Wyklucz autora z logów](#wyklucz-autora-z-logów)
+* [Generuj podsumowanie oczekujących zmian](#generuj-podsumowanie-oczekujących-zmian)
+* [Lista referencji w zdalnym repozytorium](#lista-referencji-w-zdalnym-repozytorium)
+* [Utwórz kopię zapasową nieśledzonych plików.](#utwórz-kopię-zapasową-nieśledzonych-plików)
+* [Wyświetl wszystkie aliasy git](#wyświetl-wszystkie-aliasy-git)
+* [Pokaż git status short](#pokaż-git-status-short)
+* [Sprawdź commit sprzed dnia](#sprawdź-commit-sprzed-dnia)
+* [Popchnij nowy branch lokalny do zdalnego repozytorium i śledź](#popchnij-nowy-branch-lokalny-do-zdalnego-repozytorium-i-śledź)
+* [Zmień branch base](#zmień-branch-base)
+* [Użyj SSH zamiast HTTPs dla remotes](#użyj-ssh-zamiast-https-dla-remotes)
+* [Zaktualizuj submoduł do najnowszego commita](#zaktualizuj-submoduł-do-najnowszego-commita)
+* [Zapobiegaj automatycznemu zastępowaniu LF przez CRLF](#zapobiegaj-automatycznemu-zastępowaniu-lf-przez-crlf)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -984,32 +984,32 @@ git config core.fileMode false
 git config --global color.ui false
 ```
 
-## Specific color settings
+## Określone ustawienia kolorów
 ```sh
 git config --global <specific command e.g branch, diff> <true, false or always>
 ```
 
-## Show all local branches ordered by recent commits
+## Pokaż wszystkie lokalne branche uporządkowane według ostatnich commitów
 ```sh
 git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/
 ```
 
-## Find lines matching the pattern (regex or string) in tracked files
+## Znajdź wiersze pasujące do wzorca (wyrażenia regularnego lub ciągu) w śledzonych plikach
 ```sh
 git grep --heading --line-number 'foo bar'
 ```
 
-## Clone a shallow copy of a repository
+## Sklonuj płytką kopię repozytorium
 ```sh
 git clone https://github.com/user/repo.git --depth 1
 ```
 
-## Search Commit log across all branches for given text
+## Wyszukaj Commit log we wszystkich branchach dla podanego tekstu
 ```sh
 git log --all --grep='<given-text>'
 ```
 
-## Get first commit in a branch (from master)
+## Uzyskaj pierwszy commit w branchu (z master)
 ```sh
 git log --oneline master..<branch-name> | tail -1
 ```
@@ -1025,37 +1025,37 @@ git log --reverse master..<branch-name> | head -6
 git reset HEAD <file-name>
 ```
 
-## Force push to Remote Repository
+## Wymuś wypchnięcie do zdalnego repozytorium
 ```sh
 git push -f <remote-name> <branch-name>
 ```
 
-## Adding Remote name
+## Dodawanie nazwy zdalnej
 ```sh
 git remote add <remote-nickname> <remote-url>
 ```
 
-## List all currently configured remotes
+## Wyświetl listę wszystkich aktualnie skonfigurowanych zdalnych
 ```sh
 git remote -v
 ```
 
-## Show the author, time and last revision made to each line of a given file
+## Pokaż autora, czas i ostatnią wersję dokonaną w każdej linii danego pliku
 ```sh
 git blame <file-name>
 ```
 
-## Group commits by authors and title
+## Grupuj commity według autorów i tytułów
 ```sh
 git shortlog
 ```
 
-## Forced push but still ensure you don't overwrite other's work
+## Wymuś pusha, ale nadal upewnij się, że nie nadpisujesz pracy innych
 ```sh
 git push --force-with-lease <remote-name> <branch-name>
 ```
 
-## Show how many lines does an author contribute
+## Pokaż, ile wierszy ma współautor
 ```sh
 git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s removed lines: %s total lines: %s
 ", add, subs, loc }' -
@@ -1068,32 +1068,32 @@ git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += 
 ", add, subs, loc }' - # on Mac OSX
 ```
 
-## Revert: Reverting an entire merge
+## Cofnij: Cofnięcie całego merge
 ```sh
 git revert -m 1 <commit-ish>
 ```
 
-## Number of commits in a branch
+## Liczba commitów w branchu
 ```sh
 git rev-list --count <branch-name>
 ```
 
-## Alias: git undo
+## Alias: git undo - cofnij
 ```sh
 git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'
 ```
 
-## Add object notes
+## Dodaj notatkę obiektu
 ```sh
 git notes add -m 'Note on the previous commit....'
 ```
 
-## Show all the git-notes
+## Pokaż wszystkie git-notes
 ```sh
 git log --show-notes='*'
 ```
 
-## Apply commit from another repository
+## Zastosuj commit z innego repozytorium
 ```sh
 git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k
 ```
@@ -1103,12 +1103,12 @@ git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -
 git fetch origin master:refs/remotes/origin/mymaster
 ```
 
-## Find common ancestor of two branches
+## Znajdź wspólnego przodka dwóch gałęzi
 ```sh
 git merge-base <branch-name> <other-branch-name>
 ```
 
-## List unpushed git commits
+## Wyświetl unpushed git commits
 ```sh
 git log --branches --not --remotes
 ```
@@ -1124,12 +1124,12 @@ git log @{u}..
 git cherry -v
 ```
 
-## Add everything, but whitespace changes
+## Dodaj wszystko, ale bez zmiany białych znaków
 ```sh
 git diff --ignore-all-space | git apply --cached
 ```
 
-## Edit [local/global] git config
+## Edytuj [local/global] git config
 ```sh
 git config [--global] --edit
 ```
@@ -1139,7 +1139,7 @@ git config [--global] --edit
 git blame -L <start>,<end>
 ```
 
-## Show a Git logical variable.
+## Pokaż zmienną logiczną Git.
 ```sh
 git var -l | <variable>
 ```
@@ -1149,38 +1149,38 @@ git var -l | <variable>
 git format-patch -M upstream..topic
 ```
 
-## Get the repo name.
+## Uzyskaj nazwę repozytorium.
 ```sh
 git rev-parse --show-toplevel
 ```
 
-## logs between date range
+## logi między zakresem dat
 ```sh
 git log --since='FEB 1 2017' --until='FEB 14 2017'
 ```
 
-## Exclude author from logs
+## Wyklucz autora z logów
 ```sh
 git log --perl-regexp --author='^((?!excluded-author-regex).*)
 
 ```
 
-## Generates a summary of pending changes
+## Generuj podsumowanie oczekujących zmian
 ```sh
 git request-pull v1.0 https://git.ko.xz/project master:for-linus
 ```
 
-## List references in a remote repository
+## Lista referencji w zdalnym repozytorium
 ```sh
 git ls-remote git://git.kernel.org/pub/scm/git/git.git
 ```
 
-## Backup untracked files.
+## Utwórz kopię zapasową nieśledzonych plików.
 ```sh
 git ls-files --others -i --exclude-standard | xargs zip untracked.zip
 ```
 
-## List all git aliases
+## Wyświetl wszystkie aliasy git
 ```sh
 git config -l | grep alias | sed 's/^alias\.//g'
 ```
@@ -1191,32 +1191,32 @@ __Alternatywnie:__
 git config -l | grep alias | cut -d '.' -f 2
 ```
 
-## Show git status short
+## Pokaż git status short
 ```sh
 git status --short --branch
 ```
 
-## Checkout a commit prior to a day ago
+## Sprawdź commit sprzed dnia
 ```sh
 git checkout master@{yesterday}
 ```
 
-## Push a new local branch to remote repository and track
+## Popchnij nowy branch lokalny do zdalnego repozytorium i śledź
 ```sh
 git push -u origin <branch_name>
 ```
 
-## Change a branch base
+## Zmień branch base
 ```sh
 git rebase --onto <new_base> <old_base>
 ```
 
-## Use SSH instead of HTTPs for remotes
+## Użyj SSH zamiast HTTPs dla remotes
 ```sh
 git config --global url.'git@github.com:'.insteadOf 'https://github.com/'
 ```
 
-## Update a submodule to the latest commit
+## Zaktualizuj submoduł do najnowszego commita
 ```sh
 cd <path-to-submodule>
 git pull origin <branch>
@@ -1225,7 +1225,7 @@ git add <path-to-submodule>
 git commit -m "submodule updated"
 ```
 
-## Prevent auto replacing LF with CRLF
+## Zapobiegaj automatycznemu zastępowaniu LF przez CRLF
 ```sh
 git config --global core.autocrlf false
 ```
