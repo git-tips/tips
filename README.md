@@ -160,7 +160,7 @@ P.S: Wszystkie te polecenia są testowane na `git version 2.7.4 (Apple Git-66)`.
 * [Blame on certain range](#blame-on-certain-range)
 * [Pokaż zmienną logiczną Git.](#pokaż-zmienną-logiczną-git)
 * [Preformatted patch file.](#preformatted-patch-file)
-* [Uzyskaj nazwę repozytorium.](#uzyskaj nazwę repozytorium)
+* [Uzyskaj nazwę repozytorium.](#uzyskaj-nazwę-repozytorium)
 * [Logi między zakresem dat](#logi-między-zakresem-dat)
 * [Wyklucz autora z logów](#wyklucz-autora-z-logów)
 * [Generuj podsumowanie oczekujących zmian](#generuj-podsumowanie-oczekujących-zmian)
