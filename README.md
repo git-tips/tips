@@ -442,7 +442,7 @@ git stash
 
 __Alternatives:__
 ```sh
-git stash save
+git stash push
 ```
 
 ## Saving current state of unstaged changes to tracked files
@@ -458,7 +458,7 @@ git stash --keep-index
 
 
 ```sh
-git stash save --keep-index
+git stash push --keep-index
 ```
 
 ## Saving current state including untracked files
@@ -469,17 +469,23 @@ git stash -u
 
 __Alternatives:__
 ```sh
-git stash save -u
+git stash push -u
 ```
 
 
 ```sh
-git stash save --include-untracked
+git stash push --include-untracked
 ```
 
 ## Saving current state with message
 ```sh
-git stash save <message>
+git stash push -m  <message>
+```
+
+
+__Alternatives:__
+```sh
+git stash push --message <message>
 ```
 
 ## Saving current state of all files (ignored, untracked, and tracked)
@@ -495,7 +501,7 @@ git stash --all
 
 
 ```sh
-git stash save --all
+git stash push --all
 ```
 
 ## Show list of all saved stashes
