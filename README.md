@@ -1139,9 +1139,14 @@ git config [--global] --edit
 git blame -L <start>,<end>
 ```
 
-## Show a Git logical variable.
+## List all Git variable.
 ```sh
-git var -l | <variable>
+git var -l
+```
+
+## Show a Git specific variable.
+```sh
+git var <variable>
 ```
 
 ## Preformatted patch file.
