@@ -781,7 +781,7 @@ git clean -X -f
 
 ## Restore deleted file.
 ```sh
-git checkout <deleting_commit>^ -- <file_path>
+git checkout <deleting_commit> -- <file_path>
 ```
 
 ## Restore file to a specific commit-hash

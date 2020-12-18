@@ -278,7 +278,7 @@
 		"tip": "git clean -X -f"
 	}, {
 		"title": "Restore deleted file.",
-		"tip": "git checkout <deleting_commit>^ -- <file_path>"
+		"tip": "git checkout <deleting_commit> -- <file_path>"
 	}, {
 		"title": "Restore file to a specific commit-hash",
 		"tip": "git checkout <commit-ish> -- <file_path>"
