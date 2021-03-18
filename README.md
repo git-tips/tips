@@ -77,7 +77,8 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Rebases 'feature' to 'master' and merges it in to master ](#rebases-feature-to-master-and-merges-it-in-to-master)
 * [Archive the `master` branch](#archive-the-master-branch)
 * [Modify previous commit without modifying the commit message](#modify-previous-commit-without-modifying-the-commit-message)
-* [Prunes references to remote branches that have been deleted in the remote.](#prunes-references-to-remote-branches-that-have-been-deleted-in-the-remote)
+* [Prunes references to remove branches that have been deleted in the remote.](#prunes-references-to-remove-branches-that-have-been-deleted-in-the-remote)
+* [Delete local branches that has been squash and merged in the remote.](#delete-local-branches-that-has-been-squash-and-merged-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](#visualize-the-version-tree)
 * [Visualize the tree including commits that are only referenced from reflogs](#visualize-the-tree-including-commits-that-are-only-referenced-from-reflogs)
@@ -442,7 +443,7 @@ git stash
 
 __Alternatives:__
 ```sh
-git stash save
+git stash push
 ```
 
 ## Saving current state of unstaged changes to tracked files
@@ -458,7 +459,7 @@ git stash --keep-index
 
 
 ```sh
-git stash save --keep-index
+git stash push --keep-index
 ```
 
 ## Saving current state including untracked files
@@ -469,17 +470,23 @@ git stash -u
 
 __Alternatives:__
 ```sh
-git stash save -u
+git stash push -u
 ```
 
 
 ```sh
-git stash save --include-untracked
+git stash push --include-untracked
 ```
 
 ## Saving current state with message
 ```sh
-git stash save <message>
+git stash push -m <message>
+```
+
+
+__Alternatives:__
+```sh
+git stash push --message <message>
 ```
 
 ## Saving current state of all files (ignored, untracked, and tracked)
@@ -495,7 +502,7 @@ git stash --all
 
 
 ```sh
-git stash save --all
+git stash push --all
 ```
 
 ## Show list of all saved stashes
@@ -645,7 +652,7 @@ git archive master --format=zip --output=master.zip
 git add --all && git commit --amend --no-edit
 ```
 
-## Prunes references to remote branches that have been deleted in the remote.
+## Prunes references to remove branches that have been deleted in the remote.
 ```sh
 git fetch -p
 ```
@@ -654,6 +661,11 @@ git fetch -p
 __Alternatives:__
 ```sh
 git remote prune origin
+```
+
+## Delete local branches that has been squash and merged in the remote.
+```sh
+git branch -vv | grep ': gone]' | awk '{print <!-- @doxie.inject start -->}' | xargs git branch -D
 ```
 
 ## Retrieve the commit hash of the initial revision.
@@ -1139,14 +1151,9 @@ git config [--global] --edit
 git blame -L <start>,<end>
 ```
 
-## List all Git variable.
+## Show a Git logical variable.
 ```sh
-git var -l
-```
-
-## Show a Git specific variable.
-```sh
-git var <variable>
+git var -l | <variable>
 ```
 
 ## Preformatted patch file.

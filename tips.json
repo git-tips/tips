@@ -216,9 +216,12 @@
 		"title": "Modify previous commit without modifying the commit message",
 		"tip": "git add --all && git commit --amend --no-edit"
 	}, {
-		"title": "Prunes references to remote branches that have been deleted in the remote.",
+		"title": "Prunes references to remove branches that have been deleted in the remote.",
 		"tip": "git fetch -p",
 		"alternatives": ["git remote prune origin"]
+	}, {
+		"title": "Delete local branches that has been squash and merged in the remote.",
+		"tip": "git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 	}, {
 		"title": "Retrieve the commit hash of the initial revision.",
 		"tip": " git rev-list --reverse HEAD | head -1",
