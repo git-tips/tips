@@ -66,6 +66,9 @@
 		"tip": "git push origin --delete <remote_branchname>",
 		"alternatives": ["git push origin :<remote_branchname>", "git branch -dr <remote/branch>"]
 	}, {
+		"title": "Create local tag",
+		"tip": "git tag <tag-name>"
+	}, {
 		"title": "Delete local tag",
 		"tip": "git tag -d <tag-name>"
 	}, {
