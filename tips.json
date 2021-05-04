@@ -511,6 +511,9 @@
 		"title": "Checkout a commit prior to a day ago",
 		"tip": "git checkout master@{yesterday}"
 	}, {
+		"title": "Push the current branch to the same name on the remote repository",
+		"tip": "git push origin HEAD"
+  }, {
 		"title": "Push a new local branch to remote repository and track",
 		"tip": "git push -u origin <branch_name>"
 	}, {
