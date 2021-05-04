@@ -170,6 +170,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [List all git aliases](#list-all-git-aliases)
 * [Show git status short](#show-git-status-short)
 * [Checkout a commit prior to a day ago](#checkout-a-commit-prior-to-a-day-ago)
+* [Push the current branch to the same name on the remote repository](#push-the-current-branch-to-the-same-name-on-the-remote-repository)
 * [Push a new local branch to remote repository and track](#push-a-new-local-branch-to-remote-repository-and-track)
 * [Change a branch base](#change-a-branch-base)
 * [Use SSH instead of HTTPs for remotes](#use-ssh-instead-of-https-for-remotes)
@@ -1211,6 +1212,11 @@ git status --short --branch
 ## Checkout a commit prior to a day ago
 ```sh
 git checkout master@{yesterday}
+```
+
+## Push the current branch to the same name on the remote repository
+```sh
+git push origin HEAD
 ```
 
 ## Push a new local branch to remote repository and track
