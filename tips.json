@@ -152,6 +152,9 @@
 		"title": "Show list of all saved stashes",
 		"tip": "git stash list"
 	}, {
+		"title": "Show the contents of any stash in patch form",
+		"tip": "git stash show -p <stash@{n}>"
+  }, {
 		"title": "Apply any stash without deleting from the stashed list",
 		"tip": "git stash apply <stash@{n}>"
 	}, {

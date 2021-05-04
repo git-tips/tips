@@ -58,6 +58,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Saving current state with message](#saving-current-state-with-message)
 * [Saving current state of all files (ignored, untracked, and tracked)](#saving-current-state-of-all-files-ignored-untracked-and-tracked)
 * [Show list of all saved stashes](#show-list-of-all-saved-stashes)
+* [Show the contents of any stash in patch form](#show-the-contents-of-any-stash-in-patch-form)
 * [Apply any stash without deleting from the stashed list](#apply-any-stash-without-deleting-from-the-stashed-list)
 * [Apply last stashed state and delete it from stashed list](#apply-last-stashed-state-and-delete-it-from-stashed-list)
 * [Delete all stored stashes](#delete-all-stored-stashes)
@@ -508,6 +509,11 @@ git stash push --all
 ## Show list of all saved stashes
 ```sh
 git stash list
+```
+
+## Show the contents of any stash in patch form
+```sh
+git stash show -p <stash@{n}>
 ```
 
 ## Apply any stash without deleting from the stashed list
