@@ -387,7 +387,7 @@
 	}, {
 		"title": "Create and switch new branch",
 		"tip": "git checkout -b <branch-name>",
-		"alternatives": ["git branch <branch-name> && git checkout <branch-name>"]
+		"alternatives": ["git branch <branch-name> && git checkout <branch-name>", "git switch -c <branch-name>"]
 	}, {
 		"title": "Ignore file mode changes on commits",
 		"tip": "git config core.fileMode false"
