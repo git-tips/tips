@@ -992,6 +992,10 @@ __Alternatives:__
 git branch <branch-name> && git checkout <branch-name>
 ```
 
+```sh
+git switch -c <branch-name>
+```
+
 ## Ignore file mode changes on commits
 ```sh
 git config core.fileMode false
