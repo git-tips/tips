@@ -1055,7 +1055,7 @@ git reset HEAD <file-name>
 ```
 __Alternatives:__
 ```sh
-git reset --staged <file-name>
+git restore --staged <file-name>
 ```
 
 ## Force push to Remote Repository
