@@ -334,7 +334,7 @@ git tag -d <tag-name>
 git push origin :refs/tags/<tag-name>
 ```
 
-## Undo local changes with the last content in head
+## Undo local changes with the content in index(staging)
 ```sh
 git checkout -- <file_name>
 ```
