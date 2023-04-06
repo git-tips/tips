@@ -33,6 +33,6 @@
     "doxie.inject": "^0.1.1",
     "doxie.output": "^0.3.0",
     "doxie.render": "^0.3.0",
-    "husky": "^0.8.1"
+    "husky": "^5.0.9"
   }
 }
