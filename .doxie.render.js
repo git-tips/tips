@@ -7,13 +7,18 @@ function escapeStr(str) {
 var render = function(data) {
   var data = data.data;
 
-  return [
+  var tips = [
     '## ' + data.title,
     '```sh',
     data.tip,
     '```',
     '\n'
-  ].join('\n');
+  ];
+  Array.isArray(data.alternatives) && tips.push(['__Alternatives:__']) &&
+  data.alternatives.map(function(alternative){
+     tips = tips.concat(['```sh',alternative,'```','\n'])
+  });
+  return tips.join('\n');
 };
 
 module.exports = render;
