@@ -678,7 +678,7 @@ git remote prune origin
 
 ## Delete local branches that has been squash and merged in the remote.
 ```sh
-git branch -vv | grep ': gone]' | awk '{print <!-- @doxie.inject start -->}' | xargs git branch -D
+git branch -vv | grep ': gone]' | awk '$1 != "*" {print $1}' | xargs git branch -D
 ```
 
 ## Retrieve the commit hash of the initial revision.
