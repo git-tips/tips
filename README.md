@@ -1053,6 +1053,10 @@ git log --reverse master..<branch-name> | head -6
 ```sh
 git reset HEAD <file-name>
 ```
+__Alternatives:__
+```sh
+git restore --staged <file-name>
+```
 
 ## Force push to Remote Repository
 ```sh
