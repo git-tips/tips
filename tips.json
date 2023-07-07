@@ -531,5 +531,8 @@
 	}, {
 		"title": "Prevent auto replacing LF with CRLF",
 		"tip": "git config --global core.autocrlf false"
+	}, {
+		"title": "Edit config for each level",
+		"tip": "git config --edit --system\ngit config --edit --global\ngit config --edit --local"
 	}
 ]
