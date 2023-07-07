@@ -102,7 +102,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Restore deleted file.](#restore-deleted-file)
 * [Restore file to a specific commit-hash](#restore-file-to-a-specific-commit-hash)
 * [Always rebase instead of merge on pull.](#always-rebase-instead-of-merge-on-pull)
-* [List and update config for each level.](#list-and-update-config-for-each-level)
+* [List all the alias and configs.](#list-all-the-alias-and-configs)
 * [Make git case sensitive.](#make-git-case-sensitive)
 * [Add custom editors.](#add-custom-editors)
 * [Auto correct typos.](#auto-correct-typos)
