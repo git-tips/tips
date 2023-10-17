@@ -35,13 +35,13 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Create local tag](#create-local-tag)
 * [Delete local tag](#delete-local-tag)
 * [Delete remote tag](#delete-remote-tag)
-* [Undo local changes with the last content in head](#undo-local-changes-with-the-last-content-in-head)
+* [Undo local changes with the content in index(staging)](#undo-local-changes-with-the-content-in-indexstaging)
 * [Revert: Undo a commit by creating a new commit](#revert-undo-a-commit-by-creating-a-new-commit)
 * [Reset: Discard commits, advised for private branch](#reset-discard-commits-advised-for-private-branch)
 * [Reword the previous commit message](#reword-the-previous-commit-message)
 * [See commit history for just the current branch](#see-commit-history-for-just-the-current-branch)
-* [Amend author.](#amend-author)
-* [Reset author, after author has been changed in the global config.](#reset-author-after-author-has-been-changed-in-the-global-config)
+* [Amend author](#amend-author)
+* [Reset author, after author has been changed in the global config](#reset-author-after-author-has-been-changed-in-the-global-config)
 * [Changing a remote's URL](#changing-a-remotes-url)
 * [Get list of all remote references](#get-list-of-all-remote-references)
 * [Get list of all local and remote branches](#get-list-of-all-local-and-remote-branches)
@@ -76,11 +76,11 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Update all the submodules](#update-all-the-submodules)
 * [Show all commits in the current branch yet to be merged to master](#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
 * [Rename a branch](#rename-a-branch)
-* [Rebases 'feature' to 'master' and merges it in to master ](#rebases-feature-to-master-and-merges-it-in-to-master)
+* [Rebases 'feature' to 'master' and merges it in to master](#rebases-feature-to-master-and-merges-it-in-to-master)
 * [Archive the `master` branch](#archive-the-master-branch)
 * [Modify previous commit without modifying the commit message](#modify-previous-commit-without-modifying-the-commit-message)
-* [Prunes references to remove branches that have been deleted in the remote.](#prunes-references-to-remove-branches-that-have-been-deleted-in-the-remote)
-* [Delete local branches that has been squash and merged in the remote.](#delete-local-branches-that-has-been-squash-and-merged-in-the-remote)
+* [Prunes references to remove branches that have been deleted in the remote](#prunes-references-to-remove-branches-that-have-been-deleted-in-the-remote)
+* [Delete local branches that has been squash and merged in the remote](#delete-local-branches-that-has-been-squash-and-merged-in-the-remote)
 * [Retrieve the commit hash of the initial revision.](#retrieve-the-commit-hash-of-the-initial-revision)
 * [Visualize the version tree.](#visualize-the-version-tree)
 * [Visualize the tree including commits that are only referenced from reflogs](#visualize-the-tree-including-commits-that-are-only-referenced-from-reflogs)
@@ -141,7 +141,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Clone a shallow copy of a repository](#clone-a-shallow-copy-of-a-repository)
 * [Search Commit log across all branches for given text](#search-commit-log-across-all-branches-for-given-text)
 * [Get first commit in a branch (from master)](#get-first-commit-in-a-branch-from-master)
-* [Unstaging Staged file](#unstaging-staged-file)
+* [Unstage Staged file](#unstage-staged-file)
 * [Force push to Remote Repository](#force-push-to-remote-repository)
 * [Adding Remote name](#adding-remote-name)
 * [List all currently configured remotes](#list-all-currently-configured-remotes)
@@ -175,7 +175,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Push the current branch to the same name on the remote repository](#push-the-current-branch-to-the-same-name-on-the-remote-repository)
 * [Push a new local branch to remote repository and track](#push-a-new-local-branch-to-remote-repository-and-track)
 * [Change a branch base](#change-a-branch-base)
-* [Use SSH instead of HTTPs for remotes](#use-ssh-instead-of-https-for-remotes)
+* [Use SSH instead of HTTPS for remotes](#use-ssh-instead-of-https-for-remotes)
 * [Update a submodule to the latest commit](#update-a-submodule-to-the-latest-commit)
 * [Prevent auto replacing LF with CRLF](#prevent-auto-replacing-lf-with-crlf)
 
@@ -359,12 +359,12 @@ git commit -v --amend
 git cherry -v master
 ```
 
-## Amend author.
+## Amend author
 ```sh
 git commit --amend --author='Author Name <email@address.com>'
 ```
 
-## Reset author, after author has been changed in the global config.
+## Reset author, after author has been changed in the global config
 ```sh
 git commit --amend --reset-author --no-edit
 ```
@@ -650,7 +650,7 @@ __Alternatives:__
 git branch -m [<old-branch-name>] <new-branch-name>
 ```
 
-## Rebases 'feature' to 'master' and merges it in to master 
+## Rebases 'feature' to 'master' and merges it in to master
 ```sh
 git rebase master feature && git checkout master && git merge -
 ```
@@ -665,7 +665,7 @@ git archive master --format=zip --output=master.zip
 git add --all && git commit --amend --no-edit
 ```
 
-## Prunes references to remove branches that have been deleted in the remote.
+## Prunes references to remove branches that have been deleted in the remote
 ```sh
 git fetch -p
 ```
@@ -676,7 +676,7 @@ __Alternatives:__
 git remote prune origin
 ```
 
-## Delete local branches that has been squash and merged in the remote.
+## Delete local branches that has been squash and merged in the remote
 ```sh
 git branch -vv | grep ': gone]' | awk '{print <!-- @doxie.inject start -->}' | xargs git branch -D
 ```
@@ -1049,7 +1049,7 @@ __Alternatives:__
 git log --reverse master..<branch-name> | head -6
 ```
 
-## Unstaging Staged file
+## Unstage Staged file
 ```sh
 git reset HEAD <file-name>
 ```
@@ -1245,7 +1245,7 @@ git push -u origin <branch_name>
 git rebase --onto <new_base> <old_base>
 ```
 
-## Use SSH instead of HTTPs for remotes
+## Use SSH instead of HTTPS for remotes
 ```sh
 git config --global url.'git@github.com:'.insteadOf 'https://github.com/'
 ```
