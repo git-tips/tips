@@ -331,7 +331,18 @@ git tag -d <tag-name>
 
 ## Delete remote tag
 ```sh
+git push origin --delete refs/tags/<tag-name>
+```
+
+
+__Alternatives:__
+```sh
 git push origin :refs/tags/<tag-name>
+```
+
+
+```sh
+git push origin --delete <tag-name>
 ```
 
 ## Undo local changes with the content in index(staging)
