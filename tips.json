@@ -90,10 +90,10 @@
 		"title": "See commit history for just the current branch",
 		"tip": "git cherry -v master"
 	}, {
-		"title": "Amend author.",
+		"title": "Amend author",
 		"tip": "git commit --amend --author='Author Name <email@address.com>'"
 	}, {
-		"title": "Reset author, after author has been changed in the global config.",
+		"title": "Reset author, after author has been changed in the global config",
 		"tip": "git commit --amend --reset-author --no-edit"
 	}, {
 		"title": "Changing a remote's URL",
@@ -213,7 +213,7 @@
 		"tip": "git branch -m <new-branch-name>",
 		"alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
 	}, {
-		"title": "Rebases 'feature' to 'master' and merges it in to master ",
+		"title": "Rebases 'feature' to 'master' and merges it in to master",
 		"tip": "git rebase master feature && git checkout master && git merge -"
 	}, {
 		"title": "Archive the `master` branch",
@@ -222,11 +222,11 @@
 		"title": "Modify previous commit without modifying the commit message",
 		"tip": "git add --all && git commit --amend --no-edit"
 	}, {
-		"title": "Prunes references to remove branches that have been deleted in the remote.",
+		"title": "Prunes references to remove branches that have been deleted in the remote",
 		"tip": "git fetch -p",
 		"alternatives": ["git remote prune origin"]
 	}, {
-		"title": "Delete local branches that has been squash and merged in the remote.",
+		"title": "Delete local branches that has been squash and merged in the remote",
 		"tip": "git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 	}, {
 		"title": "Retrieve the commit hash of the initial revision.",
@@ -417,7 +417,7 @@
 		"tip": "git log --oneline master..<branch-name> | tail -1",
 		"alternatives": ["git log --reverse master..<branch-name> | head -6"]
 	}, {
-		"title": "Unstaging Staged file",
+		"title": "Unstage Staged file",
 		"tip": "git reset HEAD <file-name>"
 	}, {
 		"title": "Force push to Remote Repository",
@@ -523,7 +523,7 @@
 		"title": "Change a branch base",
 		"tip": "git rebase --onto <new_base> <old_base>"
 	}, {
-		"title": "Use SSH instead of HTTPs for remotes",
+		"title": "Use SSH instead of HTTPS for remotes",
 		"tip": "git config --global url.'git@github.com:'.insteadOf 'https://github.com/'"
 	}, {
 		"title": "Update a submodule to the latest commit",
