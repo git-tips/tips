@@ -331,6 +331,12 @@ git tag -d <tag-name>
 
 ## Delete remote tag
 ```sh
+git push origin --delete <tag-name>
+```
+
+
+__Alternatives:__
+```sh
 git push origin :refs/tags/<tag-name>
 ```
 
