@@ -73,8 +73,8 @@
 		"tip": "git tag -d <tag-name>"
 	}, {
 		"title": "Delete remote tag",
-		"tip": "git push origin --delete refs/tags/<tag-name>",
-		"alternatives": ["git push origin :refs/tags/<tag-name>", "git push origin --delete <tag-name>"]
+		"tip": "git push origin --delete <tag-name>",
+		"alternatives": ["git push origin :refs/tags/<tag-name>"]
 	}, {
 		"title": "Undo local changes with the content in index(staging)",
 		"tip": "git checkout -- <file_name>"
