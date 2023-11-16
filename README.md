@@ -1264,5 +1264,11 @@ git commit -m "submodule updated"
 git config --global core.autocrlf false
 ```
 
+## Send a collection of patches as emails
+```sh
+git send-email [<options>] <file|directory>…​
+git send-email [<options>] <format-patch options>
+```
+
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end -->
