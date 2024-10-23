@@ -124,6 +124,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [View the GPG signatures in the commit log](#view-the-gpg-signatures-in-the-commit-log)
 * [Remove entry in the global config.](#remove-entry-in-the-global-config)
 * [Checkout a new branch without any history](#checkout-a-new-branch-without-any-history)
+* [View expanded details of changes in last commit.](#view-expanded-details-of-changes-in-last-commit)
 * [Extract file from another branch.](#extract-file-from-another-branch)
 * [List only the root and merge commits.](#list-only-the-root-and-merge-commits)
 * [Change previous two commits with an interactive rebase.](#change-previous-two-commits-with-an-interactive-rebase)
@@ -940,6 +941,11 @@ git config --global --unset <entry-name>
 ## Checkout a new branch without any history
 ```sh
 git checkout --orphan <branch_name>
+```
+
+## View expanded details of changes in last commit.
+```sh
+git show
 ```
 
 ## Extract file from another branch.
