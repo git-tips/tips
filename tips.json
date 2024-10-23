@@ -132,7 +132,7 @@
 		"title": "Git Aliases",
 		"tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
 	}, {
-		"title": "Saving current state of tracked files without commiting",
+		"title": "Saving current state of tracked files without committing",
 		"tip": "git stash",
 		"alternatives": ["git stash push"]
 	}, {
