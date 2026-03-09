@@ -441,7 +441,9 @@
     {
         "title": "Deploying git tracked subfolder to gh-pages",
         "tip": "git subtree push --prefix subfolder_name origin gh-pages",
-        "alternatives": "git subtree push --prefix subfolder_name origin branch_name",
+        "alternatives": [
+            "git subtree push --prefix subfolder_name origin branch_name"
+        ],
         "category": "Submodules and Subtrees"
     },
     {
