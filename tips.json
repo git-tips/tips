@@ -531,5 +531,8 @@
 	}, {
 		"title": "Prevent auto replacing LF with CRLF",
 		"tip": "git config --global core.autocrlf false"
+	}, {
+		"title": "Refresh the list of remote branches",
+		"tip": "git remote update origin --prune"
 	}
 ]

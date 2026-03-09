@@ -178,6 +178,7 @@ P.S: All these commands are tested on `git version 2.7.4 (Apple Git-66)`.
 * [Use SSH instead of HTTPs for remotes](#use-ssh-instead-of-https-for-remotes)
 * [Update a submodule to the latest commit](#update-a-submodule-to-the-latest-commit)
 * [Prevent auto replacing LF with CRLF](#prevent-auto-replacing-lf-with-crlf)
+* [Refresh the list of remote branches](#refresh-the-list-of-remote-branches)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -999,6 +1000,7 @@ __Alternatives:__
 git branch <branch-name> && git checkout <branch-name>
 ```
 
+
 ```sh
 git switch -c <branch-name>
 ```
@@ -1262,6 +1264,11 @@ git commit -m "submodule updated"
 ## Prevent auto replacing LF with CRLF
 ```sh
 git config --global core.autocrlf false
+```
+
+## Refresh the list of remote branches
+```sh
+git remote update origin --prune
 ```
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
