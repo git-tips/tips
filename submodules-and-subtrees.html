@@ -1,0 +1,558 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Submodules and Subtrees · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tagging.html" />
+    
+    
+    <link rel="prev" href="stashing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic-operations.html">
+            
+                <a href="basic-operations.html">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="branching.html">
+            
+                <a href="branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="log-and-history.html">
+            
+                <a href="log-and-history.html">
+            
+                    
+                    Log and History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="merging-and-rebasing.html">
+            
+                <a href="merging-and-rebasing.html">
+            
+                    
+                    Merging and Rebasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="miscellaneous.html">
+            
+                <a href="miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="remotes.html">
+            
+                <a href="remotes.html">
+            
+                    
+                    Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="setup-and-config.html">
+            
+                <a href="setup-and-config.html">
+            
+                    
+                    Setup and Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="stashing.html">
+            
+                <a href="stashing.html">
+            
+                    
+                    Stashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="submodules-and-subtrees.html">
+            
+                <a href="submodules-and-subtrees.html">
+            
+                    
+                    Submodules and Subtrees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="tagging.html">
+            
+                <a href="tagging.html">
+            
+                    
+                    Tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="undoing-changes.html">
+            
+                <a href="undoing-changes.html">
+            
+                    
+                    Undoing Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Submodules and Subtrees</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="submodules-and-subtrees">Submodules and Subtrees</h1>
+<h2 id="update-all-the-submodules">Update all the submodules</h2>
+<pre><code class="lang-sh">git submodule foreach git pull
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git submodule update --init --recursive
+</code></pre>
+<pre><code class="lang-sh">git submodule update --remote
+</code></pre>
+<hr></hr>
+<h2 id="deploying-git-tracked-subfolder-to-gh-pages">Deploying git tracked subfolder to gh-pages</h2>
+<pre><code class="lang-sh">git subtree push --prefix subfolder_name origin gh-pages
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">g
+</code></pre>
+<pre><code class="lang-sh">i
+</code></pre>
+<pre><code class="lang-sh">t
+</code></pre>
+<pre><code class="lang-sh">
+
+</code></pre>
+<pre><code class="lang-sh">s
+</code></pre>
+<pre><code class="lang-sh">u
+</code></pre>
+<pre><code class="lang-sh">b
+</code></pre>
+<pre><code class="lang-sh">t
+</code></pre>
+<pre><code class="lang-sh">r
+</code></pre>
+<pre><code class="lang-sh">e
+</code></pre>
+<pre><code class="lang-sh">e
+</code></pre>
+<pre><code class="lang-sh">
+
+</code></pre>
+<pre><code class="lang-sh">p
+</code></pre>
+<pre><code class="lang-sh">u
+</code></pre>
+<pre><code class="lang-sh">s
+</code></pre>
+<pre><code class="lang-sh">h
+</code></pre>
+<pre><code class="lang-sh">
+
+</code></pre>
+<pre><code class="lang-sh">-
+</code></pre>
+<pre><code class="lang-sh">-
+</code></pre>
+<pre><code class="lang-sh">p
+</code></pre>
+<pre><code class="lang-sh">r
+</code></pre>
+<pre><code class="lang-sh">e
+</code></pre>
+<pre><code class="lang-sh">f
+</code></pre>
+<pre><code class="lang-sh">i
+</code></pre>
+<pre><code class="lang-sh">x
+</code></pre>
+<pre><code class="lang-sh">
+
+</code></pre>
+<pre><code class="lang-sh">s
+</code></pre>
+<pre><code class="lang-sh">u
+</code></pre>
+<pre><code class="lang-sh">b
+</code></pre>
+<pre><code class="lang-sh">f
+</code></pre>
+<pre><code class="lang-sh">o
+</code></pre>
+<pre><code class="lang-sh">l
+</code></pre>
+<pre><code class="lang-sh">d
+</code></pre>
+<pre><code class="lang-sh">e
+</code></pre>
+<pre><code class="lang-sh">r
+</code></pre>
+<pre><code class="lang-sh">_
+</code></pre>
+<pre><code class="lang-sh">n
+</code></pre>
+<pre><code class="lang-sh">a
+</code></pre>
+<pre><code class="lang-sh">m
+</code></pre>
+<pre><code class="lang-sh">e
+</code></pre>
+<pre><code class="lang-sh">
+
+</code></pre>
+<pre><code class="lang-sh">o
+</code></pre>
+<pre><code class="lang-sh">r
+</code></pre>
+<pre><code class="lang-sh">i
+</code></pre>
+<pre><code class="lang-sh">g
+</code></pre>
+<pre><code class="lang-sh">i
+</code></pre>
+<pre><code class="lang-sh">n
+</code></pre>
+<pre><code class="lang-sh">
+
+</code></pre>
+<pre><code class="lang-sh">b
+</code></pre>
+<pre><code class="lang-sh">r
+</code></pre>
+<pre><code class="lang-sh">a
+</code></pre>
+<pre><code class="lang-sh">n
+</code></pre>
+<pre><code class="lang-sh">c
+</code></pre>
+<pre><code class="lang-sh">h
+</code></pre>
+<pre><code class="lang-sh">_
+</code></pre>
+<pre><code class="lang-sh">n
+</code></pre>
+<pre><code class="lang-sh">a
+</code></pre>
+<pre><code class="lang-sh">m
+</code></pre>
+<pre><code class="lang-sh">e
+</code></pre>
+<hr></hr>
+<h2 id="adding-a-project-to-repo-using-subtree">Adding a project to repo using subtree</h2>
+<pre><code class="lang-sh">git subtree add --prefix=&lt;directory_name&gt;/&lt;project_name&gt; --squash git@github.com:&lt;username&gt;/&lt;project_name&gt;.git master
+</code></pre>
+<hr></hr>
+<h2 id="get-latest-changes-in-your-repo-for-a-linked-project-using-subtree">Get latest changes in your repo for a linked project using subtree</h2>
+<pre><code class="lang-sh">git subtree pull --prefix=&lt;directory_name&gt;/&lt;project_name&gt; --squash git@github.com:&lt;username&gt;/&lt;project_name&gt;.git master
+</code></pre>
+<hr></hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="stashing.html" class="navigation navigation-prev " aria-label="Previous page: Stashing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tagging.html" class="navigation navigation-next " aria-label="Next page: Tagging">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Submodules and Subtrees","level":"1.10","depth":1,"next":{"title":"Tagging","level":"1.11","depth":1,"path":"tagging.md","ref":"tagging.md","articles":[]},"previous":{"title":"Stashing","level":"1.9","depth":1,"path":"stashing.md","ref":"stashing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"submodules-and-subtrees.md","mtime":"2026-03-09T19:01:07.825Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-03-09T19:01:15.450Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

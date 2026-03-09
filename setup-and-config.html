@@ -1,0 +1,504 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Setup and Config · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="stashing.html" />
+    
+    
+    <link rel="prev" href="remotes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic-operations.html">
+            
+                <a href="basic-operations.html">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="branching.html">
+            
+                <a href="branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="log-and-history.html">
+            
+                <a href="log-and-history.html">
+            
+                    
+                    Log and History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="merging-and-rebasing.html">
+            
+                <a href="merging-and-rebasing.html">
+            
+                    
+                    Merging and Rebasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="miscellaneous.html">
+            
+                <a href="miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="remotes.html">
+            
+                <a href="remotes.html">
+            
+                    
+                    Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="setup-and-config.html">
+            
+                <a href="setup-and-config.html">
+            
+                    
+                    Setup and Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="stashing.html">
+            
+                <a href="stashing.html">
+            
+                    
+                    Stashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="submodules-and-subtrees.html">
+            
+                <a href="submodules-and-subtrees.html">
+            
+                    
+                    Submodules and Subtrees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="tagging.html">
+            
+                <a href="tagging.html">
+            
+                    
+                    Tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="undoing-changes.html">
+            
+                <a href="undoing-changes.html">
+            
+                    
+                    Undoing Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Setup and Config</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="setup-and-config">Setup and Config</h1>
+<h2 id="remove-sensitive-data-from-history-after-a-push">Remove sensitive data from history, after a push</h2>
+<pre><code class="lang-sh">git filter-branch --force --index-filter <span class="hljs-string">'git rm --cached --ignore-unmatch &lt;path-to-your-file&gt;'</span> --prune-empty --tag-name-filter <span class="hljs-built_in">cat</span> -- --all &amp;&amp; git push origin --force --all
+</code></pre>
+<hr></hr>
+<h2 id="reset-author-after-author-has-been-changed-in-the-global-config">Reset author, after author has been changed in the global config.</h2>
+<pre><code class="lang-sh">git commit --amend --reset-author --no-edit
+</code></pre>
+<hr></hr>
+<h2 id="get-git-bash-completion">Get git bash completion</h2>
+<pre><code class="lang-sh">curl -L http://git.io/vfhol &gt; ~/.git-completion.bash &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">'[ -f ~/.git-completion.bash ] &amp;&amp; . ~/.git-completion.bash'</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<hr></hr>
+<h2 id="git-aliases">Git Aliases</h2>
+<pre><code class="lang-sh">git config --global <span class="hljs-built_in">alias</span>.&lt;handle&gt; &lt;<span class="hljs-built_in">command</span>&gt; 
+git config --global alias.st status
+</code></pre>
+<hr></hr>
+<h2 id="always-rebase-instead-of-merge-on-pull">Always rebase instead of merge on pull.</h2>
+<pre><code class="lang-sh">git config --global pull.rebase <span class="hljs-literal">true</span>
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh"><span class="hljs-comment">#git &lt; 1.7.9</span>
+git config --global branch.autosetuprebase always
+</code></pre>
+<hr></hr>
+<h2 id="list-all-the-alias-and-configs">List all the alias and configs.</h2>
+<pre><code class="lang-sh">git config --list
+</code></pre>
+<hr></hr>
+<h2 id="make-git-case-sensitive">Make git case sensitive.</h2>
+<pre><code class="lang-sh">git config --global core.ignorecase <span class="hljs-literal">false</span>
+</code></pre>
+<hr></hr>
+<h2 id="add-custom-editors">Add custom editors.</h2>
+<pre><code class="lang-sh">git config --global core.editor <span class="hljs-string">'$EDITOR'</span>
+</code></pre>
+<hr></hr>
+<h2 id="auto-correct-typos">Auto correct typos.</h2>
+<pre><code class="lang-sh">git config --global help.autocorrect 1
+</code></pre>
+<hr></hr>
+<h2 id="reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions">Reuse recorded resolution, record and reuse previous conflicts resolutions.</h2>
+<pre><code class="lang-sh">git config --global rerere.enabled 1
+</code></pre>
+<hr></hr>
+<h2 id="remove-entry-in-the-global-config">Remove entry in the global config.</h2>
+<pre><code class="lang-sh">git config --global --<span class="hljs-built_in">unset</span> &lt;entry-name&gt;
+</code></pre>
+<hr></hr>
+<h2 id="ignore-file-mode-changes-on-commits">Ignore file mode changes on commits</h2>
+<pre><code class="lang-sh">git config core.fileMode <span class="hljs-literal">false</span>
+</code></pre>
+<hr></hr>
+<h2 id="turn-off-git-colored-terminal-output">Turn off git colored terminal output</h2>
+<pre><code class="lang-sh">git config --global color.ui <span class="hljs-literal">false</span>
+</code></pre>
+<hr></hr>
+<h2 id="specific-color-settings">Specific color settings</h2>
+<pre><code class="lang-sh">git config --global &lt;specific <span class="hljs-built_in">command</span> e.g branch, diff&gt; &lt;<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span> or always&gt;
+</code></pre>
+<hr></hr>
+<h2 id="alias-git-undo">Alias: git undo</h2>
+<pre><code class="lang-sh">git config --global alias.undo <span class="hljs-string">'!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'</span>
+</code></pre>
+<hr></hr>
+<h2 id="edit-localglobal-git-config">Edit [local/global] git config</h2>
+<pre><code class="lang-sh">git config [--global] --edit
+</code></pre>
+<hr></hr>
+<h2 id="list-all-git-aliases">List all git aliases</h2>
+<pre><code class="lang-sh">git config -l | grep <span class="hljs-built_in">alias</span> | sed <span class="hljs-string">'s/^alias\.//g'</span>
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git config -l | grep <span class="hljs-built_in">alias</span> | <span class="hljs-built_in">cut</span> -d <span class="hljs-string">'.'</span> -f 2
+</code></pre>
+<hr></hr>
+<h2 id="use-ssh-instead-of-https-for-remotes">Use SSH instead of HTTPs for remotes</h2>
+<pre><code class="lang-sh">git config --global url.<span class="hljs-string">'git@github.com:'</span>.insteadOf <span class="hljs-string">'https://github.com/'</span>
+</code></pre>
+<hr></hr>
+<h2 id="prevent-auto-replacing-lf-with-crlf">Prevent auto replacing LF with CRLF</h2>
+<pre><code class="lang-sh">git config --global core.autocrlf <span class="hljs-literal">false</span>
+</code></pre>
+<hr></hr>
+<h2 id="edit-config-for-each-level">Edit config for each level</h2>
+<pre><code class="lang-sh">git config --edit --system
+
+git config --edit --global
+
+git config --edit --<span class="hljs-built_in">local</span>
+</code></pre>
+<hr></hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="remotes.html" class="navigation navigation-prev " aria-label="Previous page: Remotes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="stashing.html" class="navigation navigation-next " aria-label="Next page: Stashing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Setup and Config","level":"1.8","depth":1,"next":{"title":"Stashing","level":"1.9","depth":1,"path":"stashing.md","ref":"stashing.md","articles":[]},"previous":{"title":"Remotes","level":"1.7","depth":1,"path":"remotes.md","ref":"remotes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"setup-and-config.md","mtime":"2026-03-09T19:01:07.825Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-03-09T19:01:15.450Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

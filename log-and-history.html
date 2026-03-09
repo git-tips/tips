@@ -1,0 +1,591 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Log and History · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="merging-and-rebasing.html" />
+    
+    
+    <link rel="prev" href="branching.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic-operations.html">
+            
+                <a href="basic-operations.html">
+            
+                    
+                    Basic Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="branching.html">
+            
+                <a href="branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="log-and-history.html">
+            
+                <a href="log-and-history.html">
+            
+                    
+                    Log and History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="merging-and-rebasing.html">
+            
+                <a href="merging-and-rebasing.html">
+            
+                    
+                    Merging and Rebasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="miscellaneous.html">
+            
+                <a href="miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="remotes.html">
+            
+                <a href="remotes.html">
+            
+                    
+                    Remotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="setup-and-config.html">
+            
+                <a href="setup-and-config.html">
+            
+                    
+                    Setup and Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="stashing.html">
+            
+                <a href="stashing.html">
+            
+                    
+                    Stashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="submodules-and-subtrees.html">
+            
+                <a href="submodules-and-subtrees.html">
+            
+                    
+                    Submodules and Subtrees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="tagging.html">
+            
+                <a href="tagging.html">
+            
+                    
+                    Tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="undoing-changes.html">
+            
+                <a href="undoing-changes.html">
+            
+                    
+                    Undoing Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Log and History</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="log-and-history">Log and History</h1>
+<h2 id="show-helpful-guides-that-come-with-git">Show helpful guides that come with Git</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">help</span> -g
+</code></pre>
+<hr></hr>
+<h2 id="search-change-by-content">Search change by content</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> -S<span class="hljs-string">'&lt;a term in the source&gt;'</span>
+</code></pre>
+<hr></hr>
+<h2 id="show-changes-over-time-for-specific-file">Show changes over time for specific file</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> -p &lt;file_name&gt;
+</code></pre>
+<hr></hr>
+<h2 id="list-all-the-conflicted-files">List all the conflicted files</h2>
+<pre><code class="lang-sh">git diff --name-only --diff-filter=U
+</code></pre>
+<hr></hr>
+<h2 id="list-of-all-files-changed-in-a-commit">List of all files changed in a commit</h2>
+<pre><code class="lang-sh">git diff-tree --no-commit-id --name-only -r &lt;commit-ish&gt;
+</code></pre>
+<hr></hr>
+<h2 id="unstaged-changes-since-last-commit">Unstaged changes since last commit</h2>
+<pre><code class="lang-sh">git diff
+</code></pre>
+<hr></hr>
+<h2 id="changes-staged-for-commit">Changes staged for commit</h2>
+<pre><code class="lang-sh">git diff --cached
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git diff --staged
+</code></pre>
+<hr></hr>
+<h2 id="show-both-staged-and-unstaged-changes">Show both staged and unstaged changes</h2>
+<pre><code class="lang-sh">git diff HEAD
+</code></pre>
+<hr></hr>
+<h2 id="what-changed-since-two-weeks">What changed since two weeks?</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --no-merges --raw --since=<span class="hljs-string">'2 weeks ago'</span>
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git whatchanged --since=<span class="hljs-string">'2 weeks ago'</span>
+</code></pre>
+<hr></hr>
+<h2 id="see-all-commits-made-since-forking-from-master">See all commits made since forking from master</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --no-merges --<span class="hljs-built_in">stat</span> --reverse master..
+</code></pre>
+<hr></hr>
+<h2 id="show-all-tracked-files">Show all tracked files</h2>
+<pre><code class="lang-sh">git ls-files -t
+</code></pre>
+<hr></hr>
+<h2 id="show-all-untracked-files">Show all untracked files</h2>
+<pre><code class="lang-sh">git ls-files --others
+</code></pre>
+<hr></hr>
+<h2 id="show-all-ignored-files">Show all ignored files</h2>
+<pre><code class="lang-sh">git ls-files --others -i --exclude-standard
+</code></pre>
+<hr></hr>
+<h2 id="visualize-the-version-tree">Visualize the version tree.</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --pretty=oneline --graph --decorate --all
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">gitk --all
+</code></pre>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --graph --pretty=format:<span class="hljs-string">'%C(auto) %h | %s | %an | %ar%d'</span>
+</code></pre>
+<hr></hr>
+<h2 id="visualize-the-tree-including-commits-that-are-only-referenced-from-reflogs">Visualize the tree including commits that are only referenced from reflogs</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --graph --decorate --oneline $(git rev-list --walk-reflogs --all)
+</code></pre>
+<hr></hr>
+<h2 id="show-inline-word-diff">Show inline word diff.</h2>
+<pre><code class="lang-sh">git diff --word-diff
+</code></pre>
+<hr></hr>
+<h2 id="show-changes-using-common-diff-tools">Show changes using common diff tools.</h2>
+<pre><code class="lang-sh">git difftool [-t &lt;tool&gt;] &lt;commit1&gt; &lt;commit2&gt; &lt;path&gt;
+</code></pre>
+<hr></hr>
+<h2 id="commits-in-branch1-that-are-not-in-branch2">Commits in Branch1 that are not in Branch2</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> Branch1 ^Branch2
+</code></pre>
+<hr></hr>
+<h2 id="list-n-last-commits">List n last commits</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> -&lt;n&gt;
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> -n &lt;n&gt;
+</code></pre>
+<hr></hr>
+<h2 id="open-all-conflicted-files-in-an-editor">Open all conflicted files in an editor.</h2>
+<pre><code class="lang-sh">git diff --name-only | <span class="hljs-built_in">uniq</span> | xargs <span class="hljs-variable">$EDITOR</span>
+</code></pre>
+<hr></hr>
+<h2 id="view-the-gpg-signatures-in-the-commit-log">View the GPG signatures in the commit log</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --show-signature
+</code></pre>
+<hr></hr>
+<h2 id="extract-file-from-another-branch">Extract file from another branch.</h2>
+<pre><code class="lang-sh">git show &lt;branch_name&gt;:&lt;file_name&gt;
+</code></pre>
+<hr></hr>
+<h2 id="list-only-the-root-and-merge-commits">List only the root and merge commits.</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --first-parent
+</code></pre>
+<hr></hr>
+<h2 id="list-commits-and-changes-to-a-specific-file-even-through-renaming">List commits and changes to a specific file (even through renaming)</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --follow -p -- &lt;file_path&gt;
+</code></pre>
+<hr></hr>
+<h2 id="search-commit-log-across-all-branches-for-given-text">Search Commit log across all branches for given text</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --all --grep=<span class="hljs-string">'&lt;given-text&gt;'</span>
+</code></pre>
+<hr></hr>
+<h2 id="get-first-commit-in-a-branch-from-master">Get first commit in a branch (from master)</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --oneline master..&lt;branch-name&gt; | <span class="hljs-built_in">tail</span> -1
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --reverse master..&lt;branch-name&gt; | <span class="hljs-built_in">head</span> -6
+</code></pre>
+<hr></hr>
+<h2 id="show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file">Show the author, time and last revision made to each line of a given file</h2>
+<pre><code class="lang-sh">git blame &lt;file-name&gt;
+</code></pre>
+<hr></hr>
+<h2 id="show-how-many-lines-does-an-author-contribute">Show how many lines does an author contribute</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --author=<span class="hljs-string">'_Your_Name_Here_'</span> --pretty=tformat: --numstat | gawk <span class="hljs-string">'{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s
+", add, subs, loc }'</span> -
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --author=<span class="hljs-string">'_Your_Name_Here_'</span> --pretty=tformat: --numstat | awk <span class="hljs-string">'{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s
+", add, subs, loc }'</span> - <span class="hljs-comment"># on Mac OSX</span>
+</code></pre>
+<hr></hr>
+<h2 id="show-all-the-git-notes">Show all the git-notes</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --show-notes=<span class="hljs-string">'*'</span>
+</code></pre>
+<hr></hr>
+<h2 id="list-unpushed-git-commits">List unpushed git commits</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --branches --not --remotes
+</code></pre>
+<p><strong>Alternatives:</strong></p>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> @{u}..
+</code></pre>
+<pre><code class="lang-sh">git cherry -v
+</code></pre>
+<hr></hr>
+<h2 id="add-everything-but-whitespace-changes">Add everything, but whitespace changes</h2>
+<pre><code class="lang-sh">git diff --ignore-all-space | git apply --cached
+</code></pre>
+<hr></hr>
+<h2 id="blame-on-certain-range">blame on certain range</h2>
+<pre><code class="lang-sh">git blame -L &lt;start&gt;,&lt;end&gt;
+</code></pre>
+<hr></hr>
+<h2 id="show-a-git-logical-variable">Show a Git logical variable.</h2>
+<pre><code class="lang-sh">git var -l | &lt;variable&gt;
+</code></pre>
+<hr></hr>
+<h2 id="get-the-repo-name">Get the repo name.</h2>
+<pre><code class="lang-sh">git rev-parse --show-toplevel
+</code></pre>
+<hr></hr>
+<h2 id="logs-between-date-range">logs between date range</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">'FEB 1 2017'</span> --<span class="hljs-keyword">until</span>=<span class="hljs-string">'FEB 14 2017'</span>
+</code></pre>
+<hr></hr>
+<h2 id="exclude-author-from-logs">Exclude author from logs</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span> --perl-regexp --author=<span class="hljs-string">'^((?!excluded-author-regex).*)$'</span>
+</code></pre>
+<hr></hr>
+<h2 id="view-expanded-details-of-changes-in-last-commit">View expanded details of changes in last commit</h2>
+<pre><code class="lang-sh">git show
+</code></pre>
+<hr></hr>
+<h2 id="visualize-each-position-of-head-in-the-last-30-days">Visualize each position of HEAD in the last 30 days</h2>
+<pre><code class="lang-sh">git reflog
+</code></pre>
+<hr></hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="branching.html" class="navigation navigation-prev " aria-label="Previous page: Branching">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="merging-and-rebasing.html" class="navigation navigation-next " aria-label="Next page: Merging and Rebasing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Log and History","level":"1.4","depth":1,"next":{"title":"Merging and Rebasing","level":"1.5","depth":1,"path":"merging-and-rebasing.md","ref":"merging-and-rebasing.md","articles":[]},"previous":{"title":"Branching","level":"1.3","depth":1,"path":"branching.md","ref":"branching.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"log-and-history.md","mtime":"2026-03-09T19:01:07.825Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-03-09T19:01:15.450Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
