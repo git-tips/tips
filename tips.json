@@ -135,6 +135,7 @@
     {
         "title": "Undo local changes with the content in index(staging)",
         "tip": "git checkout -- <file_name>",
+        "alternatives": ["git restore <file_name>"],
         "category": "Basic Operations"
     },
     {
