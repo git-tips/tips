@@ -262,6 +262,10 @@ git push origin :refs/tags/<tag-name>
 ```sh
 git checkout -- <file_name>
 ```
+**Alternatives:**
+```sh
+git restore <file_name>
+```
 
 ### Reword the previous commit message
 ```sh
