@@ -983,5 +983,169 @@
             "git restore --staged <file-name>"
         ],
         "category": "Undoing Changes"
+    },
+    {
+        "title": "Sparse checkout: clone only specific directories",
+        "tip": "git clone --filter=blob:none --sparse <url> && cd <repo> && git sparse-checkout set <dir1> <dir2>",
+        "category": "Basic Operations"
+    },
+    {
+        "title": "Enable background maintenance for faster operations",
+        "tip": "git maintenance start",
+        "alternatives": [
+            "git maintenance run --task=gc"
+        ],
+        "category": "Setup and Config"
+    },
+    {
+        "title": "Compare two versions of a rebased branch",
+        "tip": "git range-diff <base>..<old-tip> <base>..<new-tip>",
+        "alternatives": [
+            "git range-diff <rev1>...<rev2>"
+        ],
+        "category": "Log and History"
+    },
+    {
+        "title": "Sign commits with SSH key instead of GPG",
+        "tip": "git config gpg.format ssh && git config user.signingkey ~/.ssh/id_ed25519.pub && git commit -S -m '<message>'",
+        "category": "Setup and Config"
+    },
+    {
+        "title": "Create a bundle file for offline sharing",
+        "tip": "git bundle create <file>.bundle --all",
+        "alternatives": [
+            "git bundle create <file>.bundle <branch-name>"
+        ],
+        "category": "Remotes"
+    },
+    {
+        "title": "Clone from a bundle file",
+        "tip": "git clone <file>.bundle <directory>",
+        "category": "Remotes"
+    },
+    {
+        "title": "Automate bisect with a test script",
+        "tip": "git bisect start <bad> <good> && git bisect run <script>",
+        "category": "Log and History"
+    },
+    {
+        "title": "Enable rerere to auto-resolve recurring merge conflicts",
+        "tip": "git config rerere.enabled true",
+        "category": "Setup and Config"
+    },
+    {
+        "title": "Show output in columns",
+        "tip": "git branch --column",
+        "alternatives": [
+            "git tag --column"
+        ],
+        "category": "Basic Operations"
+    },
+    {
+        "title": "Blame with line range",
+        "tip": "git blame -L <start>,<end> <file>",
+        "alternatives": [
+            "git blame -L :'<funcname>' <file>"
+        ],
+        "category": "Log and History"
+    },
+    {
+        "title": "Detect moved or copied lines in blame",
+        "tip": "git blame -M -C <file>",
+        "alternatives": [
+            "git blame -C -C -C <file>"
+        ],
+        "category": "Log and History"
+    },
+    {
+        "title": "Partial clone: clone without blobs for faster fetch",
+        "tip": "git clone --filter=blob:none <url>",
+        "alternatives": [
+            "git clone --filter=tree:0 <url>"
+        ],
+        "category": "Remotes"
+    },
+    {
+        "title": "List worktrees",
+        "tip": "git worktree list",
+        "category": "Basic Operations"
+    },
+    {
+        "title": "Remove a worktree",
+        "tip": "git worktree remove <path>",
+        "alternatives": [
+            "git worktree prune"
+        ],
+        "category": "Basic Operations"
+    },
+    {
+        "title": "Stash only unstaged changes",
+        "tip": "git stash push --keep-index",
+        "category": "Stashing"
+    },
+    {
+        "title": "Stash specific files",
+        "tip": "git stash push -m '<message>' <file1> <file2>",
+        "category": "Stashing"
+    },
+    {
+        "title": "Show a diffstat summary of a stash",
+        "tip": "git stash show --stat <stash@{n}>",
+        "alternatives": [
+            "git stash show -p <stash@{n}>"
+        ],
+        "category": "Stashing"
+    },
+    {
+        "title": "Log with graph in oneline format",
+        "tip": "git log --oneline --graph --all --decorate",
+        "category": "Log and History"
+    },
+    {
+        "title": "Find commits where a file was deleted",
+        "tip": "git log --diff-filter=D --summary | grep delete",
+        "alternatives": [
+            "git log --all --full-history -- <file>"
+        ],
+        "category": "Log and History"
+    },
+    {
+        "title": "Show commit count per author per time period",
+        "tip": "git shortlog -sn --since='1 year ago'",
+        "alternatives": [
+            "git shortlog -sne --all"
+        ],
+        "category": "Log and History"
+    },
+    {
+        "title": "Verify commit signatures",
+        "tip": "git verify-commit <commit>",
+        "alternatives": [
+            "git log --show-signature"
+        ],
+        "category": "Log and History"
+    },
+    {
+        "title": "Create a fixup commit and auto-squash",
+        "tip": "git commit --fixup=<commit> && git rebase -i --autosquash <commit>~1",
+        "category": "Merging and Rebasing"
+    },
+    {
+        "title": "Rebase interactively from the root commit",
+        "tip": "git rebase -i --root",
+        "category": "Merging and Rebasing"
+    },
+    {
+        "title": "Set default branch name for new repos",
+        "tip": "git config --global init.defaultBranch main",
+        "category": "Setup and Config"
+    },
+    {
+        "title": "Show diff with word-level granularity using color",
+        "tip": "git diff --color-words",
+        "alternatives": [
+            "git diff --word-diff=color"
+        ],
+        "category": "Log and History"
     }
 ]

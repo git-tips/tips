@@ -1,0 +1,40 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'tips.json'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Generate README
+        run: node build-readme.js
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet README.md docs/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push updated README
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/
+          git commit -m "docs: auto-generate README and docs from tips.json [skip ci]"
+          git push
