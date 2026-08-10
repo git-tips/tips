@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/git-tips/tips#readme",
   "devDependencies": {
-    "honkit": "^6.1.6",
+    "honkit": "^6.1.7",
     "husky": "^5.0.9"
   }
 }
